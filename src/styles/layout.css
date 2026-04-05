@@ -1,0 +1,16 @@
+nav{
+    display:flex;
+    height:60px;
+}
+
+nav ul{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+}
+
+nav ul li a{
+ color:black;
+}

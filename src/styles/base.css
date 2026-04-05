@@ -1,0 +1,23 @@
+:root{
+    --primary-color: #3B429F;
+    --secondary-color: #D4E9EE;
+    --primary-font: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+    flex:1
+}
+
+a{
+    text-decoration: none;
+}
