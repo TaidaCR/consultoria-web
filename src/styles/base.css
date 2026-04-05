@@ -15,7 +15,8 @@ body{
 }
 
 main{
-    flex:1
+    flex:1;
+    padding: 0 20px;
 }
 
 a{

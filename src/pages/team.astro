@@ -1,7 +1,90 @@
 ---
-import LayoutPrincipal from '../layouts/baseLayout.astro';
+import LayoutPrincipal from '../layouts/base-layout.astro';
+import DiegoImagen from '../assets/Diego-Garcia.jpeg';
 ---
 
 <LayoutPrincipal>
-    <h1>TEAM</h1>
+    <section aria-labelledby="titulo-equipo">
+        <h1 id="titulo-equipo">Nuestro Equipo</h1>
+        
+        <div class="team-grid" role="list">
+    
+            <article role="listitem">
+                <figure>
+                    <img src={DiegoImagen.src} alt=""/>
+                </figure>
+                <div class="text-container">
+                    <h2>José A. García Ruiz</h2>
+                    <p class="academic-title"><strong>Licenciado en Medicina y Cirugía.</strong></p>
+                    <p>Consultor experto en gestión sanitaria y metodología JCI con amplia trayectoria en dirección médica y acreditación de centros hospitalarios de alta complejidad.</p>
+                </div>
+            </article>
+    
+            <article role="listitem">
+                <figure>
+                    <img src={DiegoImagen.src} alt=""/>
+                </figure>
+                <div class="text-container">
+                    <h2>Carmen Cortes Martínez</h2>
+                    <p class="academic-title"><strong>Diplomada en Enfermería.</strong></p>
+                    <p>Especialista en seguridad del paciente y mejora de procesos clínicos. Experta en la implementación de estándares de enfermería y gestión de riesgos en el entorno sanitario.</p>
+                </div>
+            </article>
+            <article role="listitem">
+                <figure>
+                    <img src={DiegoImagen.src} alt=""/>
+                </figure>
+                <div class="text-container">
+                    <h2>Diego García Cortés</h2>
+                    <p class="academic-title"><strong>Grado en Farmacia y Especialista en Farmacia Hospitalaria Clínica.</strong></p>
+                    <p>Experto en gestión del uso de la medicación bajo el modelo JCI y referente en seguridad del paciente. Cuenta con una amplia trayectoria internacional en el NHS del Reino Unido y experiencia clínica en el Hospital Costa del Sol.</p>
+                </div>
+            </article>
+    
+            <article role="listitem">
+                <figure>
+                    <img src={DiegoImagen.src} alt=""/>
+                </figure>
+                <div class="text-container">
+                    <h2>Juan Ignacio Barrachina</h2>
+                    <p class="academic-title"><strong>Licenciado en Medicina y Cirugía.</strong></p>
+                    <p>Especialista en Medicina Preventiva y Salud Pública. Experto en control de infecciones, epidemiología hospitalaria y gestión de la calidad asistencial.</p>
+                </div>
+            </article>
+    
+            <article role="listitem">
+                <figure>
+                    <img src={DiegoImagen.src} alt=""/>
+                </figure>
+                <div class="text-container">
+                    <h2>Carlos Arribas López</h2>
+                    <p class="academic-title"><strong>Licenciado en Medicina y Cirugía.</strong></p>
+                    <p>Consultor con amplia experiencia en la gestión de servicios centrales, sistemas de información clínica y optimización de recursos en procesos de acreditación internacional.</p>
+                </div>
+            </article>
+    
+            <article role="listitem">
+                <figure>
+                    <img src={DiegoImagen.src} alt=""/>
+                </figure>
+                <div class="text-container">
+                    <h2>Gema de la Sierra del Barrio</h2>
+                    <p class="academic-title"><strong>Licenciada en Farmacia.</strong></p>
+                    <p>Especialista en gestión farmacéutica hospitalaria, seguridad en el manejo de la medicación y cumplimiento de estándares de Farmacia para la JCI.</p>
+                </div>
+            </article>
+    
+            <article role="listitem">
+                <figure>
+                    <img src={DiegoImagen.src} alt=""/>
+                </figure>
+                <div class="text-container">
+                    <h2>José J. Fernández Maira</h2>
+                    <p class="academic-title"><strong>Ingeniero Industrial.</strong></p>
+                    <p>Experto en gestión de infraestructuras, seguridad de las instalaciones (FMS) y mantenimiento preventivo en el ámbito hospitalario bajo normativas internacionales.</p>
+                </div>
+            </article>
+    
+        </div>
+    </section>
 </LayoutPrincipal>

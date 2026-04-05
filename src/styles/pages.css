@@ -1,0 +1,25 @@
+/* ALL */
+section{
+    max-width:1200px;
+    margin: 0 auto;
+}
+
+/* TEAM */
+.team-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.team-grid article{
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    padding: 20px;
+}
+
+.team-grid article img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
