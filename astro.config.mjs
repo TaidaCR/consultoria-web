@@ -5,5 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://taidacr.github.io/', 
   
-  base: '/consultoria-web',
+  base: '/consultoria-web/',
 });
