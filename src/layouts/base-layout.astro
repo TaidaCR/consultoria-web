@@ -1,54 +1,81 @@
 ---
 // LayoutPrincipal.astro
-import logoImagen from '../assets/logo.jpeg';
-import '../styles/layout.css'
-import '../styles/base.css'
-import '../styles/pages.css'
-import { ClientRouter } from 'astro:transitions';
+import logoImagen from "../assets/logo.svg";
+import logoImagenS from "../assets/SALQUALIS.svg";
+import "../styles/layout.css";
+import "../styles/base.css";
+import "../styles/pages.css";
+import { ClientRouter } from "astro:transitions";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Consultoría Web</title>
+    <head>
+        <!-- //Pasarlas como props?? -->
+        <meta charset="UTF-8" />
+        <title>Consultoría Sanitaria Salqualis</title>
+        <meta name="description" content="Consultoría Salqualis de servicios sanitarios"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+        
+        <!-- /*LIBRERIAS EXTERNAS*/ -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <ClientRouter />
+    </head>
+    <body>
+        <header>
+            <nav aria-label="Barra de navegación principal">
+                <img class="logo-img" src={logoImagenS.src} alt="Logo optimizado" />
+                <ul>
+                    <li>
+                        <a class="nav-link active" href="/">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/services">Servicios</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/team">El Equipo</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/accreditation">Acreditación JCI</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/contact">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <ClientRouter />
-</head>
-<body>
-    <header style="background: #eee; padding: 20px;">
-        <nav>
-            <img src={logoImagen.src} alt="Logo optimizado" />
-            <ul>
-                <li>
-                    <a href="/">Inicio</a> 
-                </li>
-                <li>
-                    <a href="/about-us">Sobre nosotros</a>
-                </li>
-                <li>
-                    <a href="/">Servicios</a> 
-                </li>
-                <li>
-                    <a href="/team">Nuestro Equipo</a> 
-                </li>
-                <li>
-                    <a href="/contact">Contacto</a> 
-                </li>
-            </ul>
-        </nav>
-    </header>
+        <main>
+            <slot />
+        </main>
 
-    <main>
-        <slot />
-    </main>
+        <footer>
+            <p>© 2024 Mi Consultoría Web</p>
+        </footer>
 
-    <footer style="margin-top: 50px; border-top: 1px solid #ccc;">
-        <p>© 2024 Mi Consultoría Web</p>
-    </footer>
-</body>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script src="../scripts/layout.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="../scripts/pages.js"></script>
+        <script src="../scripts/map.js"></script>
+    </body>
 </html>
+
+<script>
+    // Astro se encarga de buscar en src/scripts/
+    import { initSwiper } from "../scripts/pages.js";
+
+    // Ejecutar
+    initSwiper();
+
+    // TIP: Si usas las transiciones de página de Astro (View Transitions)
+    document.addEventListener("astro:page-load", () => {
+        initSwiper();
+    });
+</script>

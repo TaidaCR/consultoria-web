@@ -1,8 +1,161 @@
 ---
-import LayoutPrincipal from '../layouts/base-layout.astro';
+import LayoutPrincipal from "../layouts/base-layout.astro";
+import img1 from "../assets/img-home1.webp";
+import img2 from "../assets/img-home2.webp";
+import img3 from "../assets/img-home3.webp";
+import img4 from "../assets/img-home4.webp";
+import img5 from "../assets/img-home4.jpg";
 ---
 
 <LayoutPrincipal>
-    <h1>Esta es la página de INICIO</h1>
-    <p>Todo esto aparece dentro del layout, entre el header y el footer.</p>
+    <section class="home-section">
+        <article class="jci-article">
+            <div>
+                <!-- <img src={img1.src}/> -->
+                <h1>
+                    Consultoría Salqualis: Expertos en Acreditación JCI en Chile
+                    y España.
+                </h1>
+                <p>
+                    Somos <strong
+                        >especialistas en la implementación de estándares de
+                        calidad <a
+                            href="https://www.jointcommission.org/en"
+                            target="_blank">Joint Commission International</a
+                        ></strong
+                    > desarrolló en 1996 la para organizaciones de salud que buscan
+                    la excelencia operativa y la seguridad del paciente.
+                </p>
+                <p>
+                    Consultoría Salqualis cuenta con más de 25 años de
+                    experiencia brindando soporte y consultoría a centros
+                    hospitalarios, ambulatorios y de atención primaria.
+                </p>
+            </div>
+        </article>
+        <article class="map-article">
+            <h1>Centros de Excelencia que avalan nuestra trayectoria</h1>
+            <p>
+                Con más de 25 años de trayectoria en formación y soporte
+                especializado, nuestra mayor carta de presentación es la
+                confianza de los numerosos hospitales que nos eligen para
+                acompañarles hasta el éxito de su acreditación inicial y en sus
+                sucesivos procesos de reacreditación. Esta sólida experiencia,
+                avalada por la fidelidad de directivos y profesionales de la
+                salud, constituye nuestro mejor salvoconducto y un testimonio
+                real del compromiso continuo que mantenemos con la excelencia de
+                cada organización.
+            </p>
+            <p>
+                Desde 1999, 46 centros sanitarios han obtenido su acreditación
+                JCI bajo nuestra guía y soporte experto. Hemos trabajado con
+                algunas de las instituciones sanitarias más prestigiosas a nivel
+                internacional, incluyendo entre otros:
+            </p>
+
+            <ul>
+                <li>Hospital Universitario Gregorio Marañón (Madrid)</li>
+                <li>Clínica Universitaria de Navarra (Pamplona y Madrid)</li>
+                <li>Fundación Jiménez Díaz - Grupo Quirón (Madrid)</li>
+                <li>Hospital Universitario Costa del Sol (Marbella)</li>
+                <li>Hospital Universitario de Cruces (Vizcaya)</li>
+                <li>Hospital Quirón Pozuelo (Madrid)</li>
+                <li>Hospital Vithas Xanit Internacional (Málaga)</li>
+                <li>Hospital Clínica Dexeus - Grupo Quirón (Barcelona)</li>
+                <li>Clínica Reina Sofía - Grupo Keralty (Colombia)</li>
+                <li>Hospital Alberto Barton - Grupo IBT (Perú)</li>
+            </ul>
+
+            <div class="map-container">
+            <div id="map" style="height: 500px; width: 80%;"></div>
+
+            </div>
+        </article>
+        <article class="accredit-article">
+            <div>
+                <div>
+                    <h2>
+                        Transformamos Centros Sanitarios hacia la Excelencia
+                    </h2>
+                    <p>
+                        Con el respaldo de una trayectoria internacional,
+                        ayudamos a clínicas y hospitales en Chile a cumplir con
+                        los exigentes estándares del modelo JCI. Las
+                        Organizaciones que ya han realizado este salto con éxito
+                        destacan la mejora introducida en sus centros, el
+                        aumento de la satisfacción de los clientes y el reto que
+                        ha supuesto para sus profesionales.
+                    </p>
+                    <img src={img2.src} />
+                </div>
+                <div>
+                    <img src={img4.src} />
+
+                    <h2>
+                        Por qué elegir a Salqualis para su Acreditación de
+                        Calidad
+                    </h2>
+                    <p>
+                        Somos una boutique de consultoría de alta dirección.
+                        Nuestro equipo de élite ofrece un acompañamiento cercano
+                        y experto para asegurar que su institución alcance el
+                        Sello de Oro de la calidad sanitaria internacional. Te
+                        invitamos a conocer a <a href="/team">nuestro equipo de profesionales.</a>
+                    </p>
+                    <a class="btn-primary" href="/contact">Solicita una
+                        valoración inicial y te ayudamos a orientar tu proyecto.</a>
+                </div>
+            </div>
+        </article>
+        <article class="accredit">
+            <h2>PRUEBA</h2>
+            <div>
+                <div>
+                    <p>
+                        Los centros sanitarios que deciden dar el paso adelante
+                        para la obtención de la Acreditación de calidad ofrecida
+                        a través de J.C.I., aceptan que ello supone asumir
+                        cambios trascendentales en la Organización para poder
+                        cumplir con los exigentes requisitos establecidos en los
+                        diferentes estándares del modelo JCI.
+                    </p>
+                    <p>
+                        Esta decisión no es fácil porque requiere tiempo y
+                        esfuerzo, pero JCI ofrece la fortaleza de saber que es
+                        la Acreditación de mayor valor y peso entre los
+                        profesionales porque es específicamente sanitaria, con
+                        una enorme experiencia acumulada y con altos estándares
+                        de prestigio social y entre las compañías aseguradoras
+                        internacionales. Las Organizaciones que ya han realizado
+                        este salto con éxito destacan la mejora introducida en
+                        sus centros, el aumento de la satisfacción de los
+                        clientes y el reto que ha supuesto para sus
+                        profesionales.
+                    </p>
+                    <img src={img4.src} />
+                </div>
+                <div>
+                    <img src={img2.src} />
+                    <p>
+                        Este tránsito no es sencillo, requiere un esfuerzo
+                        coordinado de toda la organización, supone altos niveles
+                        de motivación profesional y apoyo por parte del
+                        liderazgo. También supone aceptar que el proceso es
+                        largo, puede alcanzar incluso dos años de trabajo
+                        continuado y sobre todo requiere de un soporte experto
+                        constante.
+                    </p>
+                    <h2>¿Cuál es el papel de Salqualis?</h2>
+                    <p>
+                        Queremos acompañarle en ese proceso de soporte y brindar
+                        la ayuda necesaria para alcanzar su éxito como
+                        Organización, seguirá requiriendo su importante
+                        dedicación, pero tendrá una tutoría y guía para avanzar
+                        más rápido y sobre todo más seguro y con decisiones
+                        certeras.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
 </LayoutPrincipal>

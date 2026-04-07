@@ -1,90 +1,215 @@
 ---
-import LayoutPrincipal from '../layouts/base-layout.astro';
-import DiegoImagen from '../assets/Diego-Garcia.jpeg';
+import LayoutPrincipal from "../layouts/base-layout.astro";
+import DiegoImagen from "../assets/Diego-Garcia.jpeg";
+import step from "../assets/stethoscope.svg";
+import pill from "../assets/pill.svg";
+import helmet from "../assets/helmet.svg";
 ---
 
 <LayoutPrincipal>
-    <section aria-labelledby="titulo-equipo">
-        <h1 id="titulo-equipo">Nuestro Equipo</h1>
-        
-        <div class="team-grid" role="list">
-    
-            <article role="listitem">
-                <figure>
-                    <img src={DiegoImagen.src} alt=""/>
-                </figure>
-                <div class="text-container">
-                    <h2>José A. García Ruiz</h2>
-                    <p class="academic-title"><strong>Licenciado en Medicina y Cirugía.</strong></p>
-                    <p>Consultor experto en gestión sanitaria y metodología JCI con amplia trayectoria en dirección médica y acreditación de centros hospitalarios de alta complejidad.</p>
-                </div>
-            </article>
-    
-            <article role="listitem">
-                <figure>
-                    <img src={DiegoImagen.src} alt=""/>
-                </figure>
-                <div class="text-container">
-                    <h2>Carmen Cortes Martínez</h2>
-                    <p class="academic-title"><strong>Diplomada en Enfermería.</strong></p>
-                    <p>Especialista en seguridad del paciente y mejora de procesos clínicos. Experta en la implementación de estándares de enfermería y gestión de riesgos en el entorno sanitario.</p>
-                </div>
-            </article>
-            <article role="listitem">
-                <figure>
-                    <img src={DiegoImagen.src} alt=""/>
-                </figure>
-                <div class="text-container">
-                    <h2>Diego García Cortés</h2>
-                    <p class="academic-title"><strong>Grado en Farmacia y Especialista en Farmacia Hospitalaria Clínica.</strong></p>
-                    <p>Experto en gestión del uso de la medicación bajo el modelo JCI y referente en seguridad del paciente. Cuenta con una amplia trayectoria internacional en el NHS del Reino Unido y experiencia clínica en el Hospital Costa del Sol.</p>
-                </div>
-            </article>
-    
-            <article role="listitem">
-                <figure>
-                    <img src={DiegoImagen.src} alt=""/>
-                </figure>
-                <div class="text-container">
-                    <h2>Juan Ignacio Barrachina</h2>
-                    <p class="academic-title"><strong>Licenciado en Medicina y Cirugía.</strong></p>
-                    <p>Especialista en Medicina Preventiva y Salud Pública. Experto en control de infecciones, epidemiología hospitalaria y gestión de la calidad asistencial.</p>
-                </div>
-            </article>
-    
-            <article role="listitem">
-                <figure>
-                    <img src={DiegoImagen.src} alt=""/>
-                </figure>
-                <div class="text-container">
-                    <h2>Carlos Arribas López</h2>
-                    <p class="academic-title"><strong>Licenciado en Medicina y Cirugía.</strong></p>
-                    <p>Consultor con amplia experiencia en la gestión de servicios centrales, sistemas de información clínica y optimización de recursos en procesos de acreditación internacional.</p>
-                </div>
-            </article>
-    
-            <article role="listitem">
-                <figure>
-                    <img src={DiegoImagen.src} alt=""/>
-                </figure>
-                <div class="text-container">
-                    <h2>Gema de la Sierra del Barrio</h2>
-                    <p class="academic-title"><strong>Licenciada en Farmacia.</strong></p>
-                    <p>Especialista en gestión farmacéutica hospitalaria, seguridad en el manejo de la medicación y cumplimiento de estándares de Farmacia para la JCI.</p>
-                </div>
-            </article>
-    
-            <article role="listitem">
-                <figure>
-                    <img src={DiegoImagen.src} alt=""/>
-                </figure>
-                <div class="text-container">
-                    <h2>José J. Fernández Maira</h2>
-                    <p class="academic-title"><strong>Ingeniero Industrial.</strong></p>
-                    <p>Experto en gestión de infraestructuras, seguridad de las instalaciones (FMS) y mantenimiento preventivo en el ámbito hospitalario bajo normativas internacionales.</p>
-                </div>
-            </article>
-    
+    <section aria-labelledby="titulo-equipo" class="team-section">
+        <div>
+  <h1 id="titulo-equipo">
+                Liderazgo y Experiencia en Gestión Sanitaria
+            </h1>
+            <h2>Socios Fundadores</h2>
+            <div class="team-grid main" role="list">
+                <article role="listitem">
+                    <figure>
+                        <img src={DiegoImagen.src} alt="José A. García Ruiz" />
+                    </figure>
+                    <div class="text-container">
+                        <h3>José Antonio García Ruiz</h3>
+                        <p class="academic-title">
+                            <strong>Socio Director</strong>
+                        </p>
+                        <p>
+                            Licenciado en Medicina y Consultor Surveyor Senior
+                            de JCI (FAD). Ha participado en la acreditación de
+                            más de 150 centros sanitarios y fue Director Gerente
+                            del Hospital Costa del Sol.
+                        </p>
+                    </div>
+                </article>
+
+                <article role="listitem">
+                    <figure>
+                        <img
+                            src={DiegoImagen.src}
+                            alt="Carmen Cortes Martínez"
+                        />
+                    </figure>
+                    <div class="text-container">
+                        <h3>Dra. Carmen Cortes Martínez</h3>
+                        <p class="academic-title">
+                            <strong>Socia Consultora</strong>
+                        </p>
+                        <p>
+                            Doctora en Medicina y Especialista en Medicina
+                            Preventiva y Salud Pública. Ha sido Directora
+                            Gerente de hospitales universitarios y referente en
+                            seguridad del paciente y control de infecciones en
+                            más de 40 centros.
+                        </p>
+                    </div>
+                </article>
+            </div>
+                <h2>Consultores Expertos y Colaboradores</h2>
+
+            <div class="team-grid employees">
+                <article role="listitem">
+                    <h3>Gestión de Infraestructuras y Tecnología</h3>
+                    <ul>
+                        <li>
+                            <img src={helmet.src} class="helmet" alt="" /> Salvador Rodríguez Pérez
+                        </li>
+                        <li>
+                            <img src={step.src} alt="" /> Norberto Morales Ballesteros
+                        </li>
+                    </ul>
+                </article>
+
+                <article role="listitem">
+                    <h3>Seguridad Clínica y Procesos</h3>
+                    <ul>
+                        <li>
+                            <img src={step.src} alt="" /> Dra. Victoria Uribe Pérez
+                        </li>
+                        <li>
+                            <img src={pill.src} class="pill" alt="" /> Francisco Pozo Muñoz
+                        </li>
+                        <li>
+                            <img src={step.src} alt="" /> Dr. Enrique Juez Rojo
+                        </li>
+                    </ul>
+                </article>
+
+                <article role="listitem">
+                    <h3>Gestión de Medicación y Laboratorio</h3>
+                    <ul>
+                        <li>
+                            <img src={pill.src} class="pill" alt="" /> Diego García Cortés
+                        </li>
+                        <li>
+                            <img src={step.src} alt="" /> Dr. Carlos González Hermoso
+                        </li>
+                    </ul>
+                </article>
+
+                <article role="listitem">
+                    <h3>Cuidados y Gestión Operativa</h3>
+                    <ul>
+                        <li>
+                            <img src={helmet.src} class="helmet" alt="" /> José Carlos Martín Santos
+                        </li>
+                        <li>
+                            <img src={step.src} alt="" /> Juan Ignacio Barrachina
+                        </li>
+                    </ul>
+                </article>
+
+                <article role="listitem">
+                    <h3>Calidad Local (Chile)</h3>
+                    <ul>
+                        <li>
+                            <img src={step.src} alt="" /> Denisse Gómez Chaparro
+                        </li>
+                    </ul>
+                </article>
+        </div>
+          
+            <div class="team-grid employees">
+                <article role="listitem">
+                    <figure>
+                        <img src={DiegoImagen.src} alt="Victoria Uribe Pérez" />
+                    </figure>
+                    <div class="text-container">
+                        <h2>Victoria Uribe Pérez</h2>
+                        <p class="academic-title">
+                            <strong
+                                >Licenciada en Medicina y Especialista en
+                                Medicina Interna.</strong
+                            >
+                        </p>
+                        <p>
+                            Consultora JCI experta en evaluación de pacientes,
+                            metas de seguridad y gestión de medicación. Cuenta
+                            con amplia experiencia clínica en los hospitales
+                            Costa del Sol, Quirón y Vithas.
+                        </p>
+                    </div>
+                </article>
+
+                <article role="listitem">
+                    <figure>
+                        <img
+                            src={DiegoImagen.src}
+                            alt="Juan Ignacio Barrachina"
+                        />
+                    </figure>
+                    <div class="text-container">
+                        <h2>Juan Ignacio Barrachina</h2>
+                        <p class="academic-title">
+                            <strong
+                                >Licenciado en Medicina y Diplomado en Gestión
+                                Hospitalaria (ESADE).</strong
+                            >
+                        </p>
+                        <p>
+                            Consultor senior experto en planificación
+                            estratégica y reorganización de procesos
+                            asistenciales. Ha liderado proyectos de gestión
+                            clínica y análisis de casuística en más de 50
+                            centros de Europa y Latinoamérica.
+                        </p>
+                    </div>
+                </article>
+
+                <article role="listitem">
+                    <figure>
+                        <img src={DiegoImagen.src} alt="Diego García Cortés" />
+                    </figure>
+                    <div class="text-container">
+                        <h2>Diego García Cortés</h2>
+                        <p class="academic-title">
+                            <strong
+                                >Grado en Farmacia y Especialista en Farmacia
+                                Hospitalaria.</strong
+                            >
+                        </p>
+                        <p>
+                            Referente en el modelo de gestión y uso seguro de la
+                            medicación JCI. Con experiencia internacional en el
+                            NHS del Reino Unido, se especializa en seguridad del
+                            paciente y revisión de procesos asistenciales.
+                        </p>
+                    </div>
+                </article>
+
+                <article role="listitem">
+                    <figure>
+                        <img
+                            src={DiegoImagen.src}
+                            alt="Salvador Rodríguez Pérez"
+                        />
+                    </figure>
+                    <div class="text-container">
+                        <h2>Salvador Rodríguez Pérez</h2>
+                        <p class="academic-title">
+                            <strong
+                                >Ingeniero Superior Industrial (ICAI).</strong
+                            >
+                        </p>
+                        <p>
+                            Experto en Facility Management y seguridad de
+                            instalaciones hospitalarias. Ha sido Director de
+                            Servicios Generales del Hospital Costa del Sol y es
+                            referente en gestión de tecnologías sanitarias e
+                            infraestructuras.
+                        </p>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 </LayoutPrincipal>

@@ -1,7 +1,284 @@
 ---
-import LayoutPrincipal from '../layouts/base-layout.astro';
+import LayoutPrincipal from "../layouts/base-layout.astro";
+import cArrow from "../assets/circled-arrow.svg";
+import img2 from "../assets/img-home2.webp";
+import img3 from "../assets/img-home3.webp";
 ---
 
 <LayoutPrincipal>
-    <h1>TEAM</h1>
+    <section class="offert-section">
+        <article class="top-article">
+            <h1>
+                Servicios de Consultoría para la Acreditación Joint Commission
+                International.
+            </h1>
+            <p>
+                Consultoría Salqualis tiene una amplia experiencia en soporte y
+                consultoría de centros hospitalarios, así como en programas
+                específicos de gestión y formación para hospitales, centros
+                ambulatorios y centros de atención primaria.
+            </p>
+            <ul class="list-border">
+                <li>
+                    <strong>Formación y entrenamiento al Liderazgo:</strong> Capacitación
+                    específica para directivos y staff profesional en el modelo JCI.
+                </li>
+                <li>
+                    <strong>Auditoría Simulada (Mock Survey):</strong> Realizamos
+                    un diagnóstico inicial y ensayos generales con la metodología
+                    exacta de JCI (trazadores clínicos y de sistemas) para conocer
+                    su porcentaje de cumplimiento real.
+                </li>
+                <li>
+                    <strong>Soporte y Tutoría Personalizada:</strong> Consultoría
+                    tutelada hasta la auditoría final. Ofrecemos tres escenarios (Estratégico,
+                    Moderado o Intenso) adaptados a los recursos internos de su organización.
+                </li>
+            </ul>
+        </article>
+
+        <article class="bottom-article">
+            <div>
+                <div>
+                    <img src={img2.src} />
+                    <h2>El Desafío de la Acreditación en Chile</h2>
+                    <p>
+                        En el actual escenario de salud en Chile, la
+                        acreditación JCI permite a las clínicas y hospitales
+                        públicos distinguirse por su compromiso con la
+                        excelencia. El proceso es riguroso exigiendo trabajo
+                        coordinado y, requiriendo un soporte experto y constante
+                        para asegurar el éxito en la evaluación final.
+                    </p>
+                </div>
+                <div>
+                    <img src={img3.src} />
+                    <h2>¿Cómo ayuda Salqualis en este proceso?</h2>
+                    <p>
+                        Como consultora especializada con 25 años de
+                        experiencia, Salqualis actúa como el guía estratégico
+                        que su organización necesita. Brindamos la tutoría
+                        necesaria para avanzar de forma segura, evitando errores
+                        y optimizando los recursos para alcanzar el Sello de Oro
+                        con decisiones certeras.
+                    </p>
+                </div>
+            </div>
+            <a class="btn-primary" href="/contact"
+            >Contacta ahora con Consultoria Salqualis para más información</a
+        >
+        </article>
+        
+    </section>
+    <section class="pruebas-section">
+        <h2>PRUEBA</h2>
+      <article>
+        
+            <div>
+                <img src={img2.src} />
+                <p>
+                    Desarrollamos los proyectos de consultoría Técnica y
+                    Formación a través de:
+                </p>
+                <ul>
+                    <li>
+                        <img src={cArrow.src} /> Medios propios constituidos por sus
+                        socios fundadores.
+                    </li>
+                    <li>
+                        <img src={cArrow.src} />Grupo importante de expertos
+                        colaboradores que desarrollan programas específicos de
+                        actuación en base a su experiencia y pericia en área
+                        clínica, gestión hospitalaria y acreditación en calidad
+                        asistencial.
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img src={img3.src} />
+                <p>
+                    Nuestra asistencia técnica ofertada se puede configurar en
+                    dos áreas:
+                </p>
+                <ul>
+                    <li>
+                        <img src={cArrow.src} />Consultoría sobre el modelo de
+                        la Acreditación de Joint Commission Internacional
+                        (J.C.I), facilitando la adaptación de los procesos
+                        asistenciales y cumplimiento de estándares de JCI.
+                    </li>
+                    <li>
+                        <img src={cArrow.src} />Área de consultoría y formación
+                        en calidad y procesos asitenciales y de soporte.
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <p>
+            ACREDITACIÓN J.C.I.
+            <ul>
+                <li>Ahorrar tiempo para llegar antes</li>
+                <li>Estimular a sus profesionales</li>
+                <li>Ayudarle a Liderar el cambio</li>
+                <li>Cambiar el enfoque de calidad de su organización</li>
+                <li>Conseguir una posición competitiva privilegiada</li>
+            </ul>
+        </p>
+        <p>
+            Ofrecemos una propuesta de trabajo adaptada a las necesidades
+            especificas de cada organización:
+            <ul>
+                <li>En intensidad de apoyo</li>
+                <li>En tiempo de intervención</li>
+                <li>En evaluación de avances</li>
+                <li>En modelo de comunicación</li>
+            </ul>
+        </p>
+    </section>
+    <section class="fases-section">
+        <h2>Metodología</h2>
+        <div>
+            <article>
+                <h3>Formación modelo J.C.I.</h3>
+                <ul>
+                    <li>Capacitación de directivos</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Auditoría simulada</h3>
+                <ul>
+                    <li>Simulación de prueba</li>
+                    <li>Diagnóstico inicial</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Soporte y tutoría</h3>
+                <ul>
+                    <li>Consultoría tutelada</li>
+                    <li>Soporte periódico hasta el final</li>
+                    <li>Ensayo general previo</li>
+                </ul>
+            </article>
+        </div>
+        <div>
+            <article>
+                <span>01</span>
+                <h3>Formación y liderazgo</h3>
+                <p>
+                    Formación y entrenamiento al Liderazgo y equipos internos de
+                    trabajo.
+                </p>
+            </article>
+
+            <article>
+                <span>02</span>
+                <h3>Diagnóstico inicial</h3>
+                <p>
+                    Foto de partida: Realización de una auditoría simulada de
+                    prueba “mock survey” para establecer el % de cumplimiento
+                    respecto de los estándares de JCI.
+                </p>
+            </article>
+
+            <article>
+                <span>03</span>
+                <h3>Plan de Acción</h3>
+                <p>
+                    Desarrollo profundo de la consultoría: Visitas periódicas y
+                    realización de trazadores clínicos y de sistemas para una
+                    asimilación cómoda del modelo.
+                </p>
+            </article>
+
+            <article>
+                <span>04</span>
+                <h3>Implementación y Tutoría</h3>
+                <p>
+                    Realización de un ensayo general de auditoría para asignar
+                    roles y simular las entrevistas en las semanas previas a la
+                    evaluación formal.
+                </p>
+            </article>
+
+            <article>
+                <span>05</span>
+                <h3>Evaluación Final</h3>
+                <p>
+                    Acompañamiento de un miembro del equipo durante los días de
+                    la consultoría formal de acreditación (opcional).
+                </p>
+            </article>
+        </div>
+    </section>
+    <section class="scenarios-section">
+        <div>
+            <div class="swiper scenarios-swiper">
+                <div class="swiper-wrapper">
+                    <article class="swiper-slide">
+                        <p>
+                            <strong>Escenario 1:</strong>En el caso de
+                            disponibilidad de un grupo de trabajo interno
+                            importante, buena formación en metodología de
+                            calidad y seguridad, así como una fuerte implicación
+                            del liderazgo y mandos intermedios, nuestra
+                            propuesta es:
+                        </p>
+                        <p>
+                            <strong
+                                >“Bajo tutelaje, educación rápida, diagnóstico
+                                inicial con informe de situación de partida y un
+                                apoyo de consultoría más liviano, aunque
+                                conlleva mayor intensidad de trabajo interno en
+                                el centro”.</strong
+                            >
+                        </p>
+                    </article>
+                    <article class="swiper-slide">
+                        <p>
+                            <strong>Escenario 2:</strong> En el caso de escasa disponibilidad
+                            de personas para trabajo interno, aunque con una fuerte
+                            implicación del liderazgo y en menor medida del resto
+                            de estructura, nuestra propuesta es:
+                        </p>
+                        <p>
+                            <strong
+                                >“Apoyar con un modelo de consultoría “llave en
+                                mano” con un intenso tutelaje, diagnóstico
+                                inicial con informe de situación de partida y un
+                                apoyo de consultoría mucho más profundo con una
+                                mayor dedicación de personal de Consultoría
+                                Salqualis al proyecto y con una presencia
+                                importante en el hospital para facilitar y
+                                apoyar la implantación de políticas y adecuadas
+                                prácticas de trabajo”.</strong
+                            >
+                        </p>
+                    </article>
+                    <article class="swiper-slide">
+                        <p>
+                            <strong>Escenario 3 Mixto:</strong> En el caso de situaciones
+                            no claramente definidas hacia ninguno de los dos extremos
+                            anteriores nuestra propuesta sería:
+                        </p>
+                        <p>
+                            <strong
+                                >“Apoyar con un modelo de consultoría con
+                                tutelaje adaptativo, diagnóstico inicial con
+                                informe de situación de partida y un apoyo de
+                                consultoría muy variable con una dedicación de
+                                personal específico de C. Salqualis al proyecto
+                                para facilitar y apoyar la implantación de
+                                políticas y adecuadas prácticas de trabajo”.</strong
+                            >
+                        </p>
+                    </article>
+                </div>
+            </div>
+            
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
 </LayoutPrincipal>
