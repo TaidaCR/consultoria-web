@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+Sitemap: https://taidacr.github.io/consultoria-web/sitemap-index.xml

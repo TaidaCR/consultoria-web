@@ -1,10 +1,10 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
-// Exportamos la función para poder llamarla
+//swiper metodologia
 export function initSwiper() {
-    const swiper = new Swiper('.scenarios-swiper', {
-        modules: [Navigation], // ¡Importante en versiones nuevas!
+    const swiper = new Swiper('.metodology-swiper', {
+        modules: [Navigation],
         slidesPerView: 3,
         spaceBetween: 20,
         navigation: {
@@ -22,3 +22,12 @@ export function initSwiper() {
         }
     });
 }
+
+//Giro flip-cards
+document.addEventListener("click", (e) => {
+    if (e.target.closest(".flip-card-front")) {
+        e.target.closest(".flip-card-inner").classList.add("rotated")
+    } else if (e.target.closest(".flip-card-back")) {
+        e.target.closest(".flip-card-inner").classList.remove("rotated")
+    }
+})

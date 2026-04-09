@@ -1,11 +1,12 @@
 ---
 // LayoutPrincipal.astro
-import logoImagen from "../assets/logo.svg";
+import logoMobile from "../../public/favicon/favicon.svg";
 import logoImagenS from "../assets/SALQUALIS.svg";
 import "../styles/layout.css";
 import "../styles/base.css";
 import "../styles/pages.css";
 import { ClientRouter } from "astro:transitions";
+import burgerMenu from "../assets/icon/burger-menu.svg"
 ---
 
 <!doctype html>
@@ -13,10 +14,28 @@ import { ClientRouter } from "astro:transitions";
     <head>
         <!-- //Pasarlas como props?? -->
         <meta charset="UTF-8" />
-        <title>Consultoría Sanitaria Salqualis</title>
-        <meta name="description" content="Consultoría Salqualis de servicios sanitarios"/>
+        <title>Consultoría Salqualis | Expertos en Calidad y Acreditación Sanitaria</title>
+        <meta name="description" content="En Consultoría Salqualis somos especialistas en acreditación sanitaria JCI (Joint Commision International) y gestión de Calidad. Ayudamos a tu centro sanitario a lograr la excelencia operativa"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow" />
 
+        <!-- FAVICON -->
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+        <link rel="shortcut icon" href="favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+
+        <!-- Open Graph / LinkedIn / WhatsApp / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://taidacr.github.io/consultoria-web/" />
+        <meta property="og:title" content="Consultoría Salqualis | Acreditación y Gestión Sanitaria" />
+        <meta property="og:description" content="Especialistas en procesos de acreditación JCI y optimización de calidad para centros sanitarios. Logra la excelencia operativa con Salqualis." />
+        <meta property="og:image" content="https://taidacr.github.io/consultoria-web/favicon/og-image.png" />
+        <meta property="og:site_name" content="Salqualis" />
+        <meta property="og:locale" content="es_ES" />
+
+        <!-- FUENTE -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
@@ -28,8 +47,11 @@ import { ClientRouter } from "astro:transitions";
     </head>
     <body>
         <header>
-            <nav aria-label="Barra de navegación principal">
-                <img class="logo-img" src={logoImagenS.src} alt="Logo optimizado" />
+            <nav class="nav-bar" aria-label="Barra de navegación principal">
+                <img class="logo-img-desktop" src={logoImagenS.src} alt="Logo versión desktop" />
+                <img class="logo-img-mobile" src={logoMobile.src} alt="Logo versión móvil" />
+                <label for="burguer-menu" class="burger-label"><img src={burgerMenu.src}/></label>
+                <input type="checkbox" id="burguer-menu">
                 <ul>
                     <li>
                         <a class="nav-link active" href="/consultoria-web/">Inicio</a>
@@ -41,11 +63,7 @@ import { ClientRouter } from "astro:transitions";
                         <a class="nav-link" href="/consultoria-web/team">El Equipo</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/consultoria-web/accreditation">Acreditación JCI</a>
-                    </li>
-                    <li>
                         <a class="nav-link" href="/consultoria-web/contact">Contacto</a>
-                        
                     </li>
                 </ul>
             </nav>
@@ -56,7 +74,7 @@ import { ClientRouter } from "astro:transitions";
         </main>
 
         <footer>
-            <p>© 2024 Mi Consultoría Web</p>
+            <p>© 2026 Consultoria sanitaria Salqualis</p>
         </footer>
 
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -69,13 +87,10 @@ import { ClientRouter } from "astro:transitions";
 </html>
 
 <script>
-    // Astro se encarga de buscar en src/scripts/
     import { initSwiper } from "../scripts/pages.js";
 
-    // Ejecutar
     initSwiper();
 
-    // TIP: Si usas las transiciones de página de Astro (View Transitions)
     document.addEventListener("astro:page-load", () => {
         initSwiper();
     });

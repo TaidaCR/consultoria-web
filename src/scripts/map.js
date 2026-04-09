@@ -1,23 +1,19 @@
 //MAPA
-
 document.addEventListener('astro:page-load', () => {
     const mapContainer = document.getElementById('map');
 
     if (mapContainer) {
-        // 1. Inicializar el mapa (centrado en el Atlántico para ver ambos continentes)
         const map = L.map('map', {
-            minZoom: 2,           // No deja alejar tanto el mapa como para que se vea minúsculo
-            worldCopyJump: true,  // Si cruzas el límite del mundo, te "salta" al siguiente suavemente
+            minZoom: 2,
+            worldCopyJump: true,
             noWrap: true
         }).setView([20, -40], 3);
 
-        // 2. Cargar la capa visual (estilo claro y profesional)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap'
         }).addTo(map);
 
-        // 3. Crear una lista de hospitales (Data de tus diapositivas)
         const hospitales = [
             // --- PERÚ ---
             { nombre: "Hospital Barton Grupo Ibt", ubicacion: [-12.052, -77.128], pais: "Perú", ciudad: "Callao", url: "https://www.hospitalbarton.com.pe/" },
@@ -66,7 +62,6 @@ document.addEventListener('astro:page-load', () => {
             { nombre: "Hospital Vithas Madrid Aravaca", ubicacion: [40.457, -3.791], pais: "España", ciudad: "Madrid", url: "https://vithas.es/centro/vithas-madrid-aravaca/" }
         ];
 
-        // 4. Dibujar los marcadores en el mapa
         hospitales.forEach(hosp => {
             L.marker(hosp.ubicacion)
                 .addTo(map)

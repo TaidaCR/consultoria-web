@@ -11,9 +11,18 @@ body>header {
         display: flex;
         height: 60px;
 
-        .logo-img{
-            max-width:200px;
-            margin-left:20px;
+        .logo-img-desktop {
+            max-width: 200px;
+            margin-left: 20px;
+        }
+
+        .logo-img-mobile {
+            display: none;
+        }
+
+        #burguer-menu,
+        label[for="burguer-menu"] {
+            display: none;
         }
 
         ul {
@@ -25,7 +34,7 @@ body>header {
 
             li a {
                 color: black;
-                font-weight:400;
+                font-weight: 400;
 
                 &.active {
                     font-weight: 700;
@@ -40,4 +49,48 @@ footer {
     padding: 10px;
     text-align: center;
     border-top: 1px solid #ccc;
+}
+
+@media(max-width:1024px) {
+    body > header nav {
+        width: 100%;
+    justify-content: space-between;
+    max-width: 100%;
+    flex-direction: row-reverse;
+        label[for="burguer-menu"] {
+            display: block;
+        }
+
+        .logo-img-desktop {
+            display: none;
+        }
+
+        .logo-img-mobile {
+            display: flex;
+        }
+
+         .burger-label{
+            transition: ease .5s;
+        }
+
+        .burger-label.turnRound{
+            transform: rotate(90deg);
+        }
+
+        ul{
+            flex-direction:column;
+            position:absolute;
+            top:60px;
+            background-color:#eeeeeef7;
+            width:100%;
+            left:0;
+            padding:30px;
+            gap:35px;
+            display:none;
+        }
+
+        input:checked+ul{
+            display:flex;
+        }
+    }
 }
