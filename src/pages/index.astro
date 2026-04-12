@@ -1,29 +1,42 @@
 ---
-import LayoutPrincipal from "../layouts/base-layout.astro";
-import img10 from "../assets/img10.webp";
-import img9 from "../assets/img9.webp";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<LayoutPrincipal>
+<Layout>
     <section class="jci-article">
         <div>
             <h1>
-                Consultoría Salqualis: Expertos en Asesoría para la Acreditación
-                JCI
+                Consultoría Salqualis: Expertos en Asesoría para la Acreditación JCI.
             </h1>
-            <p>
-                Somos <strong
-                    >especialistas en la implementación de estándares de calidad <a
-                        href="https://www.jointcommission.org/en"
-                        target="_blank">Joint Commission International</a
-                    ></strong
-                > para organizaciones de salud que buscan la excelencia operativa
-                y la seguridad del paciente.
-            </p>
-            <a href="/consultoria-web/JCIAccreditation" class="btn-primary"
+            <div class="text-container">
+                <p>
+                    Somos <strong
+                        >especialistas en la implementación de estándares de
+                        calidad <a
+                            href="/consultoria-web/JCIAccreditation"
+                            target="_blank">Joint Commission International</a
+                        ></strong
+                    > para organizaciones de salud que buscan la excelencia operativa
+                    y la seguridad del paciente.
+                    <br />
+                    <br />
+                    Además realizamos asesoría a centros sanitarios para el desarrollo
+                    de estrategias trasformadoras, dirigidas a la mejora de la calidad
+                    y seguridad centrada en el paciente.
+                </p>
+                <p>
+                    Consultoría Salqualis cuenta con más de <strong
+                        >25 años de experiencia</strong
+                    > brindando soporte y consultoría a centros hospitalarios, ambulatorios
+                    y de atención primaria para el desarrollo de cambios estratégicos
+                    enfocados a mejora de la calidad y eficiencia.
+                </p>
+            </div>
+
+            <!-- <a href="/consultoria-web/JCIAccreditation" class="btn-primary"
                 >¿Qué es la acreditación JCI?</a
-            >
-            <p>
+            > -->
+            <!-- <p>
                 Además realizamos asesoría a centros sanitarios para el
                 desarrollo de estrategias trasformadoras, dirigidas a la mejora
                 de la calidad y seguridad centrada en el paciente.
@@ -34,10 +47,10 @@ import img9 from "../assets/img9.webp";
                 > brindando soporte y consultoría a centros hospitalarios, ambulatorios
                 y de atención primaria para el desarrollo de cambios estratégicos
                 enfocados a mejora de la calidad y eficiencia.
-            </p>
+            </p> -->
         </div>
     </section>
-    <section class="map-article">
+    <section class="map-article" id="centros-acred">
         <h2>
             Centros de Excelencia acreditados que avalan nuestra trayectoria
         </h2>
@@ -71,25 +84,19 @@ import img9 from "../assets/img9.webp";
             <article>
                 <div></div>
                 <p>
-                    3 hospitales en <strong
-                        >Chile</strong
-                    >
+                    3 hospitales en <strong>Chile</strong>
                 </p>
             </article>
-             <article>
+            <article>
                 <div></div>
                 <p>
-                    2 centros ambulatorios en <strong
-                        >Chile</strong
-                    >
+                    2 centros ambulatorios en <strong>Chile</strong>
                 </p>
             </article>
-             <article>
+            <article>
                 <div></div>
                 <p>
-                    1 centro de atención primaria en <strong
-                        >Chile</strong
-                    >
+                    1 centro de atención primaria en <strong>Chile</strong>
                 </p>
             </article>
 
@@ -102,7 +109,6 @@ import img9 from "../assets/img9.webp";
                 <div></div>
                 <p>10 hospitales en España</p>
             </article>
-
         </div>
     </section>
     <section class="accredit-article">
@@ -122,23 +128,23 @@ import img9 from "../assets/img9.webp";
                     profesionales implicados consiguiendo mejorar la atención a
                     sus pacientes.
                 </p>
-                <p>
+                <!-- <p>
                     Los centros sanitarios que deciden dar el paso adelante para
                     la obtención de la Acreditación de calidad ofrecida a través
                     de J.C.I., aceptan que ello supone asumir cambios
                     trascendentales en la organización para poder cumplir con
                     los exigentes requisitos establecidos en los diferentes
                     estándares del modelo JCI.
-                </p>
+                </p> -->
                 <p>
                     Este tránsito hacia la excelencia requiere un esfuerzo
                     coordinado de toda la organización, la implicación de los
                     profesionales y apoyo por parte del liderazgo.
                 </p>
-                <img src={img10.src} />
+                <img src="assets/img10.webp"/>
             </div>
             <div>
-                <img src={img9.src} />
+                <img src="assets/img9.webp" />
 
                 <p>
                     Los estándares JCI tiene un enfoque muy asistencial lo que
@@ -151,20 +157,21 @@ import img9 from "../assets/img9.webp";
                 <p>
                     Brindamos la tutoría necesaria para avanzar de forma segura,
                     evitando errores y optimizando los recurso, y tomando
-                    decisiones certera.
+                    decisiones certeras.
                 </p>
                 <p>
-                    Es un camino en el que podemos acompañar a los centros hacia
-                    la mejora continua y el cambio cultural de la organización.
-                    Este proceso puede incluir, si así lo decide en centro, el
-                    reto de alcanzar la acreditación JCI.
+                    Es un camino en el que podemos acompañar a los centros
+hacia la mejora continua y el cambio cultural de la
+organización. Este proceso puede incluir, si así lo decide en
+centro, el reto de alcanzar la acreditación JCI.
                 </p>
 
                 <h2>
                     Por qué elegir a Salqualis para su Acreditación de Calidad
                 </h2>
                 <p>
-                    Somos una boutique de consultoría de alta dirección. Nuestro
+                    Somos una consultoría de alta dirección que
+actúa como el guía estratégico que tu organización necesita. Nuestro
                     equipo de élite ofrece un acompañamiento cercano y experto
                     para asegurar que su institución <strong
                         >alcance el Sello de Oro</strong
@@ -173,5 +180,6 @@ import img9 from "../assets/img9.webp";
                 </p>
             </div>
         </div>
+        <a class="btn-primary" href="/consultoria-web/contact/">Solicita más información</a>
     </section>
-</LayoutPrincipal>
+</Layout>

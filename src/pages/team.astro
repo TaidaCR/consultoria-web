@@ -1,12 +1,8 @@
 ---
-import LayoutPrincipal from "../layouts/base-layout.astro";
-import DiegoImagen from "../assets/Diego-Garcia.jpeg";
-import step from "../assets/icon/stethoscope.svg";
-import pill from "../assets/icon/pill.svg";
-import helmet from "../assets/icon/helmet.svg";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<LayoutPrincipal>
+<Layout>
     <section aria-labelledby="titulo-equipo" class="team-section">
         <div>
             <h1 id="titulo-equipo">
@@ -18,12 +14,12 @@ import helmet from "../assets/icon/helmet.svg";
                         <div class="flip-card-front" role="listitem">
                             <figure>
                                 <img
-                                    src={DiegoImagen.src}
+                                    src="assets/Diego-Garcia.jpeg"
                                     alt="José A. García Ruiz"
                                 />
                             </figure>
                             <div class="text-container">
-                                <h2> <img src={step.src} alt="" />Jose Antonio García Ruiz</h2>
+                                <h2> <img src="assets/icon/stethoscope.svg" alt="" />Jose Antonio García Ruiz</h2>
                                 <p class="academic-title">
                                     <strong>Director Consultoria</strong>
                                 </p>
@@ -37,8 +33,7 @@ import helmet from "../assets/icon/helmet.svg";
                         </div>
                         <div
                             class="flip-card-back"
-                            role="listitem"
-                            style="font-size:12px">
+                            role="listitem">
                             <ul>
                                 <li class="title">
                                     <strong>TITULACIÓN DESTACADA</strong>
@@ -133,12 +128,12 @@ import helmet from "../assets/icon/helmet.svg";
                         <div class="flip-card-front" role="listitem">
                             <figure>
                                 <img
-                                    src={DiegoImagen.src}
+                                    src="assets/Diego-Garcia.jpeg"
                                     alt="Victoria Reina"
                                 />
                             </figure>
                             <div class="text-container">
-                                <h2><img src={helmet.src} alt="" />Salvador Rodríguez Pérez</h2>
+                                <h2><img src="assets/icon/helmet.svg" alt="" />Salvador Rodríguez Pérez</h2>
                                 <p class="academic-title">
                                     <strong
                                         >Gestión de Infraestructuras y
@@ -156,8 +151,7 @@ import helmet from "../assets/icon/helmet.svg";
                         </div>
                         <div
                             class="flip-card-back"
-                            role="listitem"
-                            style="font-size:12px">
+                            role="listitem">
                             <ul>
                                 <li class="title">
                                     <strong>TITULACIÓN DESTACADA</strong>
@@ -244,12 +238,12 @@ import helmet from "../assets/icon/helmet.svg";
                         <div class="flip-card-front" role="listitem">
                             <figure>
                                 <img
-                                    src={DiegoImagen.src}
+                                    src="assets/Diego-Garcia.jpeg"
                                     alt="Carmen Cortes Martínez"
                                 />
                             </figure>
                             <div class="text-container">
-                                <h2><img src={step.src} alt="" />Dra. Carmen Cortes Martínez</h2>
+                                <h2><img src="assets/icon/stethoscope.svg" alt="" />Dra. Carmen Cortes Martínez</h2>
                                 <p class="academic-title">
                                     <strong
                                         >Seguridad Clínica y Procesos médicos</strong
@@ -267,8 +261,7 @@ import helmet from "../assets/icon/helmet.svg";
                             </div>
                         </div>
                         <div class="flip-card-back"
-                            role="listitem"
-                            style="font-size:12px">
+                            role="listitem">
                             <ul>
                                 <li class="title">
                                     <strong>TITULACIÓN DESTACADA</strong>
@@ -379,12 +372,12 @@ import helmet from "../assets/icon/helmet.svg";
                         <div class="flip-card-front" role="listitem">
                             <figure>
                                 <img
-                                    src={DiegoImagen.src}
+                                    src="assets/Diego-Garcia.jpeg"
                                     alt="Victoria Uribe Pérez"
                                 />
                             </figure>
                             <div class="text-container">
-                                <h2><img src={step.src} alt="" />Victoria Uribe Pérez</h2>
+                                <h2><img src="assets/icon/stethoscope.svg" alt="" />Victoria Uribe Pérez</h2>
                                 <p class="academic-title">
                                     <strong
                                         >Seguridad Clínica y Procesos médicos</strong
@@ -404,7 +397,6 @@ import helmet from "../assets/icon/helmet.svg";
                         <div
                             class="flip-card-back"
                             role="listitem"
-                            style="font-size:12px"
                         >
                             <ul>
                                 <li class="title">
@@ -480,11 +472,11 @@ import helmet from "../assets/icon/helmet.svg";
                     <div class="flip-card-inner">
                         <div class="flip-card-front" role="listitem">
                             <figure>
-                                <img src={DiegoImagen.src}
+                                <img src="assets/Diego-Garcia.jpeg"
                                     alt="Juan Ignacio Barrachina"/>
                             </figure>
                             <div class="text-container">
-                                <h2><img src={step.src} alt="" />Juan Ignacio Barrachina</h2>
+                                <h2><img src="assets/icon/stethoscope.svg" alt="" />Juan Ignacio Barrachina</h2>
                                 <p class="academic-title">
                                     <strong
                                         >Seguridad Clínica y Procesos médicos</strong
@@ -504,7 +496,6 @@ import helmet from "../assets/icon/helmet.svg";
                         </div>
                         <div class="flip-card-back"
                             role="listitem"
-                            style="font-size:12px"
                         >
                             <ul>
                                 <li class="title">
@@ -605,12 +596,12 @@ import helmet from "../assets/icon/helmet.svg";
                         <div class="flip-card-front" role="listitem">
                             <figure>
                                 <img
-                                    src={DiegoImagen.src}
+                                    src="assets/Diego-Garcia.jpeg"
                                     alt="Diego García Cortés"
                                 />
                             </figure>
                             <div class="text-container">
-                                <h2><img src={pill.src} alt="" />Diego García Cortés</h2>
+                                <h2><img src="assets/icon/pill.svg" alt="" />Diego García Cortés</h2>
                                 <p class="academic-title">
                                     <strong>Gestión de la Medicación</strong>
                                 </p>
@@ -629,7 +620,6 @@ import helmet from "../assets/icon/helmet.svg";
                         <div
                             class="flip-card-back"
                             role="listitem"
-                            style="font-size:12px"
                         >
                             <ul>
                                 <li class="title">
@@ -723,7 +713,7 @@ import helmet from "../assets/icon/helmet.svg";
                         <div class="flip-card-front" role="listitem">
                             <figure>
                                 <img
-                                    src={DiegoImagen.src}
+                                    src="assets/Diego-Garcia.jpeg"
                                     alt="Salvador Rodríguez Pérez"
                                 />
                             </figure>
@@ -745,7 +735,6 @@ import helmet from "../assets/icon/helmet.svg";
                         <div
                             class="flip-card-back"
                             role="listitem"
-                            style="font-size:12px"
                         >
                             <ul>
                                 <li><strong>TITULACIÓN DESTACADA</strong></li>
@@ -778,7 +767,7 @@ import helmet from "../assets/icon/helmet.svg";
                         <div class="flip-card-front" role="listitem">
                             <figure>
                                 <img
-                                    src={DiegoImagen.src}
+                                    src="assets/Diego-Garcia.jpeg"
                                     alt="Victoria Reina"
                                 />
                             </figure>
@@ -800,7 +789,6 @@ import helmet from "../assets/icon/helmet.svg";
                         <div
                             class="flip-card-back"
                             role="listitem"
-                            style="font-size:12px"
                         >
                             <ul>
                                 <li><strong>TITULACIÓN DESTACADA</strong></li>
@@ -830,4 +818,4 @@ import helmet from "../assets/icon/helmet.svg";
             </div>
         </div>
     </section>
-    </LayoutPrincipal>
+    </Layout>

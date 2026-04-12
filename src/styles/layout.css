@@ -46,17 +46,44 @@ body>header {
 }
 
 footer {
-    padding: 10px;
+    padding: 15px 20px;
     text-align: center;
     border-top: 1px solid #ccc;
+    font-size: 12px;
+    justify-content: space-between;
+    display: flex;
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+
+        div:first-child {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        div:nth-child(2) {
+            column-count: 2;
+
+            ul {
+                margin-top: 0
+            }
+        }
+    }
 }
 
 @media(max-width:1024px) {
-    body > header nav {
+    body>header nav {
         width: 100%;
-    justify-content: space-between;
-    max-width: 100%;
-    flex-direction: row-reverse;
+        justify-content: space-between;
+        max-width: 100%;
+        flex-direction: row-reverse;
+
         label[for="burguer-menu"] {
             display: block;
         }
@@ -69,28 +96,28 @@ footer {
             display: flex;
         }
 
-         .burger-label{
+        .burger-label {
             transition: ease .5s;
         }
 
-        .burger-label.turnRound{
+        .burger-label.turnRound {
             transform: rotate(90deg);
         }
 
-        ul{
-            flex-direction:column;
-            position:absolute;
-            top:60px;
-            background-color:#eeeeeef7;
-            width:100%;
-            left:0;
-            padding:30px;
-            gap:35px;
-            display:none;
+        ul {
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            background-color: #eeeeeef7;
+            width: 100%;
+            left: 0;
+            padding: 30px;
+            gap: 35px;
+            display: none;
         }
 
-        input:checked+ul{
-            display:flex;
+        input:checked+ul {
+            display: flex;
         }
     }
 }

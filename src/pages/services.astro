@@ -1,10 +1,8 @@
 ---
-import LayoutPrincipal from "../layouts/base-layout.astro";
-import cArrow from "../assets/icon/circled-arrow.svg";
-import imgBuilding from "../assets/img-building.webp";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<LayoutPrincipal>
+<Layout>
         <section class="servJCI-section">
             <header>
                 <h2>
@@ -143,7 +141,9 @@ import imgBuilding from "../assets/img-building.webp";
                         </p>
                     </li>
                 </ul>
-                <img src={imgBuilding.src} alt="Imagen de un edificio" />
+                <div>
+                    <img src="assets/img-building.webp" alt="Imagen de un edificio" />
+                    </div>
             </article>
         </section>
         <section class="servForm-section">
@@ -159,11 +159,11 @@ import imgBuilding from "../assets/img-building.webp";
                         >
                         <ul class="list-icon">
                             <li>
-                                <img src={cArrow.src} /> Desarrollo de planes funcionales
+                                <img src="assets/icon/circled-arrow.svg" /> Desarrollo de planes funcionales
                                 completos de establecimientos sanitarios de nueva
                                 apertura para su adecuación al entorno: población,
                                 situación de servicios de salud en el área, cartera
-                                de servicios pendientes de desarrollo en el entorno,
+                                de servicios e
                                 infraestructuras necesarias.
                             </li>
                         </ul>
@@ -176,7 +176,7 @@ import imgBuilding from "../assets/img-building.webp";
                         >
                         <ul class="list-icon">
                             <li>
-                                <img src={cArrow.src} /> Apoyo al liderazgo de las
+                                <img src="assets/icon/circled-arrow.svg" /> Apoyo al liderazgo de las
                                 organizaciones en los procesos para la consolidación
                                 de <strong>nuevos servicios</strong>,
                                 establecimiento de estrategias de innovación,
@@ -185,28 +185,29 @@ import imgBuilding from "../assets/img-building.webp";
                         </ul>
                     </li>
                     <li>
-                        <strong>Formación de profesionales</strong> en área de:
+                        <strong>Formación de profesionales</strong> presencial y on-line:
                         <ul class="list-icon">
                             <li>
-                                <img src={cArrow.src} /> Calidad y seguridad del paciente.
+                                <img src="assets/icon/circled-arrow.svg" /> Calidad y seguridad del paciente. AMFE, ACR, Mapas de
+riesgo, moceo de gestión.
                             </li>
                             <li>
-                                <img src={cArrow.src} /> Desarrollo de los requerimientos
+                                <img src="assets/icon/circled-arrow.svg" /> Desarrollo de los requerimientos
                                 de calidad en el proceso completo de la medicación
                                 en los establecimientos sanitarios.
                             </li>
                             <li>
-                                <img src={cArrow.src} /> Formación para el desarrollo
+                                <img src="assets/icon/circled-arrow.svg" /> Formación para el desarrollo
                                 e implantación del modelo de farmacia clínica en los
                                 hospitales.
                             </li>
                             <li>
-                                <img src={cArrow.src} /> Desarrollo de modelos de
+                                <img src="assets/icon/circled-arrow.svg" /> Desarrollo de modelos de
                                 gestión en los servicios clínicos, desarrollo de comisiones
                                 clínica.
                             </li>
                             <li>
-                                <img src={cArrow.src} /> Formación para la mejora
+                                <img src="assets/icon/circled-arrow.svg" /> Formación para la mejora
                                 en la codificación CIE-10 y posicionamiento y análisis
                                 de la información obtenida.
                             </li>
@@ -229,15 +230,15 @@ import imgBuilding from "../assets/img-building.webp";
                         >
                         <ul class="list-icon">
                             <li>
-                                <img src={cArrow.src} /> Servicio de codificación
+                                <img src="assets/icon/circled-arrow.svg" /> Servicio de codificación
                                 on-line parcial o completo según necesidades del hospital.
                             </li>
                             <li>
-                                <img src={cArrow.src} /> Rigurosidad en la codificación
+                                <img src="assets/icon/circled-arrow.svg" /> Rigurosidad en la codificación
                                 para mejorar la complejidad y case-mix del hospital.
                             </li>
                             <li>
-                                <img src={cArrow.src} /> Rapidez en la respuesta para
+                                <img src="assets/icon/circled-arrow.svg" /> Rapidez en la respuesta para
                                 facilitar análisis de la información clínica que apoye
                                 la toma de decisiones.
                             </li>
@@ -247,4 +248,4 @@ import imgBuilding from "../assets/img-building.webp";
             </article>
             <a href="/consultoria-web/team" class="btn-primary">Conoce a nuestro equipo</a>
         </section>
-</LayoutPrincipal>
+</Layout>

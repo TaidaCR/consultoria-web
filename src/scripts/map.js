@@ -15,58 +15,189 @@ document.addEventListener('astro:page-load', () => {
         }).addTo(map);
 
         const hospitales = [
+            // --- ESPAÑA ---
+            { nombre: "Hospital General Universitario Gregorio Marañón", ubicacion: [40.4192, -3.6716], pais: "España", ciudad: "Madrid", url: "https://www.comunidad.madrid/hospital/gregoriomaranon/" },
+            {
+                nombre: "Hospital Universitario de Cruces",
+                ubicacion: [43.2826, -2.9844],
+                pais: "España",
+                ciudad: "Barakaldo",
+                url: ""
+            },
+            {
+                nombre: "Hospital del Alto Deba en Mondragón",
+                ubicacion: [43.0631, -2.4832],
+                pais: "España",
+                ciudad: "Mondragón",
+                url: ""
+            },
+            { nombre: "Hospital Universitario Costa del Sol", ubicacion: [36.5078, -4.8274], pais: "España", ciudad: "Marbella", url: "https://www.hcs.es/" },
+            { nombre: "Hospital Universitario Fundación Jiménez Díaz", ubicacion: [40.4389, -3.7191], pais: "España", ciudad: "Madrid", url: "https://www.fjd.es/" },
+            { nombre: "Hospital Universitario Quirónsalud Madrid", ubicacion: [40.4027, -3.7834], pais: "España", ciudad: "Pozuelo de Alarcón", url: "https://www.quironsalud.es/hospital-madrid" },
+            { nombre: "Hospital Universitari Dexeus", ubicacion: [41.3850, 2.1256], pais: "España", ciudad: "Barcelona", url: "https://www.quironsalud.es/dexeus-barcelona" },
+            { nombre: "Hospital Quirónsalud Córdoba", ubicacion: [37.8720, -4.8018], pais: "España", ciudad: "Córdoba", url: "https://www.quironsalud.es/cordoba" },
+            { nombre: "Hospital Universitari Sagrat Cor (Quirón)", ubicacion: [41.3891, 2.1462], pais: "España", ciudad: "Barcelona", url: "https://www.quironsalud.es/sagrat-cor" },
+            { 
+    nombre: "Hospital Quirónsalud Torrevieja", 
+    ubicacion: [38.0044, -0.6865], 
+    pais: "España", 
+    ciudad: "Torrevieja", 
+    url: "https://www.quironsalud.es/torrevieja" 
+},
+            { nombre: "Centro Médico Teknon", ubicacion: [41.4055, 2.1287], pais: "España", ciudad: "Barcelona", url: "https://www.teknon.es/" },
+            { nombre: "Hospital La Luz", ubicacion: [40.4431, -3.7144], pais: "España", ciudad: "Madrid", url: "https://www.quironsalud.es/hospital-la-luz" },
+            { nombre: "Hospital Universitario Sanitas La Zarzuela", ubicacion: [40.4578, -3.7786], pais: "España", ciudad: "Madrid", url: "https://www.sanitas.es/zarzuela" },
+            { nombre: "Hospital Universitario Sanitas La Moraleja", ubicacion: [40.4951, -3.6559], pais: "España", ciudad: "Madrid", url: "https://www.sanitas.es/lamoraleja" },
+            { nombre: "Hospital CIMA - Sanitas", ubicacion: [41.3934, 2.1215], pais: "España", ciudad: "Barcelona", url: "https://www.hospitalcima.es/es/" },
+            { nombre: "Hospital Vithas Xanit Internacional", ubicacion: [36.5982, -4.5385], pais: "España", ciudad: "Benalmádena", url: "https://vithas.es/centro/vithas-xanit-internacional/" },
+            { 
+    nombre: "Hospital Sanitas Virgen del Mar", 
+    ubicacion: [40.4533, -3.6745], 
+    pais: "España", 
+    ciudad: "Madrid", 
+    url: "https://www.hospitalvirgendelmar.es/" 
+},
+{ 
+        nombre: "Hospital Vithas Almería", 
+        ubicacion: [36.8454, -2.4335], 
+        pais: "España", 
+        ciudad: "Almería", 
+        url: "https://vithas.es/centro/vithas-hospital-almeria/" 
+    },
+    { 
+        nombre: "Hospital Vithas Granada", 
+        ubicacion: [37.1554, -3.5932], 
+        pais: "España", 
+        ciudad: "Granada", 
+        url: "https://vithas.es/centro/vithas-hospital-granada/" 
+    },
+    { 
+        nombre: "Hospital Vithas Madrid Nuestra Señora de América", 
+        ubicacion: [40.4485, -3.6552], 
+        pais: "España", 
+        ciudad: "Madrid", 
+        url: "" 
+    },
+    { 
+        nombre: "Hospital Clínica Benidorm (HCB)", 
+        ubicacion: [38.5422, -0.1247], 
+        pais: "España", 
+        ciudad: "Benidorm", 
+        url: "https://www.hcbhospitales.com/" 
+    },
+            { nombre: "Hospital Universitario IMQ Zorrotzaurre", ubicacion: [43.2725, -2.9497], pais: "España", ciudad: "Bilbao", url: "https://www.imq.es/" },
+            { nombre: "Clínica Universidad de Navarra (Pamplona)", ubicacion: [42.8066, -1.6616], pais: "España", ciudad: "Pamplona", url: "https://www.cun.es/sedes/sede-pamplona" },
+            { nombre: "Clínica Universidad de Navarra (Madrid)", ubicacion: [40.4447, -3.6267], pais: "España", ciudad: "Madrid", url: "https://www.cun.es/sedes/sede-madrid" },
+
+
+            //AMBULATORIOS ESPAÑA
+            { 
+        nombre: "Clínica ServiDigest", 
+        ubicacion: [41.4035, 2.1512], 
+        pais: "España", 
+        ciudad: "Barcelona", 
+        url: "https://www.servidigest.com/" 
+    },
+    { 
+        nombre: "Clínica Emby - Reproducción Asistida", 
+        ubicacion: [43.3644, -5.8511], 
+        pais: "España", 
+        ciudad: "Oviedo", 
+        url: "https://clinicaemby.es/" 
+    },
+
+    //MODELO ACREDITACIÓN DE CENTROS DE ATENCIÓN PRIMARIA
+    { 
+        nombre: "Centro de Salud Oñati (Osakidetza)", 
+        ubicacion: [43.0335, -2.4116], 
+        pais: "España", 
+        ciudad: "Oñati", 
+        url: "" 
+    },
+    { 
+        nombre: "Centro de Salud El Llano (SESPA)", 
+        ubicacion: [43.5303, -5.6565], 
+        pais: "España", 
+        ciudad: "Gijón", 
+        url: "" 
+    },
             // --- PERÚ ---
-            { nombre: "Hospital Barton Grupo Ibt", ubicacion: [-12.052, -77.128], pais: "Perú", ciudad: "Callao", url: "https://www.hospitalbarton.com.pe/" },
-            { nombre: "Hospital Villa María del Triunfo (Kaelin)", ubicacion: [-12.162, -76.938], pais: "Perú", ciudad: "Lima", url: "https://www.hospitalkaelin.com.pe/" },
-            { nombre: "Hospital Clínica San Pablo Surco", ubicacion: [-12.115, -76.980], pais: "Perú", ciudad: "Lima", url: "https://www.sanpablo.com.pe/sede/surco/" },
-            { nombre: "Hospital Jesús del Norte", ubicacion: [-11.992, -77.062], pais: "Perú", ciudad: "Lima", url: "https://www.sanpablo.com.pe/sede/jesus-del-norte/" },
-            { nombre: "Hospital San Gabriel", ubicacion: [-12.091, -77.018], pais: "Perú", ciudad: "Lima", url: "https://www.sangabriel.com.pe/" },
+    { 
+        nombre: "Hospital Alberto Barton (Grupo IBT)", 
+        ubicacion: [-12.0528, -77.1281], 
+        pais: "Perú", 
+        ciudad: "Callao", 
+        url: "" 
+    },
+    { 
+        nombre: "Hospital Guillermo Kaelin (Grupo IBT)", 
+        ubicacion: [-12.1642, -76.9385], 
+        pais: "Perú", 
+        ciudad: "Villa María del Triunfo", 
+        url: "https://kaelin.pe/hospital-guillermo-kaelin-de-la-fuente/" 
+    },
+    { 
+        nombre: "Clínica San Pablo Surco", 
+        ubicacion: [-12.1064, -76.9745], 
+        pais: "Perú", 
+        ciudad: "Lima", 
+        url: "https://www.sanpablo.com.pe/" 
+    },
+    { 
+        nombre: "Clínica Jesús del Norte (Grupo San Pablo)", 
+        ubicacion: [-11.9936, -77.0612], 
+        pais: "Perú", 
+        ciudad: "Independencia", 
+        url: "https://www.sanpablo.com.pe/" 
+    },
+    { 
+        nombre: "Clínica San Gabriel (Grupo San Pablo)", 
+        ubicacion: [-12.0788, -77.0934], 
+        pais: "Perú", 
+        ciudad: "San Miguel", 
+        url: "https://www.sanpablo.com.pe/" 
+    },
+    { 
+        nombre: "Clínica Ricardo Palma", 
+        ubicacion: [-12.0917, -77.0233], 
+        pais: "Perú", 
+        ciudad: "San Isidro", 
+        url: "https://www.crp.com.pe/" 
+    },
 
-            // --- COLOMBIA ---
-            { nombre: "Clínica Reina Sofia - Colsanitas", ubicacion: [4.701, -74.063], pais: "Colombia", ciudad: "Bogotá", url: "https://www.colsanitas.com/infografias-clinicas/clinica-reina-sofia" },
-            { nombre: "Clínica Sanitas Materno Infantil", ubicacion: [4.653, -74.061], pais: "Colombia", ciudad: "Bogotá", url: "https://www.colsanitas.com/clinicas-y-centros-medicos" },
-            { nombre: "Centro Ambulatorio Colsanitas", ubicacion: [4.698, -74.058], pais: "Colombia", ciudad: "Bogotá", url: "https://www.colsanitas.com/" },
-
-            // --- ESPAÑA: PÚBLICOS ---
-            { nombre: "Hospital Universitario Costa del Sol", ubicacion: [36.505, -4.834], pais: "España", ciudad: "Marbella", url: "https://www.hcs.es/" },
-            { nombre: "Hospital Univ. Gregorio Marañón (Materno)", ubicacion: [40.419, -3.671], pais: "España", ciudad: "Madrid", url: "https://www.comunidad.madrid/hospital/gregoriomaranon/" },
-            { nombre: "Hospital del Alto Deba", ubicacion: [43.064, -2.486], pais: "España", ciudad: "Mondragón", url: "https://www.osakidetza.euskadi.eus/hospitall-alto-deba/" },
-            { nombre: "Hospital Universitario de Cruces", ubicacion: [43.284, -2.986], pais: "España", ciudad: "Baracaldo", url: "https://www.osakidetza.euskadi.eus/hospital-universitario-cruces/" },
-            { nombre: "Fundación Jiménez Díaz (Quirón)", ubicacion: [40.435, -3.715], pais: "España", ciudad: "Madrid", url: "https://www.fjd.es/" },
-
-            // --- ESPAÑA: PRIVADOS ---
-            { nombre: "Clínica Universidad de Navarra (Pamplona)", ubicacion: [42.808, -1.663], pais: "España", ciudad: "Pamplona", url: "https://www.cun.es/" },
-            { nombre: "Clínica Universidad de Navarra (Madrid)", ubicacion: [40.444, -3.626], pais: "España", ciudad: "Madrid", url: "https://www.cun.es/sedes/madrid" },
-            { nombre: "Hospital Clínica Benidorm", ubicacion: [38.541, -0.134], pais: "España", ciudad: "Benidorm", url: "https://www.clinicabenidorm.com/" },
-            { nombre: "Hospital Zorrotzaurre", ubicacion: [43.272, -2.955], pais: "España", ciudad: "Bilbao", url: "https://www.imq.es/clinicas/clinica-imq-zorrotzaurre/" },
-            { nombre: "Clínica Servidigest", ubicacion: [41.402, 2.146], pais: "España", ciudad: "Barcelona", url: "https://www.servidigest.com/" },
-
-            // --- GRUPO QUIRÓN ---
-            { nombre: "Hospital Quirón Pozuelo", ubicacion: [40.428, -3.799], pais: "España", ciudad: "Madrid", url: "https://www.quironsalud.com/hospital-madrid" },
-            { nombre: "Hospital Clínica Dexeus", ubicacion: [41.385, 2.127], pais: "España", ciudad: "Barcelona", url: "https://www.quironsalud.com/dexeus-barcelona" },
-            { nombre: "Hospital Quirón Córdoba", ubicacion: [37.876, -4.792], pais: "España", ciudad: "Córdoba", url: "https://www.quironsalud.com/hospital-cordoba" },
-            { nombre: "Hospital Quirón Barcelona", ubicacion: [41.412, 2.140], pais: "España", ciudad: "Barcelona", url: "https://www.quironsalud.com/hospital-barcelona" },
-            { nombre: "Hospital Quirón Torrevieja", ubicacion: [38.001, -0.672], pais: "España", ciudad: "Alicante", url: "https://www.quironsalud.com/torrevieja" },
-            { nombre: "Hospital Universitario La Luz", ubicacion: [40.443, -3.712], pais: "España", ciudad: "Madrid", url: "https://www.hospitalalaluz.es/" },
-
-            // --- GRUPO BUPA-SANITAS ---
-            { nombre: "Hospital La Zarzuela", ubicacion: [40.463, -3.778], pais: "España", ciudad: "Madrid", url: "https://www.sanitas.es/sanitas/seguros/es/particulares/medicos-centros/hospital-la-zarzuela/" },
-            { nombre: "Hospital La Moraleja", ubicacion: [40.505, -3.649], pais: "España", ciudad: "Madrid", url: "https://www.sanitas.es/sanitas/seguros/es/particulares/medicos-centros/hospital-la-moraleja/" },
-            { nombre: "Hospital CIMA", ubicacion: [41.393, 2.119], pais: "España", ciudad: "Barcelona", url: "https://www.sanitas.es/sanitas/seguros/es/particulares/medicos-centros/hospital-cima/" },
-            { nombre: "Hospital Nuestra Señora del Mar", ubicacion: [40.448, -3.655], pais: "España", ciudad: "Madrid", url: "https://www.sanitas.es/sanitas/seguros/es/particulares/medicos-centros/hospital-virgen-mar/" },
-
-            // --- GRUPO VITHAS ---
-            { nombre: "Hospital VITHAS XANIT Internacional", ubicacion: [36.598, -4.532], pais: "España", ciudad: "Málaga", url: "https://vithas.es/centro/vithas-xanit-internacional/" },
-            { nombre: "Hospital Vithas Almería", ubicacion: [36.848, -2.433], pais: "España", ciudad: "Almería", url: "https://vithas.es/centro/hospital-vithas-almeria/" },
-            { nombre: "Hospital Vithas Granada", ubicacion: [37.161, -3.593], pais: "España", ciudad: "Granada", url: "https://vithas.es/centro/hospital-vithas-granada/" },
-            { nombre: "Hospital Vithas Madrid Aravaca", ubicacion: [40.457, -3.791], pais: "España", ciudad: "Madrid", url: "https://vithas.es/centro/vithas-madrid-aravaca/" }
+      // --- COLOMBIA ---
+            { nombre: "Clínica Reina Sofía (Colsanitas)", ubicacion: [4.7067, -74.0533], pais: "Colombia", ciudad: "Bogotá", url: "https://clinicareinasofia.com/" },
+{ 
+        nombre: "Clínica Sanitas Materno Infantil (Grupo Keralty)", 
+        ubicacion: [4.6465, -74.0754], 
+        pais: "Colombia", 
+        ciudad: "Bogotá", 
+        url: "https://clinicainfantilsantamariadellago.com/" 
+    },
+    { 
+        nombre: "Centro Ambulatorio Colsanitas (Grupo Keralty)", 
+        ubicacion: [4.7042, -74.0545], 
+        pais: "Colombia", 
+        ciudad: "Bogotá", 
+        url: "https://www.colsanitas.com/" 
+    },
+            // --- CHILE ---
+            { nombre: "Hospital Padre Hurtado (Domicilio)", ubicacion: [-33.5414, -70.6277], pais: "Chile", ciudad: "Santiago", url: "https://www.hph.cl/" }
         ];
 
         hospitales.forEach(hosp => {
             L.marker(hosp.ubicacion)
                 .addTo(map)
-                .bindPopup(`<a target="blank" href=${hosp.url}><b>${hosp.nombre}</b><br>Centro Acreditado JCI en ${hosp.pais}</a >`);
+                .bindPopup(`
+                <p class="map__nombreHosp"><strong>${hosp.nombre}</strong></p>
+                ${hosp.url
+                        ? `<a class="map__hospLink" href="${hosp.url}" target="_blank" rel="noopener noreferrer">Visitar sitio web</a>`
+                        : ''
+                    }
+            `);
         });
+
+
 
     }
 })
