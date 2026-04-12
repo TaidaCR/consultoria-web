@@ -1,12 +1,5 @@
 ---
-// LayoutPrincipal.astro
-// import logoMobile from "/favicon/favicon.svg";
-// import logoImagenS from "../assets/SALQUALIS.svg";
-import "../styles/layout.css";
-import "../styles/base.css";
-import "../styles/pages.css";
 import { ClientRouter } from "astro:transitions";
-// import burgerMenu from "../assets/icon/burger-menu.svg";
 ---
 
 <!doctype html>
@@ -23,6 +16,10 @@ import { ClientRouter } from "astro:transitions";
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
+
+        <link rel="stylesheet" href="/styles/base.css" />
+        <link rel="stylesheet" href="/styles/layout.css" />
+        <link rel="stylesheet" href="/styles/pages.css" />
 
         <!-- FAVICON -->
         <link
@@ -85,36 +82,36 @@ import { ClientRouter } from "astro:transitions";
             <nav class="nav-bar" aria-label="Barra de navegación principal">
                 <img
                     class="logo-img-desktop"
-                    src="assets/SALQUALIS.svg"
+                    src="/assets/SALQUALIS.svg"
                     alt="Logo versión desktop"
                 />
                 <img
                     class="logo-img-mobile"
-                    src="favicon/favicon.svg"
+                    src="/favicon/favicon.svg"
                     alt="Logo versión móvil"
                 />
                 <label for="burguer-menu" class="burger-label"
-                    ><img src="assets/icon/burger-menu.svg" /></label
+                    ><img src="/assets/icon/burger-menu.svg" /></label
                 >
                 <input type="checkbox" id="burguer-menu" />
                 <ul>
                     <li>
-                        <a class="nav-link active" href="/consultoria-web/"
+                        <a class="nav-link active" href="/"
                             >Inicio</a
                         >
                     </li>
                     <li>
-                        <a class="nav-link" href="/consultoria-web/services/"
+                        <a class="nav-link" href="/services/"
                             >Servicios</a
                         >
                     </li>
                     <li>
-                        <a class="nav-link" href="/consultoria-web/team/"
+                        <a class="nav-link" href="/team/"
                             >El Equipo</a
                         >
                     </li>
                     <li>
-                        <a class="nav-link" href="/consultoria-web/contact/"
+                        <a class="nav-link" href="/contact/"
                             >Contacto</a
                         >
                     </li>
@@ -129,7 +126,7 @@ import { ClientRouter } from "astro:transitions";
         <footer>
             <div class="footer-content">
                 <div>
-                    <img src="favicon/favicon.svg" alt="Logo versión móvil" />
+                    <img src="/favicon/favicon.svg" alt="Logo versión móvil" />
                     <p>
                         Consultoría Especializada en seguridad del paciente y
                         excelencia operativa bajo estándares internacionales
