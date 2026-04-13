@@ -1,10 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
 import sitemap from '@astrojs/sitemap';
+
+const isVercel = process.env.VERCEL === 'true';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://taidacr.github.io/',
+  site: isVercel ? 'https://consultoriasalqualis.cl' : 'https://taidacr.github.io/',
+  base: isVercel ? '/' : '/consultoria-web',
   integrations: [sitemap()],
 });

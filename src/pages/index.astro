@@ -6,14 +6,15 @@ import Layout from "../layouts/Layout.astro";
     <section class="jci-article">
         <div>
             <h1>
-                Consultoría Salqualis: Expertos en Asesoría para la Acreditación JCI.
+                Consultoría Salqualis: Expertos en Asesoría para la Acreditación
+                JCI.
             </h1>
             <div class="text-container">
                 <p>
                     Somos <strong
                         >especialistas en la implementación de estándares de
                         calidad <a
-                            href="/consultoria-web/JCIAccreditation"
+                            href="/JCIAccreditation"
                             target="_blank">Joint Commission International</a
                         ></strong
                     > para organizaciones de salud que buscan la excelencia operativa
@@ -55,7 +56,7 @@ import Layout from "../layouts/Layout.astro";
             Centros de Excelencia acreditados que avalan nuestra trayectoria
         </h2>
         <p>
-            Nuestra mayor carta de presentación es la confianza de los numerosos
+            Nuestra mejor carta de presentación es la confianza de los numerosos
             hospitales que nos eligen para acompañarles hasta el éxito de su
             acreditación inicial y en sus sucesivos procesos de reacreditación.
             Esta sólida experiencia, avalada por la fidelidad de directivos y
@@ -64,13 +65,190 @@ import Layout from "../layouts/Layout.astro";
             excelencia de cada organización.
         </p>
         <p>
-            Desde 1999, 42 establecimientos de salud Públicos y Privados han
+            Desde 1999, <span id="counter-num">42</span> establecimientos de salud Públicos y Privados han
             obtenido su acreditación JCI bajo nuestra guía y soporte experto.
             Hemos trabajado con algunas de las instituciones sanitarias más
             prestigiosas a nivel nacional e internacional:
         </p>
-        <div class="map-container">
-            <div id="map" style="height: 500px; width: 80%;"></div>
+        <div>
+            <div>
+                <div class="accreditation-container">
+                    <div class="country-group">
+                        <label for="spain" class="country-label"
+                            >ESPA&Ntilde;A</label
+                        >
+                        <input
+                            type="checkbox"
+                            id="spain"
+                            class="toggle-input"
+                        />
+                        <ul class="center-list spain">
+                            <li>
+                                Hospital Universitario Gregorio
+                                Mara&ntilde;&oacute;n. Hospital
+                                Materno-infantil. SERMAS. Madrid
+                            </li>
+                            <li>
+                                Hospital Universitario de Cruces. Baracaldo.
+                                Osakidetza. Vizcaya.
+                            </li>
+                            <li>
+                                Hospital del Alto Deba en Mondrag&oacute;n,
+                                Osakidetza. Guipuzcoa.
+                            </li>
+                            <li>
+                                Hospital Universitario Costa del Sol. Marbella.
+                                SAS. M&aacute;laga.
+                            </li>
+                            <li>
+                                Cl&iacute;nica Universitaria Fundaci&oacute;n
+                                Jim&eacute;nez Diaz. Grupo Quir&oacute;n. Madrid
+                            </li>
+                            <li>
+                                Hospital Universitario Quir&oacute;n Pozuelo de
+                                Alarc&oacute;n en Madrid
+                            </li>
+                            <li>
+                                Hospital Cl&iacute;nica Dexeus Quir&oacute;n en
+                                Barcelona
+                            </li>
+                            <li>Hospital Quir&oacute;n C&oacute;rdoba</li>
+                            <li>Hospital Teknon Quir&oacute;n. Barcelona</li>
+                            <li>Hospital Quir&oacute;n Barcelona</li>
+                            <li>Hospital Quir&oacute;n Torrevieja. Alicante</li>
+                            <li>Hospital Universitario La Luz en Madrid</li>
+                            <li>Hospital La Zarzuela. BUPA-SANITAS. Madrid</li>
+                            <li>Hospital La Moraleja. BUPA-SANITAS Madrid</li>
+                            <li>Hospital CIMA. BUPA-SANITAS Barcelona</li>
+                            <li>
+                                Hospital Nuestra Se&ntilde;ora del Mar.
+                                BUPA-SANITAS Madrid
+                            </li>
+                            <li>
+                                Hospital Vithas XANIT Internacional
+                                Benalm&aacute;dena. M&aacute;laga
+                            </li>
+                            <li>Hospital Vithas Almeria</li>
+                            <li>Hospital Vithas Granada</li>
+                            <li>
+                                Hospital Vithas Nuestra Se&ntilde;ora de
+                                Am&eacute;rica. Madrid
+                            </li>
+                            <li>Hospital Zorrotzaurre en Bilbao. Vizcaya.</li>
+                            <li>Hospital Cl&iacute;nica Benidorm. Alicante</li>
+                            <li>
+                                Cl&iacute;nica Universitaria de Navarra.
+                                Pamplona
+                            </li>
+                            <li>
+                                Cl&iacute;nica Universitaria de Navarra. Madrid
+                            </li>
+                            <li>Cl&iacute;nica Servidigest. Barcelona</li>
+                            <li>
+                                Clinica Emby. Cl&iacute;nica de
+                                reproducci&oacute;n asistida. Oviedo. Asturias
+                            </li>
+                            <li>
+                                Centro de salud. O&ntilde;ati. Osakidetza.
+                                Guip&uacute;zcoa
+                            </li>
+                            <li>Centro de salud el Llano. SESPA. Asturias</li>
+                            <li>
+                                Servicio de atenci&oacute;n a domicilio Hospital
+                                Gregorio Mara&ntilde;&oacute;n. SERMAS. Madrid
+                            </li>
+                            <li>Grupo Quir&oacute;n</li>
+                            <li>Grupo Vithas</li>
+                        </ul>
+                    </div>
+
+                    <div class="country-group">
+                        <label for="peru" class="country-label"
+                            >PER&Uacute;</label
+                        >
+                        <input type="checkbox" id="peru" class="toggle-input" />
+                        <ul class="center-list peru">
+                            <li>
+                                Hospital Alberto Barton. Grupo Ibt. El Callao.
+                            </li>
+                            <li>
+                                Hospital Guillermo Kaelin. Villa Mar&iacute;a
+                                del Triunfo. Grupo Ibt. Lima
+                            </li>
+                            <li>
+                                Cl&iacute;nica San Pablo Surco. Grupo San Pablo.
+                                Lima
+                            </li>
+                            <li>
+                                Cl&iacute;nica Jes&uacute;s del Norte. Grupo San
+                                Pablo. Lima
+                            </li>
+                            <li>
+                                Cl&iacute;nica San Gabriel. Grupo San Pablo.
+                                Lima
+                            </li>
+                            <li>Cl&iacute;nica Ricardo Palma. Lima</li>
+                            <li>
+                                Policl&iacute;nico Alberto Barton. Grupo Ibt. El
+                                Callao.
+                            </li>
+                            <li>
+                                Policl&iacute;nico Guillermo Kaelin. Villa
+                                Mar&iacute;a del Triunfo. Grupo Ibt. Lima
+                            </li>
+                            <li>
+                                Servicios de atenci&oacute;n a domicilio de
+                                Grupo Ibt
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="country-group">
+                        <label for="colombia" class="country-label"
+                            >COLOMBIA</label
+                        >
+                        <input
+                            type="checkbox"
+                            id="colombia"
+                            class="toggle-input"
+                        />
+                        <ul class="center-list colombia">
+                            <li>Acreditaci&oacute;n Grupo Colsanitas</li>
+                            <li>
+                                Cl&iacute;nica Reina Sofia. Colsanitas. Grupo
+                                Keralty. Bogot&aacute;
+                            </li>
+                            <li>
+                                Cl&iacute;nica Sanitas materno infantil. Grupo
+                                Keralty. Bogot&aacute;
+                            </li>
+                            <li>
+                                Centro ambulatorio Colsanitas. Grupo Keralty.
+                                Bogot&aacute;
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="country-group">
+                        <label for="chile" class="country-label">CHILE</label>
+                        <input
+                            type="checkbox"
+                            id="chile"
+                            class="toggle-input"
+                        />
+                        <ul class="center-list chile">
+                            <li>
+                                Servicio de atenci&oacute;n a domicilio Hospital
+                                Padre Hurtado. Servicio de Salud Sur Oriente.
+                                Santiago de Chile
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
         </div>
     </section>
     <section class="currently-section">
@@ -107,7 +285,7 @@ import Layout from "../layouts/Layout.astro";
 
             <article>
                 <div></div>
-                <p>10 hospitales en España</p>
+                <p>10 hospitales en <strong>España</strong></p>
             </article>
         </div>
     </section>
@@ -141,11 +319,6 @@ import Layout from "../layouts/Layout.astro";
                     coordinado de toda la organización, la implicación de los
                     profesionales y apoyo por parte del liderazgo.
                 </p>
-                <img src="assets/img10.webp"/>
-            </div>
-            <div>
-                <img src="assets/img9.webp" />
-
                 <p>
                     Los estándares JCI tiene un enfoque muy asistencial lo que
                     supone una gran ventaja respecto a otros modelos para contar
@@ -153,6 +326,12 @@ import Layout from "../layouts/Layout.astro";
                     propuesta tiene repercusión directa en los pacientes , por
                     lo que es fácil de asumir y comprender.
                 </p>
+                <img src="/assets/img10.webp" />
+            </div>
+            <div>
+                <img src="/assets/img9.webp" />
+
+                
                 <h2>¿Cuál es el papel de Salqualis?</h2>
                 <p>
                     Brindamos la tutoría necesaria para avanzar de forma segura,
@@ -160,18 +339,18 @@ import Layout from "../layouts/Layout.astro";
                     decisiones certeras.
                 </p>
                 <p>
-                    Es un camino en el que podemos acompañar a los centros
-hacia la mejora continua y el cambio cultural de la
-organización. Este proceso puede incluir, si así lo decide en
-centro, el reto de alcanzar la acreditación JCI.
+                    Es un camino en el que podemos acompañar a los centros hacia
+                    la mejora continua y el cambio cultural de la organización.
+                    Este proceso puede incluir, si así lo decide en centro, el
+                    reto de alcanzar la acreditación JCI.
                 </p>
 
                 <h2>
                     Por qué elegir a Salqualis para su Acreditación de Calidad
                 </h2>
                 <p>
-                    Somos una consultoría de alta dirección que
-actúa como el guía estratégico que tu organización necesita. Nuestro
+                    Somos una consultoría de alta dirección que actúa como el
+                    guía estratégico que tu organización necesita. Nuestro
                     equipo de élite ofrece un acompañamiento cercano y experto
                     para asegurar que su institución <strong
                         >alcance el Sello de Oro</strong
@@ -180,6 +359,8 @@ actúa como el guía estratégico que tu organización necesita. Nuestro
                 </p>
             </div>
         </div>
-        <a class="btn-primary" href="/consultoria-web/contact/">Solicita más información</a>
+        <a class="btn-primary" href="/contact/"
+            >Solicita más información</a
+        >
     </section>
 </Layout>

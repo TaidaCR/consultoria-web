@@ -7,13 +7,19 @@ import Layout from "../layouts/Layout.astro";
         <h1>Hablemos de tu proyecto de acreditación</h1>
         <h2>Nuestra ubicación</h2>
         <div>
-            <article>
-                <p>Sede oficial en Málaga, España.</p>
+            <article class="malaga">
+                <h3>Sede oficial en Málaga, España.</h3>
             </article>
 
-            <article>
-                <p>
-                    Sede de Reuniones - Santiago de Chile:
+            <article class="chile">
+                <div>
+                    <img
+                        src="/assets/sala-reunion.webp"
+                        alt="Imagen sala de reuniones"
+                    />
+                </div>
+                <div>
+                    <h3>Sede de Reuniones - Santiago de Chile:</h3>
                     <ul>
                         <li>
                             Para nuestras visitas y reuniones presenciales en
@@ -26,21 +32,28 @@ import Layout from "../layouts/Layout.astro";
                             financiero de Santiago.
                         </li>
                         <li>
-                            Servicios para clientes: Disponemos de salas de
-                            juntas privadas, tecnología para presentaciones de
-                            alto nivel y conectividad total para sesiones de
-                            trabajo presenciales con los directivos de los
-                            centros.
+                            <strong>Servicios para clientes:</strong> Disponemos de
+                            salas de juntas privadas, tecnología para presentaciones
+                            de alto nivel y conectividad total para sesiones de trabajo
+                            presenciales con los directivos de los centros.
                         </li>
                     </ul>
-                </p>
+                </div>
             </article>
+            <article class="contact-article">
+            <p>
+                <img src="/assets/icon/email.svg" alt="Email" />Puedes
+                contactarnos directamente a través de nuestro e-mail corporativo
+                &nbsp;<a href="mailto:consultoriasalqualis@gmail.com">
+                    consultoriasalqualis@gmail.com</a
+                >
+            </p>
+            <p>
+                <img src="/assets/icon/phone.svg" alt="Teléfono" />O a través de
+                nuestro número de teléfono: +34 672 48 54 03
+            </p>
+        </article>
         </div>
-
-        <p>
-            Puedes contactarnos directamente a través de nuestro e-mail
-            corporativo <a href="mailto:consultoriasalqualis@gmail.com">
-                consultoriasalqualis@gmail.com</a>
-        </p>
+        
     </section>
 </Layout>

@@ -3,37 +3,50 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+    <link rel="preload" href="/assets/JGarcia.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/CCortes.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/JCMartin.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/VReina.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/VUribe.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/DGarcia.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/SRodriguez.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/VUribe.webp" as="image" slot="head" />
+
     <section aria-labelledby="titulo-equipo" class="team-section">
         <div>
             <h1 id="titulo-equipo">
                 Liderazgo y Experiencia en Gestión Sanitaria
             </h1>
             <div class="team-grid" role="list">
-                <article class="flip-card">
+                 <article class="flip-card accent">
                     <div class="flip-card-inner">
                         <div class="flip-card-front" role="listitem">
-                            <figure>
+                            <div class="img-container">
                                 <img
-                                    src="/assets/Diego-Garcia.jpeg"
+                                    src="/assets/JGarcia.webp"
                                     alt="José A. García Ruiz"
                                 />
-                            </figure>
+                            </div>
                             <div class="text-container">
-                                <h2> <img src="/assets/icon/stethoscope.svg" alt="" />Jose Antonio García Ruiz</h2>
+                                <h2>
+                                    <img
+                                        src="/assets/icon/stethoscope.svg"
+                                        alt=""
+                                    />Jose Antonio García Ruiz
+                                </h2>
                                 <p class="academic-title">
                                     <strong>Director Consultoria</strong>
                                 </p>
                                 <p>
-                                    Licenciado en Medicina y Consultor Surveyor
-                                    Senior de JCI (FADA). Ha realizado labores
-                                    de consultoría en mas de 150 centros
-                                    sanitarios.
+                                    Socio fundador y Director de Consultoría
+                                    Saquialis. Médico, surveyor de JCI desde
+                                    hace 25 años . Ha realizado labores de
+                                    consultoría en mas de 100 establecimientos
+                                    de salud.
                                 </p>
                             </div>
                         </div>
-                        <div
-                            class="flip-card-back"
-                            role="listitem">
+                        <div class="flip-card-back" role="listitem">
                             <ul>
                                 <li class="title">
                                     <strong>TITULACIÓN DESTACADA</strong>
@@ -70,17 +83,15 @@ import Layout from "../layouts/Layout.astro";
                                 </li>
                                 <li>
                                     Asistencias técnicas específicas para
-                                    diferentes centros, destacando para los
-                                    Grupos sanitarios de SANITAS/BUPA, nacional
-                                    e internacional y los dos grupos
-                                    hospitalarios más grandes de España: Grupo
-                                    Quirón y Grupo VITHAS entre otros. A nivel
-                                    internacional especifico con consultorías en
-                                    Chile, Perú y Colombia.
+                                    diferentes centros, destacando Grupo Quirón,
+                                    Sanitas / BUPA y Vithas. A nivel
+                                    internacional con consultorías en Servicio
+                                    de Salud en Chile, y centros de Perú y
+                                    Colombia.
                                 </li>
                                 <li>
                                     Ha participado en auditoría y consultoría de
-                                    JCI en más de 170 hospitales y otros centros
+                                    JCI en más de 100 hospitales y otros centros
                                     sanitarios.
                                 </li>
                                 <li class="title">
@@ -123,17 +134,25 @@ import Layout from "../layouts/Layout.astro";
                         </div>
                     </div>
                 </article>
+            </div>
+            <div class="team-grid" role="list">
+               
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front" role="listitem">
-                            <figure>
+                            <div class="img-container">
                                 <img
-                                    src="/assets/Diego-Garcia.jpeg"
-                                    alt="Victoria Reina"
+                                    src="/assets/SRodriguez.webp"
+                                    alt="Salvador Rodriguez Pérez"
                                 />
-                            </figure>
+                            </div>
                             <div class="text-container">
-                                <h2><img src="/assets/icon/helmet.svg" alt="" />Salvador Rodríguez Pérez</h2>
+                                <h2>
+                                    <img
+                                        src="/assets/icon/helmet.svg"
+                                        alt=""
+                                    />Salvador Rodríguez Pérez
+                                </h2>
                                 <p class="academic-title">
                                     <strong
                                         >Gestión de Infraestructuras y
@@ -141,17 +160,15 @@ import Layout from "../layouts/Layout.astro";
                                     >
                                 </p>
                                 <p>
-                                    Ingeniero Superior Industrial especializado
+                                    Ingeniero Superior Industrial. Especializado
                                     en Ingeniería Hospitalaria y Alta Dirección.
-                                    Experto en seguridad de instalaciones,
+                                    Experto en seguridad de Instalaciones,
                                     gestión de tecnologías sanitarias y puesta
-                                    en marcha de centros de alta complejidad.
+                                    en marcha de hospitales de alta complejidad.
                                 </p>
                             </div>
                         </div>
-                        <div
-                            class="flip-card-back"
-                            role="listitem">
+                        <div class="flip-card-back" role="listitem">
                             <ul>
                                 <li class="title">
                                     <strong>TITULACIÓN DESTACADA</strong>
@@ -204,7 +221,8 @@ import Layout from "../layouts/Layout.astro";
 
                                 <li class="title">
                                     <strong
-                                        >EXPERIENCIA PROFESIONAL DESTACADA</strong>
+                                        >EXPERIENCIA PROFESIONAL DESTACADA</strong
+                                    >
                                 </li>
                                 <li>
                                     INGHO FACILITIES & MANAGEMENT S.L. Director
@@ -236,56 +254,58 @@ import Layout from "../layouts/Layout.astro";
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front" role="listitem">
-                            <figure>
+                            <div class="img-container">
                                 <img
-                                    src="/assets/Diego-Garcia.jpeg"
+                                    src="/assets/CCortes.webp"
                                     alt="Carmen Cortes Martínez"
                                 />
-                            </figure>
+                            </div>
                             <div class="text-container">
-                                <h2><img src="/assets/icon/stethoscope.svg" alt="" />Dra. Carmen Cortes Martínez</h2>
+                                <h2>
+                                    <img
+                                        src="/assets/icon/stethoscope.svg"
+                                        alt=""
+                                    />Dra. Carmen Cortes Martínez
+                                </h2>
                                 <p class="academic-title">
                                     <strong
                                         >Seguridad Clínica y Procesos médicos</strong
                                     >
                                 </p>
                                 <p>
-                                    Doctora en Medicina y especialista en
-                                    Medicina Preventiva. Experta en gestión
-                                    hospitalaria, ha liderado centros
-                                    universitarios y es referente internacional
-                                    en seguridad del paciente y control de
-                                    infecciones en más de 70 instituciones
-                                    sanitarias.
+                                    Doctora en Medicina. Médico Especialista en
+                                    Medina Preventiva y Salud Público. Larga
+                                    trayectoria en gestión de centros
+                                    sanitarios. Socia fundadora en Consultoría
+                                    Salqualis.
                                 </p>
                             </div>
                         </div>
-                        <div class="flip-card-back"
-                            role="listitem">
+                        <div class="flip-card-back" role="listitem">
                             <ul>
                                 <li class="title">
                                     <strong>TITULACIÓN DESTACADA</strong>
                                 </li>
                                 <li>
                                     Licenciada en Medicina. Universidad de
-                                    Granada.
+                                    Granada (UGR)
                                 </li>
                                 <li>
                                     Médico Especialista en Medicina Preventiva y
                                     Salud Pública.
                                 </li>
                                 <li>
-                                    Doctor en Medicina. Universidad de Granada.
+                                    Doctor en Medicina. UGR
                                 </li>
                                 <li>
                                     Máster Universitario en Salud Pública y
                                     Administración Sanitaria. Escuela Andaluza
-                                    de Salud Pública. Universidad de Granada.
+                                    de Salud Pública. UGR
                                 </li>
                                 <li>
                                     Experto Universitario en Epidemiología e
                                     Investigación Clínica. Escuela Andaluza de
-                                    Salud Pública. Universidad de Granada.
+                                    Salud Pública. UGR
                                 </li>
                                 <li>
                                     Máster en Especialización en Gestión y
@@ -298,9 +318,12 @@ import Layout from "../layouts/Layout.astro";
                                 </li>
                                 <li>Socio Consultoría Salqualis.</li>
                                 <li>
-                                    Asistencia y consultoría en más de 70
-                                    centros y grupos como SANITAS/BUPA, Quirón,
-                                    Vithas, centros de Chile y Perú.
+                                    Asistencia y consultoría en grupos como
+                                    SANITAS/BUPA, Quirón y Servicios de Salud de
+                                    Chile. Referente en trazadores clínicos,
+                                    prevención control de la infección, mejora
+                                    de la calidad, evaluación, atención centrada
+                                    en el paciente y liderazgo.
                                 </li>
                                 <li>
                                     Referente en Prevención control de la
@@ -329,7 +352,7 @@ import Layout from "../layouts/Layout.astro";
                                 </li>
                                 <li>
                                     Directora General de Asistencia Sanitaria:
-                                    Servicio Andaluz de Salud. Sevilla.
+                                    SAS. Sevilla.
                                     Consejería de Salud. Junta de Andalucía.
                                 </li>
                                 <li>
@@ -343,8 +366,7 @@ import Layout from "../layouts/Layout.astro";
                                 <li>
                                     Directora Gerente de los hospitales:
                                     Universitario Regional de Málaga y Hospital
-                                    Universitario de Málaga. Servicio andaluz de
-                                    salud.
+                                    Universitario de Málaga. SAS
                                 </li>
                                 <li>
                                     Directora Gerente Hospital Comarcal de la
@@ -360,7 +382,7 @@ import Layout from "../layouts/Layout.astro";
                                 </li>
                                 <li>
                                     Médico en epidemiología y salud pública
-                                    distrito Málaga. Servicio andaluz de salud.
+                                    distrito Málaga. SAS
                                 </li>
                             </ul>
                         </div>
@@ -370,34 +392,34 @@ import Layout from "../layouts/Layout.astro";
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front" role="listitem">
-                            <figure>
-                                <img
-                                    src="/assets/Diego-Garcia.jpeg"
+                            <div class="img-container">
+                                <img class="top"
+                                    src="/assets/VUribe.webp"
                                     alt="Victoria Uribe Pérez"
                                 />
-                            </figure>
+                            </div>
                             <div class="text-container">
-                                <h2><img src="/assets/icon/stethoscope.svg" alt="" />Victoria Uribe Pérez</h2>
+                                <h2>
+                                    <img
+                                        src="/assets/icon/stethoscope.svg"
+                                        alt=""
+                                    />Victoria Uribe Pérez
+                                </h2>
                                 <p class="academic-title">
                                     <strong
                                         >Seguridad Clínica y Procesos médicos</strong
                                     >
                                 </p>
                                 <p>
-                                    Especialista en Medicina Interna y referente
-                                    en seguridad clínica. Experta en procesos
-                                    asistenciales bajo el modelo JCI, se
-                                    especializa en la implantación de registros
-                                    clínicos y metas internacionales de
-                                    seguridad del paciente en centros de España
-                                    y Chile.
+                                    Médico Especialista en Medicina Interna.
+                                    Referente en calidad y seguridad de
+                                    servicios médicos. Consultora experta en
+                                    trazadores clínicos en Consultoría
+                                    Salqualis.
                                 </p>
                             </div>
                         </div>
-                        <div
-                            class="flip-card-back"
-                            role="listitem"
-                        >
+                        <div class="flip-card-back" role="listitem">
                             <ul>
                                 <li class="title">
                                     <strong>TITULACIÓN DESTACADA</strong>
@@ -436,8 +458,8 @@ import Layout from "../layouts/Layout.astro";
                                     hospitales en España y Chile.
                                 </li>
                                 <li>
-                                    Referente en Evaluación y asistencia a
-                                    pacientes.
+                                    Referente en trazadores clínicos, evaluación
+                                    y asistencia a pacientes.
                                 </li>
                                 <li>
                                     Referente en Metas de Seguridad de
@@ -471,12 +493,19 @@ import Layout from "../layouts/Layout.astro";
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front" role="listitem">
-                            <figure>
-                                <img src="/assets/Diego-Garcia.jpeg"
-                                    alt="Juan Ignacio Barrachina"/>
-                            </figure>
+                            <div class="img-container">
+                                <img
+                                    loading="lazy" src="/assets/barranchina.webp"
+                                    alt="Juan Ignacio Barrachina"
+                                />
+                            </div>
                             <div class="text-container">
-                                <h2><img src="/assets/icon/stethoscope.svg" alt="" />Juan Ignacio Barrachina</h2>
+                                <h2>
+                                    <img
+                                        src="/assets/icon/stethoscope.svg"
+                                        alt=""
+                                    />Juan Ignacio Barrachina
+                                </h2>
                                 <p class="academic-title">
                                     <strong
                                         >Seguridad Clínica y Procesos médicos</strong
@@ -494,9 +523,7 @@ import Layout from "../layouts/Layout.astro";
                                 </p>
                             </div>
                         </div>
-                        <div class="flip-card-back"
-                            role="listitem"
-                        >
+                        <div class="flip-card-back" role="listitem">
                             <ul>
                                 <li class="title">
                                     <strong>TITULACIÓN DESTACADA</strong>
@@ -594,33 +621,32 @@ import Layout from "../layouts/Layout.astro";
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front" role="listitem">
-                            <figure>
-                                <img
-                                    src="/assets/Diego-Garcia.jpeg"
+                            <div class="img-container">
+                                <img loading="lazy"
+                                    src="/assets/DGarcia.webp"
                                     alt="Diego García Cortés"
                                 />
-                            </figure>
+                            </div>
                             <div class="text-container">
-                                <h2><img src="/assets/icon/pill.svg" alt="" />Diego García Cortés</h2>
+                                <h2>
+                                    <img
+                                        src="/assets/icon/pill.svg"
+                                        alt=""
+                                    />Diego García Cortés
+                                </h2>
                                 <p class="academic-title">
                                     <strong>Gestión de la Medicación</strong>
                                 </p>
                                 <p>
-                                    Farmacéutico especialista en Farmacia
-                                    Hospitalaria con una destacada trayectoria
-                                    en el NHS del Reino Unido y el sistema
-                                    sanitario español. Experto en Farmacia
-                                    Clínica, se especializa en el despliegue de
-                                    modelos JCI para la gestión segura de la
-                                    medicación y la prevención de riesgos en
-                                    pacientes de alto grado.
+                                    Farmacéutico Especialista en Farmacia
+                                    Hospitalaria, con una destacada trayectoria
+                                    en NHS de Reino Unido. Experto en farmacia
+                                    clínica, especializado en el despliegue del
+                                    modelo JCI para gestión del medicamento.
                                 </p>
                             </div>
                         </div>
-                        <div
-                            class="flip-card-back"
-                            role="listitem"
-                        >
+                        <div class="flip-card-back" role="listitem">
                             <ul>
                                 <li class="title">
                                     <strong>TITULACIÓN DESTACADA</strong>
@@ -703,6 +729,8 @@ import Layout from "../layouts/Layout.astro";
                                     Senior clinical pharmacist. BMI hospitals.
                                     Sheffield. U.K.
                                 </li>
+                                <li>Jefe de Servicio Farmacia Hospitalaria Hospital Quiron Marbella 2023
+FEA Farmacia Hospitalaria Servicio Andaluz de Salud 2023-presente</li>
                             </ul>
                         </div>
                     </div>
@@ -711,51 +739,105 @@ import Layout from "../layouts/Layout.astro";
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front" role="listitem">
-                            <figure>
-                                <img
-                                    src="/assets/Diego-Garcia.jpeg"
-                                    alt="Salvador Rodríguez Pérez"
+                            <div class="img-container">
+                                <img loading="lazy"
+                                    src="/assets/JCMartin.webp"
+                                    alt="José carlos Martín Santos"
                                 />
-                            </figure>
+                            </div>
                             <div class="text-container">
                                 <h2>José Carlos Martín Santos</h2>
                                 <p class="academic-title">
                                     <strong>Cuidados de Enfermería</strong>
                                 </p>
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled
-                                    it to make a type specimen book.
+                                    Amplia experiencia en Dirección de
+                                    Enfermería y Calidad en centros
+                                    hospitalarios. Consultor en implantación y
+                                    desarrollo de competencias técnicas de
+                                    enfermería y evaluación bajo el modelo JCI.
                                 </p>
                             </div>
                         </div>
-                        <div
-                            class="flip-card-back"
-                            role="listitem"
-                        >
+                        <div class="flip-card-back" role="listitem">
                             <ul>
-                                <li><strong>TITULACIÓN DESTACADA</strong></li>
-                                <li>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
+                                <li class="title">
+                                    <strong
+                                        >TITULACIÓN DESTACADA</strong>
                                 </li>
                                 <li>
-                                    Sed do eiusmod tempor incididunt ut labore
-                                    et dolore magna aliqua.
+                                    Grado de enfermería en la Universidad de
+                                    Salamanca.
                                 </li>
                                 <li>
-                                    <strong>TRAYECTORIA PROFESIONAL</strong>
+                                    Programa de desarrollo en liderazgo para la
+                                    gestión de enfermería por la Universidad de
+                                    Nebrija
+                                </li>
+                                <li>Auditor de sistemas de la calidad</li>
+                                <li>
+                                    Master en gestión y liderazgo Universidad
+                                    Europea.
+                                </li>
+
+                                <li class="title">
+                                    <strong
+                                        >CONSULTORIA SALQUALIS</strong>
                                 </li>
                                 <li>
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco.
+                                    Asistencia y consultoría en hospitales en
+                                    España
                                 </li>
                                 <li>
-                                    Duis aute irure dolor in reprehenderit in
-                                    voluptate velit.
+                                    Referente en Evaluación y asistencia a
+                                    pacientes, modelos de atención de
+                                    enfermería, planes de cuidados
+                                </li>
+                                <li>
+                                    Referente en Metas de Seguridad de pacientes
+                                </li>
+                                <li>Referente en Calidad y Seguridad</li>
+                                <li>
+                                    Referente en cualificación profesional
+                                    competencias técnicas de enfermería y otros
+                                    profesionales de salud
+                                </li>
+                                <li>
+                                    Referente en Sistemas de evaluación de
+                                    enfermería e indicadores
+                                </li>
+
+                                <li class="title">
+                                    <strong
+                                        >EXPERIENCIA PROFESIONAL DESTACADA</strong>
+                                </li>
+                                <li>
+                                    Actualmente Director Enfermería en Hospital
+                                    Hospiten en Estepona.
+                                </li>
+                                <li>
+                                    Director Enfermería en Hospital Vithas
+                                    Málaga
+                                </li>
+                                <li>
+                                    Supervisor de enfermería en el hospital
+                                    Quirón Teknon acreditado JCI.
+                                </li>
+                                <li>
+                                    Supervisor de Calidad en Hospital Vithas
+                                    Xanit Internacional acreditado JCI.
+                                </li>
+                                <li>
+                                    Jefe de Calidad y enfermero referente en
+                                    infecciones en Hospital Vithas Málaga.
+                                </li>
+                                <li>
+                                    Actividad de enfermería en el Hospital Vall
+                                    D’Hebron de Barcelona
+                                </li>
+                                <li>
+                                    Investigador colaborador en instituto de
+                                    investigación Vall d`Hebron. Barcelona.
                                 </li>
                             </ul>
                         </div>
@@ -765,51 +847,83 @@ import Layout from "../layouts/Layout.astro";
                 <article class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front" role="listitem">
-                            <figure>
-                                <img
-                                    src="/assets/Diego-Garcia.jpeg"
-                                    alt="Victoria Reina"
+                            <div class="img-container">
+                                <img loading="lazy"
+                                    src="/assets/VReina.webp"
+                                    alt="Victoria Reina Fernández"
                                 />
-                            </figure>
+                            </div>
                             <div class="text-container">
-                                <h2>Victoria Reina</h2>
+                                <h2>Victoria Reina Fernández</h2>
                                 <p class="academic-title">
                                     <strong>Documentación clínica</strong>
                                 </p>
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled
-                                    it to make a type specimen book.
+                                    Técnico experto en documentación clínica y
+                                    codificación. Conocimiento avanzado en
+                                    metodología de calidad. Experiencia como
+                                    responsable de Calidad y Documentación
+                                    Clínica en hospitales.
                                 </p>
                             </div>
                         </div>
-                        <div
-                            class="flip-card-back"
-                            role="listitem"
-                        >
+                        <div class="flip-card-back" role="listitem">
                             <ul>
-                                <li><strong>TITULACIÓN DESTACADA</strong></li>
-                                <li>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
+                                <li class="title">
+                                    <strong
+                                        >TITULACIÓN DESTACADA</strong>
                                 </li>
                                 <li>
-                                    Sed do eiusmod tempor incididunt ut labore
-                                    et dolore magna aliqua.
+                                    Técnico Superior en Documentación Sanitaria.
+                                </li>
+                                <li>Curso de Estadística Avanzada, Madrid</li>
+                                <li>
+                                    Formación en metodología Lean Healthcare,
+                                    Madrid
+                                </li>
+                                <li>Curso Auditor Interno Norma ISO/UNE</li>
+                                <li>
+                                    Curso sobre Fundamentos de la Transición a
+                                    la Norma ISO 9001.
+                                </li>
+
+                                <li class="title">
+                                    <strong
+                                        >CONSULTORIA SALQUALIS</strong>
+                                </li>
+                                <li>Experta en Codificación Clínica CIE-10</li>
+                                <li>
+                                    Referente en metodología de calidad y
+                                    seguridad del paciente.
                                 </li>
                                 <li>
-                                    <strong>TRAYECTORIA PROFESIONAL</strong>
+                                    Asesoría practica en metodología para la
+                                    gestión de procesos y mejora continúa basada
+                                    en riesgo.
                                 </li>
                                 <li>
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco.
+                                    Elaboración cuadro de mando de calidad y
+                                    seguridad. Monitorización de indicadores
+                                    asistenciales.
+                                </li>
+
+                                <li class="title">
+                                    <strong
+                                        >EXPERIENCIA PROFESIONAL DESTACADA</strong>
                                 </li>
                                 <li>
-                                    Duis aute irure dolor in reprehenderit in
-                                    voluptate velit.
+                                    Jefa del Departamento de Calidad, Seguridad
+                                    del Paciente y Documentación Clínica. Vithas
+                                    Málaga junio 2020 – actualidad
+                                </li>
+                                <li>
+                                    Codificación clínica en Departamento de
+                                    Calidad en Hospital Vithas Xanit
+                                    Internacional septiembre 2009 – junio 2020
+                                </li>
+                                <li>
+                                    Codificación Clínica en Hospital Quirón
+                                    Málaga enero-septiembre 2009.
                                 </li>
                             </ul>
                         </div>
@@ -818,4 +932,4 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </div>
     </section>
-    </Layout>
+</Layout>

@@ -4,8 +4,8 @@
     --color-dark: #4b6d83;
     --primary-font: 'Montserrat', sans-serif;
     --primary-hightlight: 'Playfair Display', sans-serif;
-    --flip-card-width: 470px;
-    --flip-card-height: 740px;
+    --flip-card-width: 480px;
+    --flip-card-height: 750px;
     --max-width-main: 1100px;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 main {
-     margin-top: 80px;
+    margin-top: 80px;
 }
 
 h1,
@@ -47,7 +47,7 @@ a {
     color: var(--color-dark);
 }
 
-a:not(.btn-primary):hover{
+a:not(.btn-primary):hover {
     color: #698ca2;
 }
 
@@ -122,10 +122,10 @@ img {
     font-weight: 600;
 }
 
-section{
-    padding-top:50px;
-    padding-bottom:50px;
-        padding-right:30px;
-        padding-left:30px;
-            box-sizing: border-box;
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    box-sizing: border-box;
 }
