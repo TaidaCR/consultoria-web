@@ -23,6 +23,8 @@ export function initSwiper() {
     });
 }
 
+initSwiper();
+
 //Giro flip-cards
 document.addEventListener("click", (e) => {
     if (e.target.closest(".flip-card-front")) {
