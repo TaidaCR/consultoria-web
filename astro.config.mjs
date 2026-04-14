@@ -7,9 +7,7 @@ const isVercel = process.env.VERCEL === 'true';
 // https://astro.build/config
 export default defineConfig({
   site: isVercel ? 'https://consultoriasalqualis.cl' : 'https://taidacr.github.io/',
-  base: isVercel ? '/' : '/',
+  base: isVercel ? '/' : '/consultoria-web',
 
-  //   site: 'https://taidacr.github.io/',
-  // base: '/',
   integrations: [sitemap()],
 });
