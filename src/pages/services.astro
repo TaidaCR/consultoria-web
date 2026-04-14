@@ -95,6 +95,7 @@ import Layout from "../layouts/Layout.astro";
                         </article>
                          <article class="extra swiper-slide">
             <div></div>
+            <img src="/assets/icon/screen.svg" alt="Pantalla de ordenador"/>
             <h3>Sesiones online</h3>
             <p>
                 Para responder a dudas o comentar avances en diferentes momentos
@@ -135,7 +136,6 @@ import Layout from "../layouts/Layout.astro";
                 </div>
             </div>
         </div>
-
        
     </section>
 
@@ -143,25 +143,25 @@ import Layout from "../layouts/Layout.astro";
         <header>
             <h2>Preparación para nuevas aperturas de centros</h2>
         </header>
-        <article>
+        <article class="flex-adjust">
             <ul class="list-border">
                 <li>
-                    <strong>ORIENTAR</strong> la estructura de los centros a hacia
+                    <strong>ORIENTAR</strong> la estructura de los centros hacia
                     la excelencia desde su inicio:
                     <ul>
                         <li>a. Flujo de pacientes</li>
                         <li>b. Requerimientos ambientales</li>
                         <li>c. Funcionalidad del edificio</li>
                         <li>d. Requisitos de las instalaciones</li>
-                        <li>e. Revisión de la ingeniería del edifico</li>
+                        <li>e. Revisión de la ingeniería del edificio</li>
                     </ul>
                 </li>
                 <li>
                     <strong>ASEGURAR</strong> el cumplimiento de requisitos de JCI
                     para el entorno de la asistencia.
                     <p>
-                        <a href="/consultoria-web/team" class="btn-primary"
-                            >Conoce a nuestro equipo</a
+                        <a href="/contact" class="btn-primary"
+                            >Solicita más información</a
                         >
                     </p>
                 </li>
@@ -174,11 +174,12 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </article>
     </section>
-    <section class="servForm-section">
+    <section class="servCons-section">
         <header>
-            <h2>Consultoria estrategica y formación de profesionales</h2>
+            <h2>Consultoria estrategica</h2>
         </header>
-        <article>
+        <article class="flex-adjust">
+            <div><img src="/assets/laptop.webp" alt="Imagen estetoscopio"/></div>
             <ul>
                 <li>
                     <strong
@@ -209,13 +210,24 @@ import Layout from "../layouts/Layout.astro";
                         </li>
                     </ul>
                 </li>
+            </ul>
+        </article>
+        <a href="/team" class="btn-primary">Conoce a nuestro equipo</a>
+
+    </section>
+     <section class="servForm-section">
+        <header>
+            <h2>Formación de profesionales</h2>
+        </header>
+        <article class="flex-adjust">
+            <ul>
                 <li>
                     <strong>Formación de profesionales</strong> presencial y on-line:
                     <ul class="list-icon">
                         <li>
                             <img src="/assets/icon/circled-arrow.svg" /> Calidad y
-                            seguridad del paciente. AMFE, ACR, Mapas de riesgo, moceo
-                            de gestión.
+                            seguridad del paciente: AMFE, ACR, Mapas de riesgo, modelo
+                            de gestión de calidad.
                         </li>
                         <li>
                             <img src="/assets/icon/circled-arrow.svg" /> Desarrollo
@@ -229,8 +241,7 @@ import Layout from "../layouts/Layout.astro";
                         </li>
                         <li>
                             <img src="/assets/icon/circled-arrow.svg" /> Desarrollo
-                            de modelos de gestión en los servicios clínicos, desarrollo
-                            de comisiones clínica.
+                            de modelos de gestión en los servicios clínicos.
                         </li>
                         <li>
                             <img src="/assets/icon/circled-arrow.svg" /> Formación
@@ -240,8 +251,9 @@ import Layout from "../layouts/Layout.astro";
                     </ul>
                 </li>
             </ul>
+            <div><img src="/assets/img9.webp" alt="Imagen consulta"/></div>
         </article>
-        <a href="/consultoria-web/team" class="btn-primary"
+        <a href="/team" class="btn-primary"
             >Conoce a nuestro equipo</a
         >
     </section>
@@ -274,6 +286,5 @@ import Layout from "../layouts/Layout.astro";
                 </li>
             </ul>
         </article>
-        <a href="/team" class="btn-primary">Conoce a nuestro equipo</a>
     </section>
 </Layout>

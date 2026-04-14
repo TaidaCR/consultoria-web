@@ -39,7 +39,7 @@ document.addEventListener('astro:page-load', () => {
             { nombre: "Hospital Universitario Quirónsalud Madrid", ubicacion: [40.4027, -3.7834], pais: "España", ciudad: "Pozuelo de Alarcón", url: "https://www.quironsalud.es/hospital-madrid" },
             { nombre: "Hospital Universitari Dexeus", ubicacion: [41.3850, 2.1256], pais: "España", ciudad: "Barcelona", url: "https://www.quironsalud.es/dexeus-barcelona" },
             { nombre: "Hospital Quirónsalud Córdoba", ubicacion: [37.8720, -4.8018], pais: "España", ciudad: "Córdoba", url: "https://www.quironsalud.es/cordoba" },
-            { nombre: "Hospital Universitari Sagrat Cor (Quirón)", ubicacion: [41.3891, 2.1462], pais: "España", ciudad: "Barcelona", url: "https://www.quironsalud.es/sagrat-cor" },
+            { nombre: "Hospital Quirón Barcelona", ubicacion: [41.4159982, 2.1385009], pais: "España", ciudad: "Barcelona", url: "https://www.quironsalud.es/sagrat-cor" },
             {
                 nombre: "Hospital Quirónsalud Torrevieja",
                 ubicacion: [38.0044, -0.6865],
@@ -169,20 +169,12 @@ document.addEventListener('astro:page-load', () => {
             },
 
             // --- COLOMBIA ---
-            { nombre: "Clínica Reina Sofía (Colsanitas)", ubicacion: [4.7067, -74.0533], pais: "Colombia", ciudad: "Bogotá", url: "https://clinicareinasofia.com/" },
             {
-                nombre: "Clínica Sanitas Materno Infantil (Grupo Keralty)",
-                ubicacion: [4.6465, -74.0754],
+                nombre: "Grupo Colsanitas (Grupo Keralty)",
+                ubicacion: [4.7071398, -74.0523755],
                 pais: "Colombia",
                 ciudad: "Bogotá",
-                url: "https://clinicainfantilsantamariadellago.com/"
-            },
-            {
-                nombre: "Centro Ambulatorio Colsanitas (Grupo Keralty)",
-                ubicacion: [4.7042, -74.0545],
-                pais: "Colombia",
-                ciudad: "Bogotá",
-                url: "https://www.colsanitas.com/"
+                url: "https://clinicareinasofia.com/"
             },
             // --- CHILE ---
             { nombre: "Hospital Padre Hurtado (Domicilio)", ubicacion: [-33.5414, -70.6277], pais: "Chile", ciudad: "Santiago", url: "https://www.hph.cl/" }

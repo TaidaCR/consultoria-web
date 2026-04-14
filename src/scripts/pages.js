@@ -39,40 +39,40 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener('astro:page-load', () => {
     //Counter
-const elContador = document.getElementById('counter-num');
-const objetivo = 42;
-let actual = 0;
-let retrasoInicial = 350;
-let retraso = retrasoInicial;
-let animacionEnCurso = false;
+    const elContador = document.getElementById('counter-num');
+    const objetivo = 42;
+    let actual = 0;
+    let retrasoInicial = 350;
+    let retraso = retrasoInicial;
+    let animacionEnCurso = false;
 
-function actualizarContador() {
-    actual++;
-    elContador.innerText = actual;
+    function actualizarContador() {
+        actual++;
+        elContador.innerText = actual;
 
-    if (actual < objetivo) {
-        retraso = retraso * 0.92;
+        if (actual < objetivo) {
+            retraso = retraso * 0.92;
 
-        setTimeout(actualizarContador, retraso);
-    }
-}
-
-const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-        if (!animacionEnCurso) {
-            animacionEnCurso = true;
-            actual = 0;
-            retraso = retrasoInicial;
-            actualizarContador();
+            setTimeout(actualizarContador, retraso);
         }
-    } else {
-        actual = 0;
-        elContador.innerText = 0;
-        animacionEnCurso = false;
     }
-}, { threshold: 1.0 });
 
-if (elContador) {
-    observer.observe(elContador);
-}
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            if (!animacionEnCurso) {
+                animacionEnCurso = true;
+                actual = 0;
+                retraso = retrasoInicial;
+                actualizarContador();
+            }
+        } else {
+            actual = 0;
+            elContador.innerText = 0;
+            animacionEnCurso = false;
+        }
+    }, { threshold: 1.0 });
+
+    if (elContador) {
+        observer.observe(elContador);
+    }
 })

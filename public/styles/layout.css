@@ -52,11 +52,26 @@ footer {
     font-size: 12px;
     justify-content: space-around;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    >* {
+        max-width: var(--max-width-main);
+    }
+
+    .footer-top {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+            text-align: left;
+    }
 
     .footer-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-size: 10px;
 
         div:first-child {
             display: flex;
@@ -94,6 +109,7 @@ footer {
 
         label[for="burguer-menu"] {
             display: block;
+            cursor:pointer;
         }
 
         .logo-img-desktop {

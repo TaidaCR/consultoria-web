@@ -1,8 +1,16 @@
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url("/fonts/Montserrat-Regular.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --primary-color: #c7d6d8;
     --secondary-color: #9dbac4;
     --color-dark: #4b6d83;
-    --primary-font: 'Montserrat', sans-serif;
+    --primary-font: 'Montserrat Regular', sans-serif;
     --primary-hightlight: 'Playfair Display', sans-serif;
     --flip-card-width: 480px;
     --flip-card-height: 750px;
@@ -128,4 +136,23 @@ section {
     padding-right: 30px;
     padding-left: 30px;
     box-sizing: border-box;
+}
+
+
+
+.flex-adjust{
+    display:flex;
+    gap:30px;
+    max-width: var(--max-width-main);
+            align-items: stretch;
+
+    >*{
+        flex:1 1 0;
+    }
+}
+
+@media(max-width:768px){
+    .flex-adjust{
+    flex-direction: column;
+}
 }

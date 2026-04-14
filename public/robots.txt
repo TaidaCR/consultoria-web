@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://taidacr.github.io/consultoria-web/sitemap-index.xml
+Sitemap: https://consultoriasalqualis.cl/sitemap-index.xml

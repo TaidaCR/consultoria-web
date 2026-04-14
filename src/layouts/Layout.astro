@@ -17,9 +17,9 @@ import { ClientRouter } from "astro:transitions";
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
 
-        <link rel="stylesheet" href="/styles/base.css" />
-        <link rel="stylesheet" href="/styles/layout.css" />
-        <link rel="stylesheet" href="/styles/pages.css" />
+        <link rel="stylesheet" href="/styles/base.css?v=1.1" />
+        <link rel="stylesheet" href="/styles/layout.css?v=1.1" />
+        <link rel="stylesheet" href="/styles/pages.css?v=1.1" />
 
         <!-- FAVICON -->
         <link
@@ -51,10 +51,7 @@ import { ClientRouter } from "astro:transitions";
             property="og:description"
             content="Especialistas en procesos de acreditación JCI y optimización de calidad para centros sanitarios. Logra la excelencia operativa con Salqualis."
         />
-        <meta
-            property="og:image"
-            content="/favicon/og-image.png"
-        />
+        <meta property="og:image" content="/favicon/og-image.png" />
         <meta property="og:site_name" content="Salqualis" />
         <meta property="og:locale" content="es_ES" />
 
@@ -96,24 +93,16 @@ import { ClientRouter } from "astro:transitions";
                 <input type="checkbox" id="burguer-menu" />
                 <ul>
                     <li>
-                        <a class="nav-link active" href="/"
-                            >Inicio</a
-                        >
+                        <a class="nav-link active" href="/">Inicio</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/services/"
-                            >Servicios</a
-                        >
+                        <a class="nav-link" href="/services/">Servicios</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/team/"
-                            >El Equipo</a
-                        >
+                        <a class="nav-link" href="/team/">El Equipo</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/contact/"
-                            >Contacto</a
-                        >
+                        <a class="nav-link" href="/contact/">Contacto</a>
                     </li>
                 </ul>
             </nav>
@@ -124,29 +113,10 @@ import { ClientRouter } from "astro:transitions";
         </main>
 
         <footer>
-                    <img src="/favicon/favicon.svg" alt="Logo versión móvil" />
+            <div class="footer-top">
+                <img src="/favicon/favicon.svg" alt="Logo versión móvil" />
 
-            <div class="footer-content">
                 <div>
-                    <p>
-                        Consultoría Especializada en seguridad del paciente y
-                        excelencia operativa bajo estándares internacionales
-                        JCI.
-                        <br>
-                        <strong>Aviso Legal JCI:</strong> Salqualis es una consultora
-                        independiente. Joint Commission International® y el Gold Seal
-                        of Approval® son marcas registradas propiedad de Joint Commission
-                        Resources, Inc
-                    </p>
-                    
-                </div>
-                <p>
-                © 2026 Consultoria Salqualis SL. Todos los derechos reservados.
-                | Consultoría para Acreditación de Salud en Chile y España. 
-            </p> 
-             
-            </div>
-              <div>
                     <nav>
                         <ul>
                             <li>
@@ -154,21 +124,49 @@ import { ClientRouter } from "astro:transitions";
                             </li>
                             <li>
                                 <a href="/JCIAccreditation/">¿Qué es JCI?</a>
-
                             </li>
                             <li>
                                 <a href="/team/">Nuestro Equipo Experto</a>
                             </li>
                             <li>
-                                <a href="/services/">Servicios de Acreditación</a>
-
+                                <a href="/services/"
+                                    >Servicios de Acreditación</a
+                                >
                             </li>
                             <li>
-                                <a href="/#centros-acred">Centros Acreditados</a>
+                                <a href="/#centros-acred">Centros Acreditados</a
+                                >
                             </li>
                         </ul>
                     </nav>
                 </div>
+                <div><strong>Contacto:</strong>
+                    <ul>
+                        <li><a href="mailto:consultoriasalqualis@gmail.com">consultoriasalqualis@gmail.com</a></li>
+                        <li><a href="tel:+34672485403">+34 672 48 54 03</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div>
+                    <p>
+                        Consultoría Especializada en seguridad del paciente y
+                        excelencia operativa bajo estándares internacionales
+                        JCI.
+                        <br />
+                        <strong>Aviso Legal JCI:</strong> Salqualis es una consultora
+                        independiente. Joint Commission International® y el Gold Seal
+                        of Approval® son marcas registradas propiedad de Joint Commission
+                        Resources, Inc
+                    </p>
+                </div>
+                <p>
+                    © 2026 Consultoria Salqualis SL. Todos los derechos
+                    reservados. | Consultoría para Acreditación de Salud en
+                    Chile y España.
+                </p>
+            </div>
         </footer>
 
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -181,4 +179,3 @@ import { ClientRouter } from "astro:transitions";
         <script src="../scripts/map.js"></script>
     </body>
 </html>
-

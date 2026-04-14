@@ -4,18 +4,20 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
     <section class="jci-article">
-        <div>
-            <h1>
-                Consultoría Salqualis: Expertos en Asesoría para la Acreditación
-                JCI.
-            </h1>
+        <div class="flex-adjust">
+            <div class="img-container">
+                <h1>
+                    Consultoría Salqualis: Expertos en Asesoría para la
+                    Acreditación JCI.
+                </h1>
+                <!-- <img src="/assets/img-home4.webp" alt="Laboratorio" /> -->
+            </div>
             <div class="text-container">
                 <p>
                     Somos <strong
                         >especialistas en la implementación de estándares de
-                        calidad <a
-                            href="/JCIAccreditation"
-                            target="_blank">Joint Commission International</a
+                        calidad <a href="/JCIAccreditation" target="_blank"
+                            >Joint Commission International</a
                         ></strong
                     > para organizaciones de salud que buscan la excelencia operativa
                     y la seguridad del paciente.
@@ -33,43 +35,50 @@ import Layout from "../layouts/Layout.astro";
                     enfocados a mejora de la calidad y eficiencia.
                 </p>
             </div>
-
-            <!-- <a href="/consultoria-web/JCIAccreditation" class="btn-primary"
-                >¿Qué es la acreditación JCI?</a
-            > -->
-            <!-- <p>
-                Además realizamos asesoría a centros sanitarios para el
-                desarrollo de estrategias trasformadoras, dirigidas a la mejora
-                de la calidad y seguridad centrada en el paciente.
-            </p>
-            <p>
-                Consultoría Salqualis cuenta con más de <strong
-                    >25 años de experiencia</strong
-                > brindando soporte y consultoría a centros hospitalarios, ambulatorios
-                y de atención primaria para el desarrollo de cambios estratégicos
-                enfocados a mejora de la calidad y eficiencia.
-            </p> -->
         </div>
     </section>
     <section class="map-article" id="centros-acred">
         <h2>
             Centros de Excelencia acreditados que avalan nuestra trayectoria
         </h2>
-        <p>
-            Nuestra mejor carta de presentación es la confianza de los numerosos
-            hospitales que nos eligen para acompañarles hasta el éxito de su
-            acreditación inicial y en sus sucesivos procesos de reacreditación.
-            Esta sólida experiencia, avalada por la fidelidad de directivos y
-            profesionales de la salud, constituye nuestro mejor salvoconducto y
-            un testimonio real del compromiso continuo que mantenemos con la
-            excelencia de cada organización.
-        </p>
-        <p>
-            Desde 1999, <span id="counter-num">42</span> establecimientos de salud Públicos y Privados han
-            obtenido su acreditación JCI bajo nuestra guía y soporte experto.
-            Hemos trabajado con algunas de las instituciones sanitarias más
-            prestigiosas a nivel nacional e internacional:
-        </p>
+
+        <div class="flex-adjust">
+            <div>
+                <p>
+                    Nuestra mejor carta de presentación es la confianza de los
+                    numerosos hospitales y organizaciones de salud que nos
+                    eligen para acompañarles hasta el éxito de su acreditación
+                    inicial y en sus sucesivos procesos de reacreditación. Esta
+                    sólida experiencia, <strong
+                        >avalada por la fidelidad de directivos y profesionales
+                        de la salud</strong
+                    >, constituye nuestro mejor salvoconducto y un testimonio
+                    real del compromiso continuo que mantenemos con la
+                    excelencia de cada organización.
+                </p>
+                <p>
+                    Desde 1999, <strong>42 establecimientos</strong>
+                    de salud Públicos y Privados <strong
+                        >han obtenido su acreditación JCI bajo nuestra guía y
+                        soporte experto</strong
+                    >. La mayoría de estas organizaciones han seguido contando
+                    con nuestro apoyo en las sucesivas reacreditaciones
+                    trienales. Hemos trabajado con algunas de las instituciones
+                    sanitarias más prestigiosas a nivel nacional e
+                    internacional:
+                </p>
+            </div>
+            <div class="counter-div">
+                <span id="counter-num">42</span>
+                <p>
+                    <strong
+                        >+ de 40 centros acreditados por JCI con Consultoría
+                        Salqualis</strong
+                    >
+                </p>
+            </div>
+        </div>
+
         <div>
             <div>
                 <div class="accreditation-container">
@@ -116,9 +125,11 @@ import Layout from "../layouts/Layout.astro";
                             <li>Hospital Teknon Quir&oacute;n. Barcelona</li>
                             <li>Hospital Quir&oacute;n Barcelona</li>
                             <li>Hospital Quir&oacute;n Torrevieja. Alicante</li>
-                            <li>Hospital Universitario La Luz en Madrid</li>
+                            <li>
+                                Hospital Universitario Quirón La Luz. Madrid
+                            </li>
                             <li>Hospital La Zarzuela. BUPA-SANITAS. Madrid</li>
-                            <li>Hospital La Moraleja. BUPA-SANITAS Madrid</li>
+                            <li>Hospital La Moraleja. BUPA-SANITAS. Madrid</li>
                             <li>Hospital CIMA. BUPA-SANITAS Barcelona</li>
                             <li>
                                 Hospital Nuestra Se&ntilde;ora del Mar.
@@ -157,8 +168,10 @@ import Layout from "../layouts/Layout.astro";
                                 Servicio de atenci&oacute;n a domicilio Hospital
                                 Gregorio Mara&ntilde;&oacute;n. SERMAS. Madrid
                             </li>
-                            <li>Grupo Quir&oacute;n</li>
-                            <li>Grupo Vithas</li>
+                            <li>
+                                Grupo Quir&oacute;n: Acreditación Enterprises
+                            </li>
+                            <li>Grupo Vithas: Acreditación Enterprises</li>
                         </ul>
                     </div>
 
@@ -213,18 +226,13 @@ import Layout from "../layouts/Layout.astro";
                             class="toggle-input"
                         />
                         <ul class="center-list colombia">
-                            <li>Acreditaci&oacute;n Grupo Colsanitas</li>
                             <li>
-                                Cl&iacute;nica Reina Sofia. Colsanitas. Grupo
-                                Keralty. Bogot&aacute;
-                            </li>
-                            <li>
-                                Cl&iacute;nica Sanitas materno infantil. Grupo
-                                Keralty. Bogot&aacute;
-                            </li>
-                            <li>
-                                Centro ambulatorio Colsanitas. Grupo Keralty.
-                                Bogot&aacute;
+                                Grupo Colsanitas, Keralty Bogotá con tres
+                                centros:
+
+                                <p>- Clínica Reina Sofía</p>
+                                <p>- Clínica Pediátrica Colsanitas</p>
+                                <p>- Centro ambulatorio Colsanitas</p>
                             </li>
                         </ul>
                     </div>
@@ -290,37 +298,25 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
     <section class="accredit-article">
-        <div>
+        <div class="flex-adjust">
             <div>
                 <h2>Transformamos Centros Sanitarios hacia la Excelencia</h2>
                 <p>
-                    Con el respaldo de una trayectoria internacional, ayudamos a
-                    clínicas y hospitales en varios países a cumplir con los
-                    exigentes estándares del modelo JCI.
+                    Con el respaldo de nuestra trayectoria internacional,
+                    ayudamos a organizaciones de salud en varios países a
+                    cumplir con los exigentes estándares del modelo JCI.
                 </p>
                 <p>
                     Las Organizaciones que ya han realizado este salto con éxito
                     destacan por la mejora en la eficiencia de los centros, el
                     aumento de la satisfacción de los clientes y en sus
-                    resultados en salud. Ha supuesto un el reto para todos las
+                    resultados en salud. Ha supuesto un reto para todos las
                     profesionales implicados consiguiendo mejorar la atención a
                     sus pacientes.
                 </p>
-                <!-- <p>
-                    Los centros sanitarios que deciden dar el paso adelante para
-                    la obtención de la Acreditación de calidad ofrecida a través
-                    de J.C.I., aceptan que ello supone asumir cambios
-                    trascendentales en la organización para poder cumplir con
-                    los exigentes requisitos establecidos en los diferentes
-                    estándares del modelo JCI.
-                </p> -->
+
                 <p>
-                    Este tránsito hacia la excelencia requiere un esfuerzo
-                    coordinado de toda la organización, la implicación de los
-                    profesionales y apoyo por parte del liderazgo.
-                </p>
-                <p>
-                    Los estándares JCI tiene un enfoque muy asistencial lo que
+                    Los estándares JCI tienen un enfoque muy asistencial lo que
                     supone una gran ventaja respecto a otros modelos para contar
                     con la motivación de los profesionales. Cada mejora
                     propuesta tiene repercusión directa en los pacientes , por
@@ -329,38 +325,35 @@ import Layout from "../layouts/Layout.astro";
                 <img src="/assets/img10.webp" />
             </div>
             <div>
-                <img src="/assets/img9.webp" />
+                <img src="/assets/hospital.webp" />
 
-                
                 <h2>¿Cuál es el papel de Salqualis?</h2>
                 <p>
-                    Brindamos la tutoría necesaria para avanzar de forma segura,
+                    Ofrecemos la tutoría necesaria para avanzar de forma segura,
                     evitando errores y optimizando los recurso, y tomando
                     decisiones certeras.
                 </p>
                 <p>
                     Es un camino en el que podemos acompañar a los centros hacia
                     la mejora continua y el cambio cultural de la organización.
-                    Este proceso puede incluir, si así lo decide en centro, el
-                    reto de alcanzar la acreditación JCI.
+                    Este proceso puede incluir, si así lo decide la
+                    organización, el reto de alcanzar la acreditación JCI.
                 </p>
 
                 <h2>
                     Por qué elegir a Salqualis para su Acreditación de Calidad
                 </h2>
                 <p>
-                    Somos una consultoría de alta dirección que actúa como el
-                    guía estratégico que tu organización necesita. Nuestro
-                    equipo de élite ofrece un acompañamiento cercano y experto
-                    para asegurar que su institución <strong
-                        >alcance el Sello de Oro</strong
-                    > de la calidad sanitaria internacional. Te invitamos a conocer
-                    a <a href="/team">nuestro equipo de profesionales.</a>
+                    Nuestra consultoría actúa como el guía estratégico que tu
+                    organización necesita. Nuestro equipo de élite ofrece un
+                    acompañamiento cercano y experto para asegurar que su
+                    institución <strong>alcance el Sello de Oro</strong> de la calidad
+                    sanitaria internacional. Te invitamos a conocer a <a
+                        href="/team">nuestro equipo de profesionales.</a
+                    >
                 </p>
             </div>
         </div>
-        <a class="btn-primary" href="/contact/"
-            >Solicita más información</a
-        >
+        <a class="btn-primary" href="/contact/">Solicita más información</a>
     </section>
 </Layout>
