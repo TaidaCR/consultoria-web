@@ -146,7 +146,7 @@ section {
     max-width: var(--max-width-main);
             align-items: stretch;
 
-    >*{
+    > :where(*){
         flex:1 1 0;
     }
 }

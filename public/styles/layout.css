@@ -14,6 +14,11 @@ body>header {
         .logo-img-desktop {
             max-width: 200px;
             margin-left: 20px;
+                        max-width: 200px;
+            margin-left: 20px;
+            position: absolute;
+            top: 2px;
+            left: -7px;
         }
 
         .logo-img-mobile {
