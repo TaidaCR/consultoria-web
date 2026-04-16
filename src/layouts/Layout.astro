@@ -79,16 +79,16 @@ import { ClientRouter } from "astro:transitions";
             <nav class="nav-bar" aria-label="Barra de navegación principal">
                 <img
                     class="logo-img-desktop"
-                    src="/assets/logo-transparent.svg"
-                    alt="Logo versión desktop"
+                    src="/assets/logo-big.svg"
+                    alt="Logo versión desktop" fetchpriority="high"
                 />
                 <img
                     class="logo-img-mobile"
                     src="/favicon/favicon.svg"
-                    alt="Logo versión móvil"
+                    alt="Logo versión móvil" fetchpriority="high"
                 />
                 <label for="burguer-menu" class="burger-label"
-                    ><img src="/assets/icon/burger-menu.svg" /></label
+                    ><img src="/assets/icon/burger-menu.svg" fetchpriority="high"/></label
                 >
                 <input type="checkbox" id="burguer-menu" />
                 <ul>

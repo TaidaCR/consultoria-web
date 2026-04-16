@@ -3,14 +3,14 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <link rel="preload" href="/assets/JGarcia.webp" as="image" slot="head" />
-    <link rel="preload" href="/assets/CCortes.webp" as="image" slot="head" />
-    <link rel="preload" href="/assets/JCMartin.webp" as="image" slot="head" />
-    <link rel="preload" href="/assets/VReina.webp" as="image" slot="head" />
-    <link rel="preload" href="/assets/VUribe.webp" as="image" slot="head" />
-    <link rel="preload" href="/assets/DGarcia.webp" as="image" slot="head" />
-    <link rel="preload" href="/assets/SRodriguez.webp" as="image" slot="head" />
-    <link rel="preload" href="/assets/VUribe.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/team/JGarcia.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/team/CCortes.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/team/JCMartin.jpeg" as="image" slot="head" />
+    <link rel="preload" href="/assets/team/VReina.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/team/VUribe.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/team/DGarcia.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/team/SRodriguez.webp" as="image" slot="head" />
+    <link rel="preload" href="/assets/team/VUribe.webp" as="image" slot="head" />
 
     <section aria-labelledby="titulo-equipo" class="team-section">
         <div>
@@ -23,7 +23,7 @@ import Layout from "../layouts/Layout.astro";
                         <div class="flip-card-front" role="listitem">
                             <div class="img-container">
                                 <img
-                                    src="/assets/JGarcia.webp"
+                                    src="/assets/team/JGarcia.webp"
                                     alt="José A. García Ruiz"
                                 />
                             </div>
@@ -142,7 +142,7 @@ import Layout from "../layouts/Layout.astro";
                         <div class="flip-card-front" role="listitem">
                             <div class="img-container">
                                 <img
-                                    src="/assets/SRodriguez.webp"
+                                    src="/assets/team/SRodriguez.webp"
                                     alt="Salvador Rodriguez Pérez"
                                 />
                             </div>
@@ -256,7 +256,7 @@ import Layout from "../layouts/Layout.astro";
                         <div class="flip-card-front" role="listitem">
                             <div class="img-container">
                                 <img
-                                    src="/assets/CCortes.webp?v=1.1"
+                                    src="/assets/team/CCortes.webp?v=1.1"
                                     alt="Carmen Cortes Martínez"
                                 />
                             </div>
@@ -264,8 +264,7 @@ import Layout from "../layouts/Layout.astro";
                                 <h2>
                                     <img
                                         src="/assets/icon/stethoscope.svg"
-                                        alt=""
-                                    />Dra. Carmen Cortes Martínez
+                                        alt="" aria-hidden="true"/>Dra. Carmen Cortes Martínez
                                 </h2>
                                 <p class="academic-title">
                                     <strong
@@ -394,7 +393,7 @@ import Layout from "../layouts/Layout.astro";
                         <div class="flip-card-front" role="listitem">
                             <div class="img-container">
                                 <img class="top"
-                                    src="/assets/VUribe.webp"
+                                    src="/assets/team/VUribe.webp"
                                     alt="Victoria Uribe Pérez"
                                 />
                             </div>
@@ -402,7 +401,7 @@ import Layout from "../layouts/Layout.astro";
                                 <h2>
                                     <img
                                         src="/assets/icon/stethoscope.svg"
-                                        alt=""
+                                        alt=""  aria-hidden="true"
                                     />Victoria Uribe Pérez
                                 </h2>
                                 <p class="academic-title">
@@ -495,7 +494,7 @@ import Layout from "../layouts/Layout.astro";
                         <div class="flip-card-front" role="listitem">
                             <div class="img-container">
                                 <img
-                                    loading="lazy" src="/assets/barranchina.webp"
+                                    loading="lazy" src="/assets/team/barranchina.webp"
                                     alt="Juan Ignacio Barrachina"
                                 />
                             </div>
@@ -503,7 +502,7 @@ import Layout from "../layouts/Layout.astro";
                                 <h2>
                                     <img
                                         src="/assets/icon/stethoscope.svg"
-                                        alt=""
+                                        alt=""  aria-hidden="true"
                                     />Juan Ignacio Barrachina
                                 </h2>
                                 <p class="academic-title">
@@ -623,7 +622,7 @@ import Layout from "../layouts/Layout.astro";
                         <div class="flip-card-front" role="listitem">
                             <div class="img-container">
                                 <img loading="lazy"
-                                    src="/assets/DGarcia.webp"
+                                    src="/assets/team/DGarcia.webp"
                                     alt="Diego García Cortés"
                                 />
                             </div>
@@ -631,7 +630,7 @@ import Layout from "../layouts/Layout.astro";
                                 <h2>
                                     <img
                                         src="/assets/icon/pill.svg"
-                                        alt=""
+                                        alt=""  aria-hidden="true"
                                     />Diego García Cortés
                                 </h2>
                                 <p class="academic-title">
@@ -742,12 +741,15 @@ import Layout from "../layouts/Layout.astro";
                         <div class="flip-card-front" role="listitem">
                             <div class="img-container">
                                 <img loading="lazy"
-                                    src="/assets/JCMartin.webp"
+                                    src="/assets/team/JCMartin.jpeg"
                                     alt="José carlos Martín Santos"
                                 />
                             </div>
                             <div class="text-container">
-                                <h2>José Carlos Martín Santos</h2>
+                                <h2> <img
+                                        src="/assets/icon/mask.svg"
+                                        alt=""  aria-hidden="true"
+                                    />José Carlos Martín Santos</h2>
                                 <p class="academic-title">
                                     <strong>Cuidados de Enfermería</strong>
                                 </p>
@@ -850,12 +852,15 @@ import Layout from "../layouts/Layout.astro";
                         <div class="flip-card-front" role="listitem">
                             <div class="img-container">
                                 <img loading="lazy"
-                                    src="/assets/VReina.webp"
+                                    src="/assets/team/VReina.webp"
                                     alt="Victoria Reina Fernández"
                                 />
                             </div>
                             <div class="text-container">
-                                <h2>Victoria Reina Fernández</h2>
+                                <h2> <img
+                                        src="/assets/icon/doc.svg"
+                                        alt=""  aria-hidden="true"
+                                    />Victoria Reina Fernández</h2>
                                 <p class="academic-title">
                                     <strong>Documentación clínica</strong>
                                 </p>

@@ -53,6 +53,11 @@ a {
     text-decoration: none;
     font-weight: 600;
     color: var(--color-dark);
+
+    &:focus {
+        box-shadow: 0 0 0 2px #eeeeeef7, 0 0 0 4px var(--color-dark);
+        border-radius: 2px;
+    }
 }
 
 a:not(.btn-primary):hover {
@@ -88,20 +93,32 @@ img {
         transform: translateY(-1.5px);
         background-color: #8aadb8;
     }
+
+    &:focus {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--color-dark);
+    }
 }
 
 .list-icon {
     padding-left: 0;
     max-width: 800px !important;
+    margin-top: 20px;
 
     li {
         list-style: none;
         margin-bottom: 10px;
-        gap: 5px;
+        padding-left: 25px;
+        position: relative;
 
-        img {
-            width: 25px;
-            height: 25px;
+        &:before {
+            content: "";
+            background-image: url(/assets/icon/circled-arrow.svg);
+            background-size: 21px;
+            width: 21px;
+            height: 19px;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0px;
         }
     }
 }
@@ -140,19 +157,19 @@ section {
 
 
 
-.flex-adjust{
-    display:flex;
-    gap:30px;
+.flex-adjust {
+    display: flex;
+    gap: 30px;
     max-width: var(--max-width-main);
-            align-items: stretch;
+    align-items: stretch;
 
-    > :where(*){
-        flex:1 1 0;
+    > :where(*) {
+        flex: 1 1 0;
     }
 }
 
-@media(max-width:768px){
-    .flex-adjust{
-    flex-direction: column;
-}
+@media(max-width:768px) {
+    .flex-adjust {
+        flex-direction: column;
+    }
 }

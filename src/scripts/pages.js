@@ -36,7 +36,6 @@ document.addEventListener("click", (e) => {
     }
 })
 
-
 document.addEventListener('astro:page-load', () => {
     //Counter
     const elContador = document.getElementById('counter-num');
@@ -65,10 +64,6 @@ document.addEventListener('astro:page-load', () => {
                 retraso = retrasoInicial;
                 actualizarContador();
             }
-        } else {
-            actual = 0;
-            elContador.innerText = 0;
-            animacionEnCurso = false;
         }
     }, { threshold: 1.0 });
 

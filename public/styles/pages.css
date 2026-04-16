@@ -12,21 +12,11 @@ img {
     border-radius: 10px;
 }
 
-/* 
-article {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-} */
-
-
 /*HOME*/
 .jci-article {
     position: relative;
     font-weight: 400;
-    padding: 0px 30px !important;
-
+    padding: 0px;
     min-height: 500px;
     background-color: #c6d4d5;
 
@@ -39,18 +29,22 @@ article {
         gap: 0;
 
         .img-container {
-            background-image: url(/assets/doctor2.jpeg);
+            background-image: url(/assets/doctor2.webp);
             background-size: cover;
             background-repeat: no-repeat;
-            /* width: 60%; */
             flex: 1 0 50%;
+            padding-left: 69px;
+            background-position: 175px;
+
+            >div {
+                padding-left: 106px;
+            }
         }
 
         h1 {
             max-width: 300px;
             margin-left: 15px;
             font-size: 26px;
-
         }
 
         .text-container {
@@ -60,134 +54,13 @@ article {
             flex-direction: column;
             justify-content: center;
             flex: 1 1 50%;
+            padding: 30px 80px 30px 50px;
+            background-color: #ebebeb;
+
         }
 
         p {
             font-size: 20px;
-        }
-    }
-}
-
-/*prueba*/
-.jci-article {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-
-    .img-container {
-        padding-left: 69px;
-        background-size: cover;
-        background-position: 175px;
-
-        >div {
-            padding-left: 106px;
-        }
-    }
-
-    .text-container {
-        background-color: #ebebeb;
-        padding: 30px;
-        padding-left: 50px;
-        padding-right: 80px;
-    }
-}
-
-@media(max-width:1550px) {
-    .jci-article {
-        .flex-adjust {
-            width: 100%;
-            gap: 0;
-
-            .img-container {
-                background-position: center;
-                background-position: 50px;
-                padding-left: 0 !important;
-                flex: 1 1 65%;
-
-                h1 {
-                    margin-left: -35px;
-                }
-            }
-
-            .text-container {
-                flex: 1 1 35%;
-
-                p {
-                    font-size: 18px;
-                }
-            }
-        }
-    }
-}
-
-@media(max-width: 1200px) {
-    .jci-article {
-        .flex-adjust {
-
-            .img-container {
-                background-position: 24%;
-                flex: 1 1 70%;
-            }
-
-            .text-container {
-                padding: 30px;
-                flex: 1 1 30%;
-            }
-        }
-    }
-
-}
-
-@media(max-width:992px) {
-    .jci-article {
-        .flex-adjust {
-            flex-direction: column;
-
-            .img-container {
-                min-height: 400px;
-                background-position: 0 -40px;
-
-                h1 {
-                    max-width: 280px;
-                }
-
-                >div {
-                    padding-left: 53px;
-                }
-            }
-        }
-    }
-}
-
-@media(max-width:768px) {
-    .jci-article {
-        & .flex-adjust {
-            .img-container {
-                min-height: 400px;
-                background-position: 0 16px;
-            }
-        }
-    }
-}
-
-@media(max-width:475px) {
-    .jci-article {
-        & .flex-adjust {
-            .img-container {
-                min-height: 400px;
-                background-position: center 90px;
-
-                >div {
-                    padding-left: 0;
-                    justify-content: center;
-                    display: flex;
-                    text-align: center;
-                }
-
-                h1 {
-                    margin: 20px 10px;
-                    max-width: none;
-                }
-            }
         }
     }
 }
@@ -489,7 +362,7 @@ article {
 .servJCI-section {
     position: relative;
     width: 100%;
-    background-image: url(/assets/img5.jpg);
+    background-image: url(/assets/hospital-corridor.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -498,6 +371,10 @@ article {
         max-width: var(--max-width-main);
         z-index: 3;
         position: relative;
+
+        h2 {
+            text-align: center;
+        }
     }
 
     &:after {
@@ -750,9 +627,7 @@ article {
 
 /*QUE ES LA ACREDITACION JCI*/
 .ac-jci-section {
-    padding-right: 0;
-    padding-left: 0;
-    padding-top: 0;
+    padding:0;
 
     >* {
         max-width: 1200px;
@@ -826,9 +701,10 @@ article {
                     border-radius: 10px;
                     font-size: 13px;
 
-                    p {
+                    span {
                         color: black;
                         font-weight: 400;
+                        text-align: center;
                     }
 
                     img {
@@ -891,9 +767,52 @@ article {
 
 
 /*MEDIA QUERIES*/
+@media(max-width:1550px) {
+    .jci-article {
+        .flex-adjust {
+            width: 100%;
+            gap: 0;
+
+            .img-container {
+                background-position: center;
+                background-position: 50px;
+                padding-left: 0 !important;
+                flex: 1 1 65%;
+
+                h1 {
+                    margin-left: -35px;
+                }
+            }
+
+            .text-container {
+                flex: 1 1 35%;
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
 @media(max-width:1200px) {
 
     /*HOME*/
+    .jci-article {
+        .flex-adjust {
+
+            .img-container {
+                background-position: 24%;
+                flex: 1 1 70%;
+            }
+
+            .text-container {
+                padding: 30px;
+                flex: 1 1 30%;
+            }
+        }
+    }
+
     .toggle-input:checked~.center-list.spain {
         max-height: 1500px;
     }
@@ -927,6 +846,27 @@ article {
 }
 
 @media (max-width: 992px) {
+    /*HOME*/
+        .jci-article {
+        .flex-adjust {
+            flex-direction: column;
+
+            .img-container {
+                min-height: 400px;
+                background-position: 0 -40px;
+
+                h1 {
+                    max-width: 280px;
+                }
+
+                >div {
+                    padding-left: 53px;
+                }
+            }
+        }
+    }
+
+    /*CONTACT*/
     .contact-section {
         .flex-adjust {
             flex-direction: column-reverse;
@@ -948,6 +888,15 @@ article {
     }
 
     /*HOME*/
+    .jci-article {
+        & .flex-adjust {
+            .img-container {
+                min-height: 400px;
+                background-position: 0 16px;
+            }
+        }
+    }
+
     .toggle-input:checked~.center-list.spain {
         max-height: 1800px;
     }
@@ -1117,6 +1066,29 @@ article {
 
         .img-container {
             height: 60% !important;
+        }
+    }
+}
+
+@media(max-width:475px) {
+    .jci-article {
+        & .flex-adjust {
+            .img-container {
+                min-height: 400px;
+                background-position: center 90px;
+
+                >div {
+                    padding-left: 0;
+                    justify-content: center;
+                    display: flex;
+                    text-align: center;
+                }
+
+                h1 {
+                    margin: 20px 10px;
+                    max-width: none;
+                }
+            }
         }
     }
 }
