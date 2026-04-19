@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+    <link rel="preload" href="/assets/doctor2.webp" as="image" slot="head" />
     <section class="jci-article">
         <div class="flex-adjust">
             <div class="img-container">
@@ -11,6 +12,7 @@ import Layout from "../layouts/Layout.astro";
                         Consultoría Salqualis: Expertos en Asesoría para la
                         Acreditación JCI
                     </h1>
+                    <img src="/assets/doctor2.webp" alt="" aria-hidden="true" fetchpriority="high">
                 </div>
             </div>
             <div class="text-container">
@@ -86,7 +88,7 @@ import Layout from "../layouts/Layout.astro";
             <div>
                 <div class="accreditation-container">
                     <div class="country-group">
-                        <label for="spain" class="country-label"
+                        <label for="spain" class="country-label fade-in-bottom"
                             >ESPA&Ntilde;A</label
                         >
                         <input
@@ -179,7 +181,7 @@ import Layout from "../layouts/Layout.astro";
                     </div>
 
                     <div class="country-group">
-                        <label for="peru" class="country-label"
+                        <label for="peru" class="country-label fade-in-bottom"
                             >PER&Uacute;</label
                         >
                         <input type="checkbox" id="peru" class="toggle-input" />
@@ -220,7 +222,7 @@ import Layout from "../layouts/Layout.astro";
                     </div>
 
                     <div class="country-group">
-                        <label for="colombia" class="country-label"
+                        <label for="colombia" class="country-label fade-in-bottom"
                             >COLOMBIA</label
                         >
                         <input
@@ -241,7 +243,7 @@ import Layout from "../layouts/Layout.astro";
                     </div>
 
                     <div class="country-group">
-                        <label for="chile" class="country-label">CHILE</label>
+                        <label for="chile" class="country-label fade-in-bottom">CHILE</label>
                         <input
                             type="checkbox"
                             id="chile"
@@ -257,7 +259,7 @@ import Layout from "../layouts/Layout.astro";
                     </div>
                 </div>
             </div>
-            <div class="map-container">
+            <div class="map-container fade-in-bottom">
                 <div id="map"></div>
             </div>
         </div>
@@ -270,31 +272,31 @@ import Layout from "../layouts/Layout.astro";
         </p>
 
         <div>
-            <article>
+            <article class="fade-in">
                 <div></div>
                 <p>
                     3 hospitales en <strong>Chile</strong>
                 </p>
             </article>
-            <article>
+            <article class="fade-in">
                 <div></div>
                 <p>
                     2 centros ambulatorios en <strong>Chile</strong>
                 </p>
             </article>
-            <article>
+            <article class="fade-in">
                 <div></div>
                 <p>
                     1 centro de atención primaria en <strong>Chile</strong>
                 </p>
             </article>
 
-            <article>
+            <article class="fade-in">
                 <div></div>
                 <p>2 hospitales en <strong>Perú</strong></p>
             </article>
 
-            <article>
+            <article class="fade-in">
                 <div></div>
                 <p>10 hospitales en <strong>España</strong></p>
             </article>
@@ -302,7 +304,7 @@ import Layout from "../layouts/Layout.astro";
     </section>
     <section class="accredit-article">
         <div class="flex-adjust">
-            <div>
+            <div class="fade-in-left">
                 <h2>Transformamos Centros Sanitarios hacia la Excelencia</h2>
                 <p>
                     Con el respaldo de nuestra trayectoria internacional,
@@ -327,13 +329,13 @@ import Layout from "../layouts/Layout.astro";
                 </p>
                 <img src="/assets/img10.webp" alt="" aria-hidden="true"/>
             </div>
-            <div>
+            <div class=" fade-in-right">
                 <img src="/assets/img-corridor.webp" alt="" aria-hidden="true"/>
 
                 <h2>¿Cuál es el papel de Salqualis?</h2>
                 <p>
                     Ofrecemos la tutoría necesaria para avanzar de forma segura,
-                    evitando errores y optimizando los recurso, y tomando
+                    evitando errores y optimizando los recursos, y tomando
                     decisiones certeras.
                 </p>
                 <p>
@@ -360,3 +362,49 @@ import Layout from "../layouts/Layout.astro";
         <a class="btn-primary" href="/contact/">Solicita más información</a>
     </section>
 </Layout>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../scripts/map.js?v=1.0"></script>
+<script>
+    
+    document.addEventListener("astro:page-load", () => {
+        //Counter
+        const elContador = document.getElementById("counter-num");
+        const objetivo = 42;
+        let actual = 0;
+        let retrasoInicial = 350;
+        let retraso = retrasoInicial;
+        let animacionEnCurso = false;
+
+        function actualizarContador() {
+            actual++;
+            if (elContador) {
+                elContador.innerText = actual.toString();
+            }
+
+            if (actual < objetivo) {
+                retraso = retraso * 0.92;
+
+                setTimeout(actualizarContador, retraso);
+            }
+        }
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    if (!animacionEnCurso) {
+                        animacionEnCurso = true;
+                        actual = 0;
+                        retraso = retrasoInicial;
+                        actualizarContador();
+                    }
+                }
+            },
+            { threshold: 1.0 },
+        );
+
+        if (elContador) {
+            observer.observe(elContador);
+        }
+    });
+</script>
+<script src="../scripts/animations.js?v=1.0"></script>

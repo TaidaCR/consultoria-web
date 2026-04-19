@@ -29,15 +29,22 @@ img {
         gap: 0;
 
         .img-container {
-            background-image: url(/assets/doctor2.webp);
-            background-size: cover;
-            background-repeat: no-repeat;
             flex: 1 0 50%;
             padding-left: 69px;
-            background-position: 175px;
+            position: relative;
 
             >div {
                 padding-left: 106px;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 25px;
+                    left: 175px;
+                    z-index: -1;
+                    object-fit: cover;
+                }
             }
         }
 
@@ -56,7 +63,6 @@ img {
             flex: 1 1 50%;
             padding: 30px 80px 30px 50px;
             background-color: #ebebeb;
-
         }
 
         p {
@@ -115,11 +121,11 @@ img {
         border: 1px solid var(--color-dark);
         font-weight: bold;
         margin-top: 8px;
-        transition: background 0.3s;
     }
 
     .country-label:hover {
         background: var(--secondary-color);
+        transition: background 0.3s;
     }
 
     .center-list {
@@ -192,6 +198,22 @@ img {
         #map {
             height: 500px;
             width: 80%;
+        }
+
+        .leaflet-container .map__hospLink {
+            background-color: var(--primary-color);
+            padding: 5px 10px;
+            color: black;
+            border-radius: 5px;
+            border: 1px solid grey;
+            justify-self: center;
+            display: flex;
+            font-weight: 100;
+
+            &:hover {
+                background-color: #9bb3b6;
+                transition: background-color 0.5s ease;
+            }
         }
     }
 }
@@ -505,6 +527,34 @@ img {
     }
 }
 
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-75%);
+    transition: all 1.2s ease-in-out;
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(75%);
+    transition: all 1.2s ease-in-out;
+}
+
+.fade-in-bottom {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: all 1.5s ease-out;
+}
+
+.appear {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 /* TEAM */
 .team-section {
     justify-content: center;
@@ -544,7 +594,6 @@ img {
             height: fit-content;
             perspective: 1000px;
             cursor: pointer;
-
         }
 
         .flip-card-inner {
@@ -556,7 +605,6 @@ img {
             height: var(--flip-card-height);
             padding: 60px 30px;
             box-sizing: border-box;
-
         }
 
         .flip-card-inner.rotated {
@@ -583,17 +631,24 @@ img {
             color: black;
             padding: 60px 30px;
 
-
             .img-container {
-                width: 100%;
+                width: 90%;
                 height: 68%;
+                box-shadow: 0px 0px 11px #989797;
+                border-radius: 10px;
+                justify-self: center;
+                overflow: hidden;
 
                 >img {
-                    width: 90%;
+                    width: 100%;
                     height: 100%;
                     max-width: 100%;
-                    box-shadow: 0px 0px 11px #989797;
                     object-fit: cover;
+                    transition: transform 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
                 }
 
                 .top {
@@ -627,7 +682,7 @@ img {
 
 /*QUE ES LA ACREDITACION JCI*/
 .ac-jci-section {
-    padding:0;
+    padding: 0;
 
     >* {
         max-width: 1200px;
@@ -695,7 +750,6 @@ img {
                     gap: 10px;
                     align-items: center;
                     flex-direction: column;
-                    /* text-align: center; */
                     background-color: #f3f3f3;
                     padding: 30px 10px;
                     border-radius: 10px;
@@ -740,7 +794,6 @@ img {
             box-sizing: border-box;
 
             >* {
-                /* flex: 1 1 0; */
                 justify-content: space-around;
                 display: flex;
                 flex-direction: column;
@@ -765,7 +818,6 @@ img {
     }
 }
 
-
 /*MEDIA QUERIES*/
 @media(max-width:1550px) {
     .jci-article {
@@ -774,14 +826,19 @@ img {
             gap: 0;
 
             .img-container {
-                background-position: center;
-                background-position: 50px;
                 padding-left: 0 !important;
                 flex: 1 1 65%;
 
                 h1 {
                     margin-left: -35px;
                 }
+
+                &>div {
+                    img {
+                        left: 70px;
+                    }
+                }
+
             }
 
             .text-container {
@@ -796,13 +853,11 @@ img {
 }
 
 @media(max-width:1200px) {
-
     /*HOME*/
     .jci-article {
         .flex-adjust {
 
             .img-container {
-                background-position: 24%;
                 flex: 1 1 70%;
             }
 
@@ -846,14 +901,14 @@ img {
 }
 
 @media (max-width: 992px) {
+
     /*HOME*/
-        .jci-article {
+    .jci-article {
         .flex-adjust {
             flex-direction: column;
 
             .img-container {
                 min-height: 400px;
-                background-position: 0 -40px;
 
                 h1 {
                     max-width: 280px;
@@ -861,6 +916,12 @@ img {
 
                 >div {
                     padding-left: 53px;
+
+                    img {
+                        left: 0;
+                        top: 70px;
+                        overflow: visible;
+                    }
                 }
             }
         }
@@ -884,15 +945,17 @@ img {
 
 @media(max-width: 768px) {
     :root {
-        --flip-card-height: 800px;
+        --flip-card-height: 700px;
     }
 
     /*HOME*/
     .jci-article {
         & .flex-adjust {
             .img-container {
-                min-height: 400px;
-                background-position: 0 16px;
+
+                >div img {
+                    top: 40px;
+                }
             }
         }
     }
@@ -989,7 +1052,7 @@ img {
 
 @media(max-width:576px) {
     :root {
-        --flip-card-height: 980px;
+        --flip-card-height: 800px;
     }
 
     /*HOME*/
@@ -1020,14 +1083,27 @@ img {
         }
     }
 
-    .jci-article div {
-        max-width: 100%;
+    .jci-article {
+        & .flex-adjust {
+            max-width: 100%;
 
-        .text-container {
-            flex-direction: column;
+            & .img-container {
+                &>div {
+                    img {
+                        right: 0;
+                        left: 70px;
+                        top: 40px;
+                        overflow: visible;
+                    }
+                }
+            }
 
-            p {
-                min-width: 0;
+            & .text-container {
+                flex-direction: column;
+
+                p {
+                    min-width: 0;
+                }
             }
         }
     }
@@ -1042,18 +1118,26 @@ img {
 
     /*SERVICES*/
     .servJCI-section {
-        .swiper-slide {
-            height: 270px;
+        .bg-met-swiper {
+            .swiper-slide {
+                height: 270px;
+                justify-content: center;
 
-            h3 {
-                font-size: 20px;
-                margin: 0px;
-            }
+                h3 {
+                    font-size: 20px;
+                    margin: 0px;
+                }
 
-            p {
-                font-size: 15px;
+                p {
+                    font-size: 15px;
+                }
+
+                &.extra h3 {
+                    margin-top: 30px;
+                }
             }
         }
+
     }
 
     /*TEAM*/
@@ -1071,17 +1155,24 @@ img {
 }
 
 @media(max-width:475px) {
+    :root {
+        --flip-card-height: 950px;
+    }
+
     .jci-article {
         & .flex-adjust {
             .img-container {
-                min-height: 400px;
-                background-position: center 90px;
-
                 >div {
                     padding-left: 0;
                     justify-content: center;
                     display: flex;
                     text-align: center;
+
+                    img {
+                        right: 0;
+                        left: 0;
+                        top: 90px;
+                    }
                 }
 
                 h1 {
@@ -1091,4 +1182,22 @@ img {
             }
         }
     }
+
+    footer {
+        .footer-top {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 1fr 100px;
+
+            img {
+                justify-self: center;
+                width: 100px;
+            }
+        }
+
+        .footer-content {
+            text-align: left;
+        }
+    }
+
 }
