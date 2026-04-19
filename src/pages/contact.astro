@@ -50,15 +50,3 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
 </Layout>
-
-<script>
-    //Giro flip-cards
-    document.addEventListener("click", (e) => {
-        const target = e.target as HTMLElement;
-        if (target.closest(".flip-card-front")) {
-            target.closest(".flip-card-inner")?.classList.add("rotated");
-        } else if (target.closest(".flip-card-back")) {
-            target.closest(".flip-card-inner")?.classList.remove("rotated");
-        }
-    });
-</script>
