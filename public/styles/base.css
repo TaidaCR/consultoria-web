@@ -171,6 +171,25 @@ section {
     }
 }
 
+.legal{
+    max-width: var(--max-width-main);
+    background-color: var(--primary-color);
+    margin:20px auto;
+    border-radius:10px;
+    text-align: left;
+    align-items: flex-start;
+    h1, h2{
+        text-align: center;
+                width: 100%;
+    }
+    ul {
+        padding-left: 20px;
+        li{
+        list-style: disc;
+    }
+    }
+}
+
 @media(max-width:768px) {
     .flex-adjust {
         flex-direction: column;
