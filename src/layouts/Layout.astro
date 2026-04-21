@@ -14,13 +14,21 @@ import { ClientRouter } from "astro:transitions";
             name="description"
             content="En Consultoría Salqualis somos especialistas en acreditación sanitaria JCI (Joint Commision International) y gestión de Calidad. Ayudamos a tu centro sanitario a lograr la excelencia operativa"
         />
+        <meta
+            name="apple-mobile-web-app-title"
+            content="Consultoría Salqualis"
+        />
+        <meta name="application-name" content="Consultoría Salqualis" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <meta name="google-site-verification" content="AUsQW3Mc0_TQYN431lsKAHBPfNvNHhcNUEUTLrrbefQ" />
+        <meta
+            name="google-site-verification"
+            content="AUsQW3Mc0_TQYN431lsKAHBPfNvNHhcNUEUTLrrbefQ"
+        />
 
-        <link rel="stylesheet" href="/styles/base.css?v=1.3" />
-        <link rel="stylesheet" href="/styles/layout.css?v=1.3" />
-        <link rel="stylesheet" href="/styles/pages.css?v=1.3" />
+        <link rel="stylesheet" href="/styles/base.css?v=1.4" />
+        <link rel="stylesheet" href="/styles/layout.css?v=1.4" />
+        <link rel="stylesheet" href="/styles/pages.css?v=1.4" />
 
         <!-- FAVICON -->
         <link
@@ -78,19 +86,29 @@ import { ClientRouter } from "astro:transitions";
     <body>
         <header>
             <nav class="nav-bar" aria-label="Barra de navegación principal">
-                <a href="/" class="logo-img-desktop" aria-label="Volver a Inicio"
-                ><img
-                    src="/assets/logo-big.svg"
-                    alt="Logo Consultoría Salqualis" fetchpriority="high"
-                /></a>
-                
+                <a
+                    href="/"
+                    class="logo-img-desktop"
+                    aria-label="Volver a Inicio"
+                    ><img
+                        src="/assets/logo-big.svg"
+                        alt="Logo Consultoría Salqualis"
+                        fetchpriority="high"
+                    /></a
+                >
+
                 <a href="/" class="logo-img-mobile" aria-label="Volver a inicio"
-                ><img
-                    src="/favicon/favicon.svg"
-                    alt="Logo Consultoría Salqualis" fetchpriority="high"
-                /></a>
+                    ><img
+                        src="/favicon/favicon.svg"
+                        alt="Logo Consultoría Salqualis"
+                        fetchpriority="high"
+                    /></a
+                >
                 <label for="burguer-menu" class="burger-label"
-                    ><img src="/assets/icon/burger-menu.svg" fetchpriority="high"/></label
+                    ><img
+                        src="/assets/icon/burger-menu.svg"
+                        fetchpriority="high"
+                    /></label
                 >
                 <input type="checkbox" id="burguer-menu" />
                 <ul>
@@ -116,7 +134,12 @@ import { ClientRouter } from "astro:transitions";
 
         <footer>
             <div class="footer-top">
-                <a href="/" aria-label="Volver a inicio"><img src="/favicon/favicon.svg" alt="Logo Consultoría Salqualis"/></a>
+                <a href="/" aria-label="Volver a inicio"
+                    ><img
+                        src="/favicon/favicon.svg"
+                        alt="Logo Consultoría Salqualis"
+                    /></a
+                >
 
                 <div>
                     <nav>
@@ -142,9 +165,13 @@ import { ClientRouter } from "astro:transitions";
                         </ul>
                     </nav>
                 </div>
-                <div><strong>Contacto:</strong>
+                <div>
+                    <strong>Contacto:</strong>
                     <ul>
-                        <li><a href="mailto:consultoriasalqualis@gmail.com">consultoriasalqualis@gmail.com</a></li>
+                        <li>
+                            <a href="mailto:consultoriasalqualis@gmail.com"
+                                >consultoriasalqualis@gmail.com</a>
+                        </li>
                         <li><a href="tel:+34672485403">+34 672 48 54 03</a></li>
                     </ul>
                 </div>
@@ -157,57 +184,58 @@ import { ClientRouter } from "astro:transitions";
                         excelencia operativa bajo estándares internacionales
                         JCI.
                         <br />
-                        Salqualis es una consultora independiente. Joint Commission International® y el Gold Seal of Approval® son marcas registradas propiedad de Joint Commission Resources, Inc.
-                      
+                        Salqualis es una consultora independiente. Joint Commission
+                        International® y el Gold Seal of Approval® son marcas registradas
+                        propiedad de Joint Commission Resources, Inc.
                     </p>
                 </div>
                 <p>
                     © 2026 Consultoria Salqualis SL. Todos los derechos
-                    reservados. | <a href="/privacy/">Política de Privacidad</a> | <a href="/legal">Aviso Legal</a> | Consultoría para Acreditación de Salud en
-                    Chile y España.
+                    reservados. | <a href="/privacy/">Política de Privacidad</a> |
+                    <a href="/legal">Aviso Legal</a> | Consultoría para Acreditación
+                    de Salud en Chile y España.
                 </p>
             </div>
         </footer>
 
         <script>
             //burger menu
-document.addEventListener('astro:page-load', () => {
-    const burgerLabel = document.querySelector(".burger-label")
-    const burgerInput = document.getElementById("burguer-menu")
+            document.addEventListener("astro:page-load", () => {
+                const burgerLabel = document.querySelector(".burger-label");
+                const burgerInput = document.getElementById("burguer-menu");
 
-    burgerInput?.addEventListener("click", (e) => {
-        console.log(e.target)
-        if (!burgerLabel?.classList.contains("turnRound")) {
-            burgerLabel?.classList.add("turnRound")
-            console.log("añadido turnround")
-        } else {
-            burgerLabel?.classList.remove("turnRound")
-            console.log("eliminada turnround")
+                burgerInput?.addEventListener("click", (e) => {
+                    console.log(e.target);
+                    if (!burgerLabel?.classList.contains("turnRound")) {
+                        burgerLabel?.classList.add("turnRound");
+                        console.log("añadido turnround");
+                    } else {
+                        burgerLabel?.classList.remove("turnRound");
+                        console.log("eliminada turnround");
+                    }
+                });
+            });
 
-        }
-    })
-})
+            //nav-link active
+            document.addEventListener("astro:page-load", () => {
+                const currentPage = window.location.pathname;
+                console.log(currentPage);
 
-//nav-link active
-document.addEventListener('astro:page-load', () => {
-    const currentPage = window.location.pathname;
-    console.log(currentPage)
+                const navLinksPath = document.querySelectorAll(".nav-link");
 
-    const navLinksPath = document.querySelectorAll(".nav-link")
+                navLinksPath.forEach((link) => {
+                    const linkPath = link.getAttribute("href");
+                    console.log("LinkPath:", linkPath);
 
-    navLinksPath.forEach(link => {
-        const linkPath = link.getAttribute("href");
-        console.log("LinkPath:", linkPath)
+                    link.classList.remove("active");
 
-        link.classList.remove("active")
+                    if (linkPath === currentPage) {
+                        link.classList.add("active");
+                    }
 
-        if (linkPath === currentPage) {
-            link.classList.add("active")
-        }
-
-        console.log("CurrentPage;", currentPage)
-    })
-})
+                    console.log("CurrentPage;", currentPage);
+                });
+            });
         </script>
     </body>
 </html>

@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { paisesAcred } from "../data/accreditations.js";
 ---
 
 <Layout>
@@ -12,7 +13,12 @@ import Layout from "../layouts/Layout.astro";
                         Consultoría Salqualis: Expertos en Asesoría para la
                         Acreditación JCI
                     </h1>
-                    <img src="/assets/doctor2.webp" alt="" aria-hidden="true" fetchpriority="high">
+                    <img
+                        src="/assets/doctor2.webp"
+                        alt=""
+                        aria-hidden="true"
+                        fetchpriority="high"
+                    />
                 </div>
             </div>
             <div class="text-container">
@@ -20,7 +26,9 @@ import Layout from "../layouts/Layout.astro";
                     <p>
                         Somos <strong
                             >especialistas en la implementación de estándares de
-                            calidad <a href="/JCIAccreditation" aria-label="Leer más sobre la Joint Commission International"
+                            calidad <a
+                                href="/JCIAccreditation"
+                                aria-label="Leer más sobre la Joint Commission International"
                                 >Joint Commission International</a
                             ></strong
                         > para organizaciones de salud que buscan la excelencia operativa
@@ -77,188 +85,40 @@ import Layout from "../layouts/Layout.astro";
                 <span id="counter-num">42</span>
                 <p>
                     <strong
-                        >+ de 40 centros acreditados por JCI con el acompañamiento de Consultoría
-                        Salqualis</strong
+                        >+ de 40 centros acreditados por JCI con el
+                        acompañamiento de Consultoría Salqualis</strong
                     >
                 </p>
             </div>
         </div>
 
-        <div>
-            <div>
-                <div class="accreditation-container">
-                    <div class="country-group">
-                        <label for="spain" class="country-label fade-in-bottom"
-                            >ESPA&Ntilde;A</label
-                        >
-                        <input
-                            type="checkbox"
-                            id="spain"
-                            class="toggle-input"
-                        />
-                        <ul class="center-list spain">
-                            <li>
-                                Hospital Universitario Gregorio
-                                Mara&ntilde;&oacute;n. Hospital
-                                Materno-infantil. SERMAS. Madrid
-                            </li>
-                            <li>
-                                Hospital Universitario de Cruces. Baracaldo.
-                                Osakidetza. Vizcaya.
-                            </li>
-                            <li>
-                                Hospital del Alto Deba en Mondrag&oacute;n,
-                                Osakidetza. Guipuzcoa.
-                            </li>
-                            <li>
-                                Hospital Universitario Costa del Sol. Marbella.
-                                SAS. M&aacute;laga.
-                            </li>
-                            <li>
-                                Cl&iacute;nica Universitaria Fundaci&oacute;n
-                                Jim&eacute;nez Diaz. Grupo Quir&oacute;n. Madrid
-                            </li>
-                            <li>
-                                Hospital Universitario Quir&oacute;n Pozuelo de
-                                Alarc&oacute;n en Madrid
-                            </li>
-                            <li>
-                                Hospital Cl&iacute;nica Dexeus Quir&oacute;n en
-                                Barcelona
-                            </li>
-                            <li>Hospital Quir&oacute;n C&oacute;rdoba</li>
-                            <li>Hospital Teknon Quir&oacute;n. Barcelona</li>
-                            <li>Hospital Quir&oacute;n Barcelona</li>
-                            <li>Hospital Quir&oacute;n Torrevieja. Alicante</li>
-                            <li>
-                                Hospital Universitario Quirón La Luz. Madrid
-                            </li>
-                            <li>Hospital La Zarzuela. BUPA-SANITAS. Madrid</li>
-                            <li>Hospital La Moraleja. BUPA-SANITAS. Madrid</li>
-                            <li>Hospital CIMA. BUPA-SANITAS Barcelona</li>
-                            <li>
-                                Hospital Nuestra Se&ntilde;ora del Mar.
-                                BUPA-SANITAS Madrid
-                            </li>
-                            <li>
-                                Hospital Vithas XANIT Internacional
-                                Benalm&aacute;dena. M&aacute;laga
-                            </li>
-                            <li>Hospital Vithas Almeria</li>
-                            <li>Hospital Vithas Granada</li>
-                            <li>
-                                Hospital Vithas Nuestra Se&ntilde;ora de
-                                Am&eacute;rica. Madrid
-                            </li>
-                            <li>Hospital Zorrotzaurre en Bilbao. Vizcaya.</li>
-                            <li>Hospital Cl&iacute;nica Benidorm. Alicante</li>
-                            <li>
-                                Cl&iacute;nica Universitaria de Navarra.
-                                Pamplona
-                            </li>
-                            <li>
-                                Cl&iacute;nica Universitaria de Navarra. Madrid
-                            </li>
-                            <li>Cl&iacute;nica Servidigest. Barcelona</li>
-                            <li>
-                                Clinica Emby. Cl&iacute;nica de
-                                reproducci&oacute;n asistida. Oviedo. Asturias
-                            </li>
-                            <li>
-                                Centro de salud. O&ntilde;ati. Osakidetza.
-                                Guip&uacute;zcoa
-                            </li>
-                            <li>Centro de salud el Llano. SESPA. Asturias</li>
-                            <li>
-                                Servicio de atenci&oacute;n a domicilio Hospital
-                                Gregorio Mara&ntilde;&oacute;n. SERMAS. Madrid
-                            </li>
-                            <li>
-                                Grupo Quir&oacute;n: Acreditación Enterprises
-                            </li>
-                            <li>Grupo Vithas: Acreditación Enterprises</li>
-                        </ul>
-                    </div>
+        <div style="width:100%">
+            {
+                paisesAcred.map((pais) => (
+                    <div class="accreditation-container">
+                        <div class="country-group">
+                            <label
+                                for={pais.id}
+                                class="country-label fade-in-bottom"
+                            >
+                                {pais.country}
+                            </label>
+                            <input
+                                type="checkbox"
+                                id={pais.id}
+                                class="toggle-input"
+                            />
 
-                    <div class="country-group">
-                        <label for="peru" class="country-label fade-in-bottom"
-                            >PER&Uacute;</label
-                        >
-                        <input type="checkbox" id="peru" class="toggle-input" />
-                        <ul class="center-list peru">
-                            <li>
-                                Hospital Alberto Barton. Grupo Ibt. El Callao.
-                            </li>
-                            <li>
-                                Hospital Guillermo Kaelin. Villa Mar&iacute;a
-                                del Triunfo. Grupo Ibt. Lima
-                            </li>
-                            <li>
-                                Cl&iacute;nica San Pablo Surco. Grupo San Pablo.
-                                Lima
-                            </li>
-                            <li>
-                                Cl&iacute;nica Jes&uacute;s del Norte. Grupo San
-                                Pablo. Lima
-                            </li>
-                            <li>
-                                Cl&iacute;nica San Gabriel. Grupo San Pablo.
-                                Lima
-                            </li>
-                            <li>Cl&iacute;nica Ricardo Palma. Lima</li>
-                            <li>
-                                Policl&iacute;nico Alberto Barton. Grupo Ibt. El
-                                Callao.
-                            </li>
-                            <li>
-                                Policl&iacute;nico Guillermo Kaelin. Villa
-                                Mar&iacute;a del Triunfo. Grupo Ibt. Lima
-                            </li>
-                            <li>
-                                Servicios de atenci&oacute;n a domicilio de
-                                Grupo Ibt
-                            </li>
-                        </ul>
+                            <ul class={`center-list ${pais.id}`}>
+                                {pais.centers.map((centro) => (
+                                    <li style="white-space: pre-line;">{centro}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
+                ))
+            }
 
-                    <div class="country-group">
-                        <label for="colombia" class="country-label fade-in-bottom"
-                            >COLOMBIA</label
-                        >
-                        <input
-                            type="checkbox"
-                            id="colombia"
-                            class="toggle-input"
-                        />
-                        <ul class="center-list colombia">
-                            <li>
-                                Grupo Colsanitas, Keralty Bogotá con tres
-                                centros:
-
-                                <p>- Clínica Reina Sofía</p>
-                                <p>- Clínica Pediátrica Colsanitas</p>
-                                <p>- Centro ambulatorio Colsanitas</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="country-group">
-                        <label for="chile" class="country-label fade-in-bottom">CHILE</label>
-                        <input
-                            type="checkbox"
-                            id="chile"
-                            class="toggle-input"
-                        />
-                        <ul class="center-list chile">
-                            <li>
-                                Servicio de atenci&oacute;n a domicilio Hospital
-                                Padre Hurtado. Servicio de Salud Sur Oriente.
-                                Santiago de Chile
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div class="map-container fade-in-bottom">
                 <div id="map"></div>
             </div>
@@ -327,10 +187,14 @@ import Layout from "../layouts/Layout.astro";
                     propuesta tiene repercusión directa en los pacientes , por
                     lo que es fácil de asumir y comprender.
                 </p>
-                <img src="/assets/img10.webp" alt="" aria-hidden="true"/>
+                <img src="/assets/img10.webp" alt="" aria-hidden="true" />
             </div>
-            <div class=" fade-in-right">
-                <img src="/assets/img-corridor.webp" alt="" aria-hidden="true"/>
+            <div class="fade-in-right">
+                <img
+                    src="/assets/img-corridor.webp"
+                    alt=""
+                    aria-hidden="true"
+                />
 
                 <h2>¿Cuál es el papel de Salqualis?</h2>
                 <p>
@@ -362,10 +226,9 @@ import Layout from "../layouts/Layout.astro";
         <a class="btn-primary" href="/contact/">Solicita más información</a>
     </section>
 </Layout>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="../scripts/map.js?v=1.0"></script>
 <script>
-    
     document.addEventListener("astro:page-load", () => {
         //Counter
         const elContador = document.getElementById("counter-num");

@@ -44,6 +44,7 @@ img {
                     left: 175px;
                     z-index: -1;
                     object-fit: cover;
+                    overflow: visible;
                 }
             }
         }
@@ -853,6 +854,7 @@ img {
 }
 
 @media(max-width:1200px) {
+
     /*HOME*/
     .jci-article {
         .flex-adjust {
@@ -868,20 +870,22 @@ img {
         }
     }
 
-    .toggle-input:checked~.center-list.spain {
-        max-height: 1500px;
-    }
+    .map-article {
+        .toggle-input:checked~.center-list.spain {
+            max-height: 1500px;
+        }
 
-    .toggle-input:checked~.center-list.peru {
-        max-height: 500px;
-    }
+        .toggle-input:checked~.center-list.peru {
+            max-height: 500px;
+        }
 
-    .toggle-input:checked~.center-list.colombia {
-        max-height: 260px;
-    }
+        .toggle-input:checked~.center-list.colombia {
+            max-height: 260px;
+        }
 
-    .toggle-input:checked~.center-list.chile {
-        max-height: 90px;
+        .toggle-input:checked~.center-list.chile {
+            max-height: 90px;
+        }
     }
 
     /*CONTACT*/
@@ -960,17 +964,20 @@ img {
         }
     }
 
-    .toggle-input:checked~.center-list.spain {
-        max-height: 1800px;
+    .map-article {
+        .toggle-input:checked~.center-list.spain {
+            max-height: 1900px;
+        }
+
+        .toggle-input:checked~.center-list.peru {
+            max-height: 800px;
+        }
+
+        .toggle-input:checked~.center-list.colombia {
+            max-height: 350px;
+        }
     }
 
-    .toggle-input:checked~.center-list.peru {
-        max-height: 800px;
-    }
-
-    .toggle-input:checked~.center-list.colombia {
-        max-height: 350px;
-    }
 
     .accredit-article {
 
@@ -1063,7 +1070,7 @@ img {
         }
 
         .toggle-input:checked~.center-list.spain {
-            max-height: 1800px;
+            max-height: 2120px;
         }
 
         .toggle-input:checked~.center-list.peru {
@@ -1158,6 +1165,25 @@ img {
     :root {
         --flip-card-height: 950px;
     }
+
+    .map-article {
+        .toggle-input:checked~.center-list.spain {
+            max-height: 2440px;
+        }
+
+        .toggle-input:checked~.center-list.peru {
+            max-height: 800px;
+        }
+
+        .toggle-input:checked~.center-list.colombia {
+            max-height: 350px;
+        }
+
+        .toggle-input:checked~.center-list.chile {
+            max-height: 130px;
+        }
+    }
+
 
     .jci-article {
         & .flex-adjust {
