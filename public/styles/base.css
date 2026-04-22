@@ -1,18 +1,18 @@
-@font-face {
+/* @font-face {
     font-family: 'Montserrat Regular';
     src: url("/fonts/Montserrat-Regular.woff2") format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 :root {
     --primary-color: #c7d6d8;
     --secondary-color: #9dbac4;
     --color-dark: #4b6d83;
-    --primary-font: 'Montserrat Regular', sans-serif;
+    --primary-font: Montserrat, sans-serif;
     --primary-hightlight: 'Playfair Display', sans-serif;
-    --flip-card-width: 473px;
+    --flip-card-width: 475px;
     --flip-card-height: 750px;
     --max-width-main: 1100px;
 }
@@ -29,6 +29,24 @@ body {
 
 main {
     margin-top: 80px;
+}
+
+section {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+        padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+img {
+    border-radius: 10px;
 }
 
 h1,
@@ -69,6 +87,11 @@ img {
     max-height: 100%;
 }
 
+strong{
+    font-weight:600;
+}
+
+/*CLASES GENERALES*/
 .btn-primary {
     background-color: var(--secondary-color);
     padding: 10px 25px;
@@ -80,8 +103,6 @@ img {
     text-align: center;
     margin-top: 35px;
     width: fit-content;
-
-    /* Mejoras de nitidez */
     transition: all 0.2s ease;
     backface-visibility: hidden;
     transform: translateZ(0);
@@ -151,14 +172,6 @@ img {
     display:none;
 }
 
-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 30px;
-    padding-left: 30px;
-    box-sizing: border-box;
-        overflow: hidden;
-}
 
 .flex-adjust {
     display: flex;

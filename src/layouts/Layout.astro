@@ -10,6 +10,14 @@ import { ClientRouter } from "astro:transitions";
         <title>
             Consultoría Salqualis | Expertos en Calidad y Acreditación Sanitaria
         </title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Consultoría Salqualis",
+                "url": "https://consultoriasalqualis.cl/"
+            }
+        </script>
         <meta
             name="description"
             content="En Consultoría Salqualis somos especialistas en acreditación sanitaria JCI (Joint Commision International) y gestión de Calidad. Ayudamos a tu centro sanitario a lograr la excelencia operativa"
@@ -25,6 +33,7 @@ import { ClientRouter } from "astro:transitions";
             name="google-site-verification"
             content="AUsQW3Mc0_TQYN431lsKAHBPfNvNHhcNUEUTLrrbefQ"
         />
+        <slot name="header" />
 
         <link rel="stylesheet" href="/styles/base.css?v=1.4" />
         <link rel="stylesheet" href="/styles/layout.css?v=1.4" />
@@ -39,47 +48,26 @@ import { ClientRouter } from "astro:transitions";
         />
         <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/favicon/apple-touch-icon.png"
-        />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
         <link rel="manifest" href="/favicon/site.webmanifest" />
 
         <!-- Open Graph / LinkedIn / WhatsApp / Facebook -->
         <meta property="og:type" content="website" />
-        <meta
-            property="og:url"
-            content="https://taidacr.github.io/consultoria-web/"
+        <meta property="og:url" content="https://taidacr.github.io/consultoria-web/"
         />
-        <meta
-            property="og:title"
-            content="Consultoría Salqualis | Acreditación y Gestión Sanitaria"
-        />
-        <meta
-            property="og:description"
-            content="Especialistas en procesos de acreditación JCI y optimización de calidad para centros sanitarios. Logra la excelencia operativa con Salqualis."
+        <meta property="og:title"
+            content="Consultoría Salqualis | Acreditación y Gestión Sanitaria" />
+        <meta property="og:description" content="Especialistas en procesos de acreditación JCI y optimización de calidad para centros sanitarios. Logra la excelencia operativa con Salqualis."
         />
         <meta property="og:image" content="/favicon/og-image.png" />
-        <meta property="og:site_name" content="Salqualis" />
+        <meta property="og:site_name" content="Consultoría Salqualis" />
         <meta property="og:locale" content="es_ES" />
 
         <!-- FUENTE -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
             rel="stylesheet"
-        />
-
-        <!-- /*LIBRERIAS EXTERNAS*/ -->
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
         <ClientRouter />
     </head>
@@ -170,7 +158,8 @@ import { ClientRouter } from "astro:transitions";
                     <ul>
                         <li>
                             <a href="mailto:consultoriasalqualis@gmail.com"
-                                >consultoriasalqualis@gmail.com</a>
+                                >consultoriasalqualis@gmail.com</a
+                            >
                         </li>
                         <li><a href="tel:+34672485403">+34 672 48 54 03</a></li>
                     </ul>

@@ -1,8 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" slot="header"/>
     <h1 class="sr-only">Servicios que ofrece Consultoría Salqualis</h1>
     <section class="servJCI-section">
         <header>
@@ -165,9 +167,7 @@ import Layout from "../layouts/Layout.astro";
                     <strong>ASEGURAR</strong> el cumplimiento de requisitos de JCI
                     para el entorno de la asistencia.
                     <p>
-                        <a href="/contact" class="btn-primary"
-                            >Solicita más información</a
-                        >
+                        <Button text="Solicita más información" href="/contact"/>
                     </p>
                 </li>
             </ul>
@@ -216,7 +216,7 @@ import Layout from "../layouts/Layout.astro";
                 </li>
             </ul>
         </article>
-        <a href="/team" class="btn-primary">Conoce a nuestro equipo</a>
+        <Button text="Conoce a nuestro equipo" href="/team"/>
     </section>
     <section class="servForm-section">
         <header>
@@ -260,7 +260,7 @@ import Layout from "../layouts/Layout.astro";
                 />
             </div>
         </article>
-        <a href="/team" class="btn-primary">Conoce a nuestro equipo</a>
+        <Button text="Conoce a nuestro equipo" href="/team"/>
     </section>
     <section class="servCod-section">
         <header><h2>Servicio de codificación clínica</h2></header>

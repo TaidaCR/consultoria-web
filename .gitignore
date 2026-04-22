@@ -24,5 +24,3 @@ pnpm-debug.log*
 .idea/
 
 src/pages/OLD.astro
-
-src/styles/old.css
