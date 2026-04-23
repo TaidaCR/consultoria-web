@@ -644,9 +644,9 @@
                     object-fit: cover;
                     transition: transform 0.5s ease;
 
-                    &:hover {
+                    /* &:hover {
                         transform: scale(1.05);
-                    }
+                    } */
                 }
 
                 .top {
