@@ -598,6 +598,12 @@
 
         .flip-card-inner.rotated {
             transform: rotateY(180deg);
+
+            .flip-card-front {
+                img{
+                    z-index:0;
+                }
+            }
         }
 
         .flip-card-front,
