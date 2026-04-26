@@ -13,8 +13,8 @@ import { team } from "../data/team.js"
             </h1>
             <div class="team-grid" role="list">
                 {
-                    team.map((member) => (
-                        <article class={`flip-card ${member == team[0] ? 'accent' : ''}`}>
+                    team.map((member, key) => (
+                        <article class={`flip-card ${member == team[0] ? 'accent' : `img-${key+1}`}`}>
                             <div class="flip-card-inner">
                                 <div class="flip-card-front" role="listitem">
                                     <div class="img-container">
