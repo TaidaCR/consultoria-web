@@ -185,21 +185,28 @@
             width: 80%;
         }
 
-        .leaflet-container .map__hospLink {
-            background-color: var(--primary-color);
-            padding: 5px 10px;
-            color: black;
-            border-radius: 5px;
-            border: 1px solid grey;
-            justify-self: center;
-            display: flex;
-            font-weight: 100;
+        .leaflet-container {
+            font-family: var(--primary-font);
 
-            &:hover {
-                background-color: #9bb3b6;
-                transition: background-color 0.5s ease;
+            .map__hospLink {
+                background-color: var(--primary-color);
+                padding: 5px 10px;
+                color: black;
+                border-radius: 5px;
+                border: 1px solid grey;
+                justify-self: center;
+                display: flex;
+                width: 108px;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: #9bb3b6;
+                    transition: background-color 0.5s ease;
+                }
             }
         }
+
+
     }
 }
 
@@ -263,9 +270,10 @@
 
 /*SERVICIOS*/
 .servOpening-section {
-    h2{
+    h2 {
         text-align: center;
     }
+
     div {
         position: relative;
 
@@ -548,7 +556,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-        position: relative;
+    position: relative;
 
     &:before {
         content: "";
@@ -587,13 +595,13 @@
                 width: 100%;
                 justify-content: center;
                 display: flex;
-                    object-position: bottom;
+                object-position: bottom;
             }
 
             &.img-4 img,
             &.img-2 img,
-            &.img-6 img{
-                object-position:top;
+            &.img-6 img {
+                object-position: top;
             }
         }
 
@@ -607,9 +615,9 @@
             padding: 60px 30px;
             box-sizing: border-box;
 
-            p{
-                margin-bottom:5px;
-                font-size:14px;
+            p {
+                margin-bottom: 5px;
+                font-size: 14px;
             }
         }
 
@@ -959,18 +967,18 @@
     }
 
     .team-section {
-    & .team-grid {
-        & .flip-card-front {
-            & .img-container {
-                & > img {
-                    &:hover {
-                        transform: none;
+        & .team-grid {
+            & .flip-card-front {
+                & .img-container {
+                    &>img {
+                        &:hover {
+                            transform: none;
+                        }
                     }
                 }
             }
         }
     }
-}
 
 }
 
