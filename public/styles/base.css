@@ -4,8 +4,6 @@
     --color-dark: #4b6d83;
     --primary-font: Montserrat, sans-serif;
     --primary-hightlight: 'Playfair Display', sans-serif;
-    --flip-card-width: 475px;
-    --flip-card-height: 750px;
     --max-width-main: 1100px;
 }
 
@@ -96,15 +94,13 @@ strong{
     margin-top: 35px;
     width: fit-content;
     transition: all 0.2s ease;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    -webkit-font-smoothing: subpixel-antialiased;
     text-transform: uppercase;
     font-size: 15px;
 
     &:hover {
         transform: translateY(-1.5px);
         background-color: #8aadb8;
+        transition: all 0.2s ease;
     }
 
     &:focus {
@@ -230,24 +226,6 @@ strong{
 /* ============================================
    VARIABLES RESPONSIVE
    ============================================ */
-@media (max-width: 768px) {
-    :root {
-        --flip-card-height: 700px;
-    }
-}
-
-@media (max-width: 576px) {
-    :root {
-        --flip-card-height: 800px;
-    }
-}
-
-@media (max-width: 475px) {
-    :root {
-        --flip-card-height: 965px;
-    }
-}
-
 @media(min-width:768px){
     section{
         padding:50px 30px;

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "skills": {
+    "accessibility": {
+      "path": ".agents/skills/accessibility"
+    },
+    "astro": {
+      "path": ".agents/skills/astro"
+    },
+    "frontend-design": {
+      "path": ".agents/skills/frontend-design"
+    },
+    "nodejs-backend-patterns": {
+      "path": ".agents/skills/nodejs-backend-patterns"
+    },
+    "nodejs-best-practices": {
+      "path": ".agents/skills/nodejs-best-practices"
+    },
+    "seo": {
+      "path": ".agents/skills/seo"
+    },
+    "typescript-advanced-types": {
+      "path": ".agents/skills/typescript-advanced-types"
+    }
+  }
+}

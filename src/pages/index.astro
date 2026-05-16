@@ -37,7 +37,6 @@ import Button from "../components/Button.astro"
                         height: 100%;
                         z-index: -1;
                         object-fit: cover;
-                        overflow: visible;
                         right: 0;
                         left: 0;
                         top: 90px;
@@ -45,7 +44,6 @@ import Button from "../components/Button.astro"
                 }
 
                 h1 {
-                    margin-left: 15px;
                     font-size: 26px;
                     margin: 20px 10px;
                     max-width: none;
@@ -115,29 +113,9 @@ import Button from "../components/Button.astro"
             }
         }
 
-        .toggle-input {
-            display: none;
-
-            &:checked ~ .center-list.spain {
-                max-height: 860px;
-                transition: max-height 1.5s ease-out;
-            }
-
-            &:checked ~ .center-list.peru {
-                max-height: 240px;
-                transition: max-height 1.0s ease-out;
-            }
-
-            &:checked ~ .center-list.colombia {
-                max-height: 200px;
-                transition: max-height 0.7s ease-out;
-            }
-
-            &:checked ~ .center-list.chile {
-                max-height: 50px;
-                transition: max-height 0.4s ease-out;
-            }
-        }
+    .toggle-input {
+        display: none;
+    }
 
         .country-label {
             display: block;
@@ -166,6 +144,7 @@ import Button from "../components/Button.astro"
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            transition: max-height 0.5s ease-out;
 
             li {
                 background-color: var(--primary-color);
@@ -175,22 +154,6 @@ import Button from "../components/Button.astro"
                 margin: 10px;
                 margin-bottom: 8px;
                 font-size: 0.95rem;
-            }
-
-            &.spain {
-                transition: max-height 1.5s ease-out;
-            }
-
-            &.peru {
-                transition: max-height 0.7s ease-out;
-            }
-
-            &.colombia {
-                transition: max-height .4s ease-out;
-            }
-
-            &.chile {
-                transition: max-height .4s ease-out;
             }
         }
 
@@ -284,20 +247,6 @@ import Button from "../components/Button.astro"
                 width: 100%;
             }
 
-            .toggle-input {
-                &:checked ~ .center-list.spain {
-                    max-height: 2120px;
-                }
-
-                &:checked ~ .center-list.peru {
-                    max-height: 800px;
-                }
-
-                &:checked ~ .center-list.colombia {
-                    max-height: 350px;
-                }
-            }
-
             ul li {
                 padding: 5px;
                 font-size: 14px;
@@ -346,22 +295,6 @@ import Button from "../components/Button.astro"
     @media (min-width: 576px) {
         .jci-article .flex-adjust .img-container > div img {
             top: 40px;
-        }
-
-        .map-article {
-            .toggle-input {
-                &:checked ~ .center-list.spain {
-                    max-height: 1900px;
-                }
-
-                &:checked ~ .center-list.peru {
-                    max-height: 800px;
-                }
-
-                &:checked ~ .center-list.colombia {
-                    max-height: 350px;
-                }
-            }
         }
     }
 
@@ -421,26 +354,6 @@ import Button from "../components/Button.astro"
                 flex: 1 1 30%;
             }
         }
-
-        .map-article {
-            .toggle-input {
-                &:checked ~ .center-list.spain {
-                    max-height: 1500px;
-                }
-
-                &:checked ~ .center-list.peru {
-                    max-height: 500px;
-                }
-
-                &:checked ~ .center-list.colombia {
-                    max-height: 260px;
-                }
-
-                &:checked ~ .center-list.chile {
-                    max-height: 90px;
-                }
-            }
-        }
     }
 
     @media (min-width: 1200px) {
@@ -471,25 +384,7 @@ import Button from "../components/Button.astro"
         }
     }
 
-    @media (max-width: 475px) {
-        .map-article .toggle-input {
-            &:checked ~ .center-list.spain {
-                max-height: 2440px;
-            }
-
-            &:checked ~ .center-list.peru {
-                max-height: 800px;
-            }
-
-            &:checked ~ .center-list.colombia {
-                max-height: 350px;
-            }
-
-            &:checked ~ .center-list.chile {
-                max-height: 130px;
-            }
-        }
-    }
+    /*  */
 </style>
     <link rel="preload" href="/assets/doctor2.webp" as="image" slot="head" />
     <link rel="stylesheet" slot="header" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
@@ -756,6 +651,25 @@ import Button from "../components/Button.astro"
         if (elContador) {
             observer.observe(elContador);
         }
+
+        //acordeon centros acreditados
+        const ACCORDION_SPEED = 0.5
+
+        document.querySelectorAll<HTMLInputElement>(".toggle-input").forEach((input) => {
+            input.addEventListener("change", (e) => {
+                const list = input.nextElementSibling as HTMLElement || null;
+                const height = list.scrollHeight;
+                const duration = Math.max(height / ACCORDION_SPEED, 150);
+
+                list.style.transition = `max-height ${duration}ms ease-out`;
+
+                if (input.checked) {
+                    list.style.maxHeight = height + "px";
+                } else {
+                    list.style.maxHeight = "0";
+                }
+            });
+        });
     });
 </script>
 <script src="../scripts/animations.js?v=1.0"></script>
