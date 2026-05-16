@@ -22,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
                                     alt=""
                                     aria-hidden="true"
                                 /><span>
-                                    Nuestro e-mail corporativo &nbsp;
+                                    Nuestro e-mail corporativo 
                                     <strong
                                         >consultoriasalqualis@gmail.com</strong
                                     ></span
@@ -124,12 +124,24 @@ import Layout from "../layouts/Layout.astro";
                 border-radius: 5px;
                 padding: 30px;
                 box-sizing: border-box;
-                flex-direction: column;
+                flex-direction: column-reverse;
 
                 > * {
                     justify-content: space-around;
                     display: flex;
                     flex-direction: column;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 575px) {
+        .contact-section > div {
+            .flex-adjust {
+                .contact-div{
+                    > div{
+                        flex-direction:row;
+                    }
                 }
             }
         }
@@ -142,7 +154,7 @@ import Layout from "../layouts/Layout.astro";
             }
 
             .flex-adjust {
-                flex-direction: row;
+                flex-direction: column-reverse;
             }
 
             article {
@@ -157,10 +169,18 @@ import Layout from "../layouts/Layout.astro";
                 flex-direction: row;
             }
 
-            .flex-adjust div:first-of-type {
+            .flex-adjust div:first-child {
+                    flex: 1 1 300px;
+                    min-width: 0;
                 > img {
+                    height: 100%;
+                    object-fit: cover;
                     object-position: center;
                 }
+            }
+
+            .flex-adjust div:nth-child(2) {
+                flex: 1 1 500px;
             }
         }
     }
@@ -174,7 +194,7 @@ import Layout from "../layouts/Layout.astro";
                     > img {
                         height: 100%;
                         object-fit: cover;
-                        object-position: -133px 0px;
+                        object-position: -90px 0px;
                     }
                 }
             }

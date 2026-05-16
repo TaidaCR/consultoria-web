@@ -9,11 +9,82 @@ body>header {
 
     nav {
         display: flex;
-        height: 60px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
 
         .logo-img-desktop {
-            max-width: 200px;
-            margin-left: 20px;
+            display: none;
+        }
+
+        .logo-img-mobile {
+            display: flex;
+            margin-right: 20px;
+            width: 62px;
+            height: 62px;
+        }
+
+        #burguer-menu {
+            display: none;
+        }
+
+        label[for="burguer-menu"] {
+            display: block;
+            cursor: pointer;
+        }
+
+        .burger-label {
+            transition: ease .5s;
+            width: 40px;
+            height: 40px;
+
+            &.turnRound {
+                transform: rotate(90deg);
+            }
+        }
+
+        ul {
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            background-color: #eeeeeef7;
+            width: 100vw;
+            left: 0;
+            padding: 60px 0 0 0;
+            gap: 35px;
+            display: none;
+            height: 100vh;
+            align-items: center;
+            justify-content: flex-start;
+            list-style: none;
+            font-size: 18px;
+
+            li a {
+                color: black;
+                font-weight: 400;
+
+                &.active {
+                    font-weight: 700;
+                    color: var(--color-dark);
+                }
+            }
+        }
+
+        input:checked + ul {
+            display: flex;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    body>header nav {
+        height: 60px;
+        flex-direction: row;
+        justify-content: center;
+
+        .logo-img-desktop {
+            display: block;
             max-width: 200px;
             margin-left: 20px;
             position: absolute;
@@ -31,21 +102,18 @@ body>header {
         }
 
         ul {
-            flex-grow: 1;
             display: flex;
-            justify-content: center;
+            flex-direction: row;
+            position: static;
+            background: none;
+            width: auto;
+            height: auto;
+            padding: 0;
             gap: 50px;
+            justify-content: center;
+            align-items: center;
+            font-size: inherit;
             list-style: none;
-
-            li a {
-                color: black;
-                font-weight: 400;
-
-                &.active {
-                    font-weight: 700;
-                    color: var(--color-dark);
-                }
-            }
         }
     }
 }
@@ -101,69 +169,5 @@ footer {
         gap: 10px;
         display: flex;
         flex-direction: column;
-    }
-}
-
-@media(max-width:1024px) {
-    body>header nav {
-        width: 100%;
-        justify-content: space-between;
-        max-width: 100%;
-        flex-direction: row-reverse;
-        align-items: center;
-
-        label[for="burguer-menu"] {
-            display: block;
-            cursor: pointer;
-        }
-
-        .logo-img-desktop {
-            display: none;
-        }
-
-        .logo-img-mobile {
-            display: flex;
-            margin-right: 20px;
-            /* margin-bottom: 4px; */
-            width:62px;
-            height:62px;        
-        }
-
-        .burger-label {
-            transition: ease .5s;
-            width: 40px;
-            height: 40px;
-        }
-
-        .burger-label.turnRound {
-            transform: rotate(90deg);
-        }
-
-        ul {
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            background-color: #eeeeeef7;
-            width: 100%;
-            left: 0;
-            padding: 30px;
-            gap: 35px;
-            display: none;
-        }
-
-        input:checked+ul {
-            display: flex;
-        }
-    }
-}
-
-@media(max-width:576px){
-    body > header nav ul{
-        padding: 60px 0px 0px 0px;
-        height:100vh;
-        align-items: center;
-        justify-content: flex-start;
-                    width: 100vw;
-                        font-size: 18px;
     }
 }
