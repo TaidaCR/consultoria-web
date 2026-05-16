@@ -1,11 +1,3 @@
-/* @font-face {
-    font-family: 'Montserrat Regular';
-    src: url("/fonts/Montserrat-Regular.woff2") format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-} */
-
 :root {
     --primary-color: #c7d6d8;
     --secondary-color: #9dbac4;
@@ -41,16 +33,9 @@ section {
     flex-direction: column;
     width: 100%;
     align-items: center;
-        padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding:30px 25px;
     box-sizing: border-box;
     overflow: hidden;
-}
-
-img {
-    border-radius: 10px;
 }
 
 h1,
@@ -89,6 +74,9 @@ a:not(.btn-primary):hover {
 img {
     max-width: 100%;
     max-height: 100%;
+    border-radius: 10px;
+    width:auto;
+    height:auto;
 }
 
 strong{
@@ -176,12 +164,12 @@ strong{
     display:none;
 }
 
-
 .flex-adjust {
     display: flex;
     gap: 30px;
     max-width: var(--max-width-main);
     align-items: stretch;
+    flex-direction: column;
 
     > :where(*) {
         flex: 1 1 0;
@@ -195,6 +183,7 @@ strong{
     border-radius:10px;
     text-align: left;
     align-items: flex-start;
+    
     h1, h2{
         text-align: center;
                 width: 100%;
@@ -202,13 +191,88 @@ strong{
     ul {
         padding-left: 20px;
         li{
-        list-style: disc;
-    }
+            list-style: disc;
+        }
     }
 }
 
-@media(max-width:768px) {
+/* ============================================
+   ANIMACIONES (usadas en múltiples páginas)
+   ============================================ */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-75%);
+    transition: all 1.2s ease-in-out;
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(75%);
+    transition: all 1.2s ease-in-out;
+}
+
+.fade-in-bottom {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: all 1.5s ease-out;
+}
+
+.appear {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* ============================================
+   VARIABLES RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    :root {
+        --flip-card-height: 700px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --flip-card-height: 800px;
+    }
+}
+
+@media (max-width: 475px) {
+    :root {
+        --flip-card-height: 965px;
+    }
+}
+
+@media(min-width:768px){
+    section{
+        padding:50px 30px;
+    }
+    
     .flex-adjust {
-        flex-direction: column;
+        flex-direction: row;
+    }
+}
+
+@media(max-width:475px){
+    footer {
+        .footer-top {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 1fr 100px;
+
+            img {
+                justify-self: center;
+                width: 100px;
+            }
+        }
+
+        .footer-content {
+            text-align: left;
+        }
     }
 }

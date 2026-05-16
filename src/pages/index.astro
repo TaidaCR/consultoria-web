@@ -5,6 +5,492 @@ import Button from "../components/Button.astro"
 ---
 
 <Layout title="Inicio">
+<style>
+    .jci-article {
+        position: relative;
+        font-weight: 400;
+        padding: 0px;
+        min-height: 500px;
+        background-color: #c6d4d5;
+
+        .flex-adjust {
+            z-index: 3;
+            align-items: stretch;
+            min-height: 536px;
+            max-width: none;
+            justify-content: center;
+            gap: 0;
+
+            .img-container {
+                flex: 1 0 50%;
+                position: relative;
+                min-height: 400px;
+
+                > div {
+                    padding-left: 0;
+                    display: flex;
+                    text-align: center;
+
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                        object-fit: cover;
+                        overflow: visible;
+                        right: 0;
+                        left: 0;
+                        top: 90px;
+                    }
+                }
+
+                h1 {
+                    margin-left: 15px;
+                    font-size: 26px;
+                    margin: 20px 10px;
+                    max-width: none;
+                }
+            }
+
+            .text-container {
+                font-size: 18px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 1 1 50%;
+                padding: 30px;
+                background-color: #ebebeb;
+            }
+        }
+    }
+
+    .accredit-article {
+        background-color: #f4f5f5;
+
+        .flex-adjust > div {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                height: auto;
+                order: 1;
+            }
+        }
+    }
+
+    .map-article {
+        > * {
+            max-width: var(--max-width-main);
+        }
+
+        .flex-adjust .counter-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            #counter-num {
+                font-weight: 500;
+                border-radius: 50px;
+                display: flex;
+                text-align: center;
+                color: black;
+                font-size: 90px;
+                background-color: var(--primary-color);
+                width: 163px;
+                height: 123px;
+                outline: 10px solid var(--color-dark);
+                box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.3);
+                align-items: center;
+                justify-content: center;
+                padding-right: 10px;
+            }
+
+            p {
+                max-width: 257px;
+                margin-top: 30px;
+            }
+        }
+
+        .toggle-input {
+            display: none;
+
+            &:checked ~ .center-list.spain {
+                max-height: 860px;
+                transition: max-height 1.5s ease-out;
+            }
+
+            &:checked ~ .center-list.peru {
+                max-height: 240px;
+                transition: max-height 1.0s ease-out;
+            }
+
+            &:checked ~ .center-list.colombia {
+                max-height: 200px;
+                transition: max-height 0.7s ease-out;
+            }
+
+            &:checked ~ .center-list.chile {
+                max-height: 50px;
+                transition: max-height 0.4s ease-out;
+            }
+        }
+
+        .country-label {
+            display: block;
+            cursor: pointer;
+            padding: 12px;
+            background: var(--primary-color);
+            border: 1px solid var(--color-dark);
+            font-weight: bold;
+            margin-top: 8px;
+
+            &:hover {
+                background: var(--secondary-color);
+                transition: background 0.3s;
+            }
+        }
+
+        .center-list {
+            max-height: 0;
+            overflow: hidden;
+            margin-left: 25px;
+            padding: 0 15px;
+            border-left: 2px solid #dee2e6;
+            margin-bottom: 0 !important;
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                background-color: var(--primary-color);
+                padding: 10px;
+                border-radius: 8px;
+                font-weight: 500;
+                margin: 10px;
+                margin-bottom: 8px;
+                font-size: 0.95rem;
+            }
+
+            &.spain {
+                transition: max-height 1.5s ease-out;
+            }
+
+            &.peru {
+                transition: max-height 0.7s ease-out;
+            }
+
+            &.colombia {
+                transition: max-height .4s ease-out;
+            }
+
+            &.chile {
+                transition: max-height .4s ease-out;
+            }
+        }
+
+        .map-container {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-top: 30px;
+
+            #map {
+                height: 500px;
+                width: 80%;
+            }
+
+            .leaflet-container {
+                font-family: var(--primary-font);
+
+                .map__hospLink {
+                    background-color: var(--primary-color);
+                    padding: 5px 10px;
+                    color: black;
+                    border-radius: 5px;
+                    border: 1px solid grey;
+                    justify-self: center;
+                    display: flex;
+                    width: 108px;
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: #9bb3b6;
+                        transition: background-color 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    .currently-section {
+        background-color: #3c3c3c;
+        color: white;
+
+        > * {
+            max-width: 1200px;
+        }
+
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 35px;
+            column-gap: 20px;
+
+            article {
+                border-radius: 10px;
+                padding: 20px;
+                align-content: center;
+                justify-content: center;
+                text-align: center;
+                position: relative;
+                width: 340px;
+
+                > div {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 120px;
+                    height: 120px;
+                    background-color: #2e6569;
+                    z-index: 1;
+                    border-radius: 50%;
+                }
+
+                p {
+                    font-size: 20px;
+                    z-index: 23;
+                    position: relative;
+
+                    strong {
+                        color: #1ec3af;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 475px) {
+        .map-article {
+            #map {
+                width: 100%;
+            }
+
+            .toggle-input {
+                &:checked ~ .center-list.spain {
+                    max-height: 2120px;
+                }
+
+                &:checked ~ .center-list.peru {
+                    max-height: 800px;
+                }
+
+                &:checked ~ .center-list.colombia {
+                    max-height: 350px;
+                }
+            }
+
+            ul li {
+                padding: 5px;
+                font-size: 14px;
+                margin: 5px;
+            }
+        }
+
+        .jci-article {
+            .flex-adjust {
+                max-width: 100%;
+
+                .img-container {
+                    > div {
+                        padding-left: 53px;
+
+                        h1 {
+                            margin-left: -35px;
+                            max-width: 280px;
+                            text-align: left;
+                        }
+
+                        img {
+                            right: 0;
+                            left: 70px;
+                            top: 40px;
+                            overflow: visible;
+                        }
+                    }
+                }
+
+                .text-container {
+                    flex-direction: column;
+
+                    p {
+                        min-width: 0;
+                    }
+                }
+            }
+        }
+
+        .currently-section > div article {
+            width: 270px;
+        }
+    }
+
+    @media (min-width: 576px) {
+        .jci-article .flex-adjust .img-container > div img {
+            top: 40px;
+        }
+
+        .map-article {
+            .toggle-input {
+                &:checked ~ .center-list.spain {
+                    max-height: 1900px;
+                }
+
+                &:checked ~ .center-list.peru {
+                    max-height: 800px;
+                }
+
+                &:checked ~ .center-list.colombia {
+                    max-height: 350px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .jci-article .flex-adjust {
+            flex-direction: column;
+
+            .img-container {
+                min-height: 400px;
+
+                h1 {
+                    max-width: 280px;
+                }
+
+                > div {
+                    padding-left: 53px;
+
+                    img {
+                        left: 0;
+                        top: 70px;
+                        overflow: visible;
+                    }
+                }
+            }
+        }
+
+        .accredit-article .flex-adjust > div {
+            h2 {
+                margin-bottom: 0;
+            }
+
+            img {
+                order: 0;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .jci-article .flex-adjust {
+            flex-direction: row;
+
+            .img-container {
+                flex: 1 1 70%;
+
+                > div {
+                    padding-left: 106px;
+
+                    img {
+                        left: 70px;
+                        top: 25px;
+                    }
+                }
+            }
+
+            .text-container {
+                padding: 30px;
+                flex: 1 1 30%;
+            }
+        }
+
+        .map-article {
+            .toggle-input {
+                &:checked ~ .center-list.spain {
+                    max-height: 1500px;
+                }
+
+                &:checked ~ .center-list.peru {
+                    max-height: 500px;
+                }
+
+                &:checked ~ .center-list.colombia {
+                    max-height: 260px;
+                }
+
+                &:checked ~ .center-list.chile {
+                    max-height: 90px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .jci-article .flex-adjust {
+            width: 100%;
+            gap: 0;
+
+            .img-container {
+                padding-left: 0 !important;
+                flex: 1 1 65%;
+
+                h1 {
+                    margin-left: -35px;
+                }
+
+                > div img {
+                    left: 70px;
+                }
+            }
+
+            .text-container {
+                flex: 1 1 35%;
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 475px) {
+        .map-article .toggle-input {
+            &:checked ~ .center-list.spain {
+                max-height: 2440px;
+            }
+
+            &:checked ~ .center-list.peru {
+                max-height: 800px;
+            }
+
+            &:checked ~ .center-list.colombia {
+                max-height: 350px;
+            }
+
+            &:checked ~ .center-list.chile {
+                max-height: 130px;
+            }
+        }
+    }
+</style>
     <link rel="preload" href="/assets/doctor2.webp" as="image" slot="head" />
     <link rel="stylesheet" slot="header" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <section class="jci-article">

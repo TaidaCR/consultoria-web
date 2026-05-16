@@ -50,3 +50,134 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
 </Layout>
+
+<style>
+    .contact-section {
+        background-color: var(--primary-color);
+
+        > * {
+            max-width: 1200px;
+        }
+
+        > div {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            flex-direction: column-reverse;
+            gap: 20px;
+
+            img {
+                max-width: 100%;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            h3 {
+                font-family: 'Montserrat';
+                font-size: 24px;
+                color: var(--color-dark);
+                text-align: center;
+                margin-bottom: 0;
+            }
+
+            .contact-div {
+                > div {
+                    display: flex;
+                    gap: 20px;
+                    flex-direction: column;
+
+                    a {
+                        display: flex;
+                        flex: 1 1 0;
+                        gap: 10px;
+                        align-items: center;
+                        flex-direction: column;
+                        background-color: #f3f3f3;
+                        padding: 30px 10px;
+                        border-radius: 10px;
+                        font-size: 13px;
+
+                        span {
+                            color: black;
+                            font-weight: 400;
+                            text-align: center;
+                        }
+
+                        img {
+                            width: 70px;
+                            height: 70px;
+                        }
+
+                        &:hover {
+                            background-color: #eae8e8;
+                            box-shadow: 0px 0px 5px #cccccc;
+                        }
+                    }
+                }
+            }
+
+            article {
+                display: flex;
+                background-color: white;
+                border-radius: 5px;
+                padding: 30px;
+                box-sizing: border-box;
+                flex-direction: column;
+
+                > * {
+                    justify-content: space-around;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .contact-section > div {
+            .contact-div > div {
+                flex-direction: row;
+            }
+
+            .flex-adjust {
+                flex-direction: row;
+            }
+
+            article {
+                flex-direction: row;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .contact-section > div {
+            .flex-adjust {
+                flex-direction: row;
+            }
+
+            .flex-adjust div:first-of-type {
+                > img {
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .contact-section > div {
+            .flex-adjust {
+                div:first-of-type {
+                    flex: 0 0 35%;
+
+                    > img {
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: -133px 0px;
+                    }
+                }
+            }
+        }
+    }
+</style>
