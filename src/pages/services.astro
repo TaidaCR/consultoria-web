@@ -3,7 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 ---
 
-<Layout title="Servicios">
+<Layout title="Servicios"
+description="Descubre nuestros servicios de consultoría sanitaria: auditorías mock JCI, planes de calidad, optimización operativa y preparación para nuevas aperturas.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" slot="header"/>
     <h1 class="sr-only">Servicios que ofrece Consultoría Salqualis</h1>
     <section class="servJCI-section">
@@ -376,8 +377,6 @@ import Button from "../components/Button.astro";
 
             .swiper {
                 max-width: 750px;
-                /* width: 80%; */
-                /* width: 90%; */
                 z-index: 10;
                 min-height: 250px;
             }
@@ -519,6 +518,18 @@ import Button from "../components/Button.astro";
 
                 img{
                     top:5px;
+                }
+            }
+        }
+    }
+
+    @media(min-width: 768px){
+        .servOpening-section{
+            .flex-adjust{
+                .fade-in-right{
+                    img{
+                        height:100%;
+                    }
                 }
             }
         }
