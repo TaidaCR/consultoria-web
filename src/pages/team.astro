@@ -226,11 +226,18 @@ body.stop-scroll{
             }
             
             .img-container {
-                padding: 40px 40px 0px 40px;
+                /* padding: 40px 40px 0px 40px; */
+                height:300px;
+                overflow:hidden;
+                border-radius:13px;
+                justify-self: center;
+                margin-top: 40px;
+                width:250px;
                 img{
-                    aspect-ratio: 1 / 1.1;
+                    /* aspect-ratio: 1 / 1.1; */
                     object-fit: cover;
                     height: 100%;
+                    width:100%;
                     transition: ease 0.3s filter;
                     object-position: top;
                 }
@@ -402,7 +409,20 @@ body.stop-scroll{
             .team-card{
                 .img-container{
                     padding: 20px 20px 0px;
+                    margin-top:0;
+                    box-sizing: border-box;
+                    width: 100%;
+                    aspect-ratio: 1 / 1.1;
+                    height:auto;
                 }
+
+                            &.img-3 {
+                & .img-container {
+                    img {
+                        object-position: center -25px;
+                    }
+                }
+            }
             }
 
             .team-card.accent {
